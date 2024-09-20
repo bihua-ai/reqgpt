@@ -1,0 +1,1776 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "My Support Team",
+            "url": "https://www.example.com/support"
+        },
+        "description": "本项目是一个包含登录和文件上传功能的网页应用。用户首先需要通过登录页面输入用户名和密码进行身份验证，用户名长度限制在5到20个字符之间，密码长度至少为8个字符，且不能包含特殊字符。登录成功后，用户将被重定向到文件上传页面。在文件上传页面，用户可以选择上传文件，但文件格式必须为XLSX、XLS、PDF、DOCX、DOC或TXT。上传过程中，系统会对文件类型进行校验，确保上传的文件符合要求。如果用户未选择文件或文件格式不正确，系统会提示错误信息。",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "本项目是一个包含登录和文件上传功能的网页应用。用户首先需要通过登录页面输入用户名和密码进行身份验证，用户名长度限制在5到20个字符之间，密码长度至少为8个字符，且不能包含特殊字符。登录成功后，用户将被重定向到文件上传页面。在文件上传页面，用户可以选择上传文件，但文件格式必须为XLSX、XLS、PDF、DOCX、DOC或TXT。上传过程中，系统会对文件类型进行校验，确保上传的文件符合要求。如果用户未选择文件或文件格式不正确，系统会提示错误信息。",
+        "termsOfService": "https://example.com/terms/",
+        "title": "安全文件上传与登录验证系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "1. 条件名：用户名长度与字符限制\n2. 条件名：密码复杂度验证\n3. 条件名：角色选择必填\n4. 条件名：表单验证状态\n5. 条件名：请求参数异常\n6. 条件名：特殊字符无效\n7. 条件名：文件状态验证",
+                            "identifier": "89d59e13e18c418cac29dba581c514d7",
+                            "states": [
+                                "16b75e113b53403e8649fd9c5b9eeb15"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为validateForm的操作，其目的是验证用户登录表单中的用户名和密码是否符合特定的要求。如果验证通过，则会触发登录请求。以下是该操作涉及的关键变量和条件的自然语言中文总结：\n\n1. **用户名**：用户登录时输入的标识，用于身份验证，不能包含特殊字符，长度应在5到20个字符之间。\n2. **密码**：用户登录时输入的凭证，用于身份验证，不能包含特殊字符，长度至少为8个字符。\n3. **角色选择**：用户登录时选择的角色，影响用户权限，必须是预定义的有效选项。\n4. **validateForm 函数**：登录表单提交时调用的验证函数，进行基本验证。\n5. **fetch API**：用于向服务器发送登录请求的接口。\n6. **文件**：用户选择的文件，用于上传，某些验证状态会检查文件的存在性和扩展名。\n\n条件描述包括：\n- 用户名和密码的长度与字符限制。\n- 角色选择是否必填。\n- 表单验证状态。\n- 请求参数是否有异常。\n- 特殊字符是否无效。\n- 文件状态验证。\n\n状态描述详细列出了各种验证状态下用户名、密码和角色选择的可能情况，例如用户名异常状态、密码复杂度验证、角色未选择状态等。每种状态都详细描述了属性、等价类和条件，以确保验证过程的准确性和安全性。\n\n例如，状态“用户名异常状态”涉及用户名中不能包含特殊字符，并且长度必须在5到20个字符之间。如果用户名长度小于5个字符或大于20个字符，或者包含特殊字符，则认为状态异常。\n\n此外，还有针对文件上传的validateUpload函数的描述，包括文件是否存在、文件扩展名是否符合要求等验证条件。这些验证确保了文件上传的安全性和正确性。",
+                        "identifier": "98402938f9e2477393d793a9e8bec7ed",
+                        "name": "场景1",
+                        "nextCar": [],
+                        "result": {
+                            "description": "伪代码：\n```\nfunction validateForm() {\n    let username = getInputValue(\"username\");\n    let password = getInputValue(\"password\");\n    let specialChars = /[ `!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?~]/;\n    let validationResult = [];\n    let isFormValid = true;\n\n    if(username.length < 5 || username.length > 20) {\n        validationResult.push(\"用户名长度必须在5到20个字符之间。\");\n        isFormValid = false;\n    }\n    if(password.length < 8 || specialChars.test(password)) {\n        validationResult.push(\"密码长度必须至少为8个字符，且不能包含特殊字符。\");\n        isFormValid = false;\n    }\n\n    // 如果表单验证未通过，不发起登录请求\n    if (!isFormValid) {\n        showValidationResults(validationResult);\n        return false;\n    }\n\n    // 发起登录请求\n    let loginRequest = sendLoginRequest(username, password);\n    handleLoginResponse(loginRequest);\n\n    // 阻止表单默认提交行为\n    return false;\n}\n\nfunction getInputValue(inputId) {\n    // 根据inputId获取输入值的逻辑\n}\n\nfunction showValidationResults(messages) {\n    // 展示验证结果的逻辑\n}\n\nfunction sendLoginRequest(username, password) {\n    // 发送登录请求的逻辑\n}\n\nfunction handleLoginResponse(response) {\n    // 处理登录响应的逻辑\n}\n```\n\n中文自然语言描述：\nvalidateForm函数在用户提交登录表单时被触发，首先获取用户名和密码的输入值。它检查用户名长度是否在5到20个字符之间，密码长度是否至少为8个字符，并且密码中是否不包含特殊字符。如果这些检查未通过，函数将收集验证错误信息，并通过showValidationResults函数展示给用户，同时阻止表单提交。如果输入验证通过，函数将调用sendLoginRequest函数向服务器发起登录请求，并通过handleLoginResponse函数处理服务器的响应。如果登录成功，用户将被重定向到文件上传页面；如果失败，将显示错误信息。整个过程中，validateForm函数负责验证用户输入，发起请求，并根据响应结果更新用户界面。",
+                            "identifier": "5e30c00e294f4939a055e6c09203f23d",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "1. 条件名：用户名异常状态\n2. 条件名：密码长度不足且无特殊字符\n3. 条件名：角色未选择状态\n4. 条件名：验证表单状态\n5. 条件名：请求参数异常状态\n6. 条件名：用户名字符有效性\n7. 条件名：文件上传验证状态",
+                            "identifier": "27676a43ee7242dcbafaf22ca5597ebf",
+                            "states": [
+                                "b60a8487425b4e69bdd49bd93ff0d35f"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为\"validateForm\"的操作，其目的是验证用户登录时输入的用户名和密码是否符合要求，并在符合要求的情况下发起登录请求。操作涉及多个变量，包括用户名、密码、角色选择、文件等，以及两个关键的验证函数：validateForm函数和validateUpload函数。validateForm函数负责基本的表单验证，而validateUpload函数则用于文件上传的验证。\n\n详细来说，JSON中描述了不同状态下用户名、密码和角色选择的验证要求，例如用户名不能包含特殊字符、长度应在5到20个字符之间，密码长度至少为8个字符且不能包含特殊字符，角色选择应为有效选项等。同时，还包括了对fetch API的描述，这是用于向服务器发送登录请求的接口，以及对请求参数的异常状态的描述。\n\n此外，JSON还定义了多个状态描述，这些状态描述了在不同条件下用户名、密码、角色选择和文件上传验证的状态。例如，描述了用户名异常状态、密码长度不足或包含特殊字符的状态、角色未选择的状态等。\n\n最后，JSON还包含了对文件上传验证的详细描述，包括文件是否存在、文件扩展名是否符合要求等。validateUpload函数会检查这些条件，确保文件上传符合系统规定。",
+                        "identifier": "e9cee909ffee4d9bb1708ef307a9e49e",
+                        "name": "场景2",
+                        "nextCar": [],
+                        "result": {
+                            "description": "伪代码：\n```\nfunction validateForm() {\n    // 定义输入变量\n    var username = getInput('username');\n    var password = getInput('password');\n    var role = getInput('role');\n    var specialChars = /[ `!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?~]/;\n\n    // 定义输出变量\n    var isValid = true;\n    var errorMessage = '';\n\n    // 定义操作影响结果列表\n    var operationResults = [];\n\n    // 检查用户名长度\n    if(username.length < 5 || username.length > 20) {\n        isValid = false;\n        errorMessage = '用户名长度必须在5到20个字符之间。';\n        operationResults.push({variable: 'username', result: 'invalidLength'});\n    }\n\n    // 检查密码长度和特殊字符\n    if(password.length < 8 || specialChars.test(password)) {\n        isValid = false;\n        errorMessage = '密码长度必须至少为8个字符，且不能包含特殊字符。';\n        operationResults.push({variable: 'password', result: 'invalidFormat'});\n    }\n\n    // 假设角色选择是有效的，这里不进行校验\n\n    // 如果验证失败，显示错误信息\n    if(!isValid) {\n        alert(errorMessage);\n    }\n\n    // 返回操作结果\n    return operationResults;\n}\n```\n\n描述：\nvalidateForm函数在用户提交登录表单时被触发，它接收用户名、密码和角色作为输入。函数首先检查用户名是否在规定的字符长度范围内，不符合则记录错误并提示用户；接着验证密码长度是否至少为8个字符，并且不包含任何特殊字符，不满足条件同样记录错误并给出提示。如果输入验证未通过，函数将返回一个包含错误详情的列表，供进一步处理或反馈。如果所有输入均符合要求，函数将允许表单提交并可能触发后续的登录请求操作。",
+                            "identifier": "1436e833dfce42619aeeed5eeb8040df",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "1. 条件名：用户名长度与字符限制\n2. 条件名：密码长度与特殊字符要求\n3. 条件名：管理员角色选择\n4. 条件名：表单验证状态\n5. 条件名：API请求参数错误\n6. 条件名：文件属性异常\n7. 条件名：文件属性验证状态",
+                            "identifier": "4fbb72a8ce44401ea3d3e47ddbaee009",
+                            "states": [
+                                "78376778f0d7468e8aae63937615f917"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为validateForm的操作，其目的是验证表单输入的用户名和密码是否符合特定要求，并在验证通过的情况下发起登录请求。操作涉及多个输入变量和环境变量，包括用户名、密码、角色选择、文件选择等，以及validateForm函数和fetch API等环境变量。\n\n具体来说，操作验证的条件包括用户名的长度和字符限制、密码的长度和特殊字符要求、角色选择是否为管理员、表单验证状态、API请求参数是否错误、文件属性是否有异常以及文件属性验证状态等。\n\nJSON还详细列出了各种状态描述和等价类，例如用户名异常状态可能包括用户名包含特殊字符或长度不在5到20个字符之间；密码状态包括密码长度不符合要求或包含不允许的特殊字符；角色选择状态可能涉及未选择角色或选择了管理员角色；文件上传验证状态可能包括文件名不符合规定格式或文件扩展名不符合要求等。\n\n此外，还考虑了API请求参数异常状态，如请求体中的密码字段为空或用户名长度超出限制，以及Content-Type头部信息错误或请求方法不恰当等情况。\n\n最后，JSON还定义了文件上传相关的验证状态，包括文件名是否以点开头、是否包含特殊字符、文件扩展名是否符合要求等。",
+                        "identifier": "2ae07939f5a14b00bf1a6018c0dafcc3",
+                        "name": "场景3",
+                        "nextCar": [],
+                        "result": {
+                            "description": "伪代码：\n```\nfunction validateForm() {\n    let username = getInputValue(\"username\");\n    let password = getInputValue(\"password\");\n    let specialChars = /[ `!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?~]/;\n    let validationResult = [];\n    let isFormValid = true;\n\n    if (!isUsernameValid(username, specialChars, 5, 20)) {\n        validationResult.push(\"用户名长度必须在5到20个字符之间，且不能包含特殊字符。\");\n        isFormValid = false;\n    }\n\n    if (!isPasswordValid(password, specialChars, 8)) {\n        validationResult.push(\"密码长度必须至少为8个字符，且不能包含特殊字符。\");\n        isFormValid = false;\n    }\n\n    if (isFormValid) {\n        let response = performLoginRequest(username, password);\n        if (response.success) {\n            navigateTo(\"upload.html\");\n        } else {\n            validationResult.push(\"登录失败，请重试。\");\n        }\n    } else {\n        displayErrors(validationResult);\n    }\n\n    return isFormValid;\n}\n\nfunction isUsernameValid(username, specialChars, minLength, maxLength) {\n    return username.length >= minLength && username.length <= maxLength && !specialChars.test(username);\n}\n\nfunction isPasswordValid(password, specialChars, minLength) {\n    return password.length >= minLength && !specialChars.test(password);\n}\n\nfunction performLoginRequest(username, password) {\n    // 模拟登录请求\n    // 实际应用中需要根据服务器响应来确定函数返回值\n    return { success: true }; // 假设登录总是成功\n}\n\nfunction displayErrors(errors) {\n    for (let error of errors) {\n        alert(error);\n    }\n}\n```\n\n描述：\n在validateForm函数中，首先获取用户名和密码的输入值，然后通过正则表达式和特定条件检查用户名和密码的有效性。如果用户名或密码不符合要求，将错误信息添加到验证结果列表中，并设置表单有效标志为无效。若表单验证通过，则执行登录请求，若登录成功则跳转到文件上传页面，否则显示错误信息。所有的错误信息最终通过弹窗展示给用户。如果找不到相关信息，将无法确定操作结果。",
+                            "identifier": "aefea2816c76425789b38644933fdea3",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "- 条件名：用户名长度与字符限制\n- 条件名：密码复杂度验证\n- 条件名：角色选择未完成\n- 条件名：表单验证异常\n- 条件名：请求验证失败\n- 条件名：用户名密码字符不符\n- 条件名：文件内容与扩展名不符",
+                            "identifier": "31462b0762d64792b18fa56f5a1a0153",
+                            "states": [
+                                "580a9c31aa1a4136995a68cf7767b065"
+                            ]
+                        },
+                        "description": "此JSON定义了一个名为validateForm的操作，其目的是验证表单输入的用户名和密码是否符合特定要求，并在验证通过后发起登录请求。操作涉及多个输入变量和环境变量，包括用户名、密码、角色选择、文件等，以及validateForm函数和fetch API等环境变量。此外，还定义了validateUpload函数，用于文件上传的验证。\n\n条件描述部分列出了多个验证条件，如用户名长度、密码复杂度、角色选择完成度等。状态描述部分详细说明了各种验证状态下用户名、密码和角色选择的属性和等价类，例如用户名不能包含特殊字符，长度应在5到20个字符之间；密码不能包含特殊字符，长度至少为8个字符；角色选择应为有效选项等。\n\nJSON还描述了使用fetch API发送登录请求时可能出现的异常状态，如请求参数错误、请求失败等，并对这些状态的属性和等价类进行了详细说明。例如，响应数据中的`success`属性应为布尔值，请求体中的密码字段不能为空，用户名长度应在5到20个字符之间，`Content-Type`应正确设置以避免服务器解析错误等。\n\n最后，JSON还定义了文件上传验证的状态和等价类，包括文件名格式、文件扩展名、文件内容与扩展名是否匹配等。例如，文件名应符合规定的格式，不应以点开头或包含特殊字符，扩展名应为允许的格式，文件大小应在允许范围内等。",
+                        "identifier": "5925925e279b428cbbdd058d2f6d62d2",
+                        "name": "场景4",
+                        "nextCar": [],
+                        "result": {
+                            "description": "伪代码：\n```\nfunction validateForm() {\n    // 定义输入变量\n    var username = document.getElementById(\"username\").value;\n    var password = document.getElementById(\"password\").value;\n    var role = document.getElementById(\"role\").value; // 假设角色选择的输入元素ID为role\n    var specialChars = /[ `!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?~]/;\n\n    // 定义操作影响结果列表\n    var validationResults = [];\n\n    // 操作1：验证用户名长度\n    if(username.length < 5 || username.length > 20) {\n        validationResults.push(\"用户名长度必须在5到20个字符之间。\");\n    }\n\n    // 操作2：验证密码复杂度\n    if(password.length < 8 || specialChars.test(password)) {\n        validationResults.push(\"密码长度必须至少为8个字符，且不能包含特殊字符。\");\n    }\n\n    // 操作3：验证角色是否选择\n    if(role === null || role === \"\") {\n        validationResults.push(\"角色选择未完成。\");\n    }\n\n    // 操作4：模拟登录请求\n    var loginRequest = performLoginRequest(username, password);\n    validationResults.push(loginRequest);\n\n    // 返回操作影响结果列表\n    return validationResults;\n}\n\n// 辅助函数，模拟登录请求\nfunction performLoginRequest(username, password) {\n    // 使用fetch API发送登录请求\n    var response = fetch('/login', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/x-www-form-urlencoded',\n        },\n        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`\n    });\n\n    // 处理响应\n    return response.json().then(data => {\n        if(data.success) {\n            return \"登录成功，跳转到文件上传页面。\";\n        } else {\n            return \"登录失败，请重试。\";\n        }\n    }).catch(error => {\n        return \"登录请求失败，请稍后再试。\";\n    });\n}\n```\n\n中文自然语言描述：\n在`validateForm`函数中，首先对用户名的合法性进行了检查，确保其长度在5到20个字符之间，并且不包含特殊字符。接着，对密码进行了复杂度验证，要求密码至少8个字符长且不包含特殊字符。此外，还检查了用户是否完成了角色选择。在完成这些客户端验证后，函数通过`performLoginRequest`辅助函数模拟了一个登录请求，使用fetch API向服务器发送了包含用户名和密码的POST请求，并根据服务器的响应来判断登录是否成功。如果登录成功，将提示用户跳转到文件上传页面；如果失败，则会显示相应的错误信息。最终，`validateForm`函数返回了一个包含所有验证结果的列表，以供进一步处理。",
+                            "identifier": "08275c976f1c4080b7953d91b1d5ae5e",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "1. 条件名：用户名过短无特殊字符\n2. 条件名：超长含特殊字符密码\n3. 条件名：角色选择状态\n4. 条件名：验证表单状态\n5. 条件名：无效内容类型删除\n6. 条件名：用户名长密码空白\n7. 条件名：文件属性验证状态",
+                            "identifier": "cd84b8ac867e4af885d8d638e9562fce",
+                            "states": [
+                                "7ac8ac3207ba42509bc134be2b43c105"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为\"validateForm\"的操作，目的是验证表单输入的用户名和密码是否符合要求，并在符合要求时发起登录请求。操作涉及多个变量，包括用户名、密码、角色选择和文件等，它们都是输入变量。环境变量包括validateForm函数、fetch API和validateUpload函数。这些变量和函数共同参与表单验证和登录请求的过程。\n\n条件描述部分列举了七个条件，涉及用户名、密码和角色选择的有效性，以及表单验证状态和文件属性验证状态。\n\n状态描述部分详细列出了各种可能的用户名、密码和角色选择的状态，以及它们对应的属性描述和等价类描述。例如，用户名不能包含特殊字符，长度应在5到20个字符之间；密码不能包含特殊字符，长度至少为8个字符；角色选择应为有效选项等。\n\n此外，还描述了使用fetch API发送登录请求时可能遇到的各种参数异常状态，如请求体、头部信息、媒体类型等不符合要求的情况。\n\n最后，还提到了文件上传相关的validateUpload函数和文件状态验证，包括文件名的格式、扩展名、文件内容等是否符合要求。",
+                        "identifier": "00ea23967ba849bca755fdbcaf13beb3",
+                        "name": "场景5",
+                        "nextCar": [],
+                        "result": {
+                            "description": "伪代码：\n```\nfunction validateForm() {\n    let username = getInputValue(\"username\");\n    let password = getInputValue(\"password\");\n    let specialChars = /[ `!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?~]/;\n    let validationResult = [];\n    let isFormValid = true;\n\n    if (username.length < 5 || username.length > 20) {\n        validationResult.push(\"用户名长度必须在5到20个字符之间。\");\n        isFormValid = false;\n    }\n    if (password.length < 8 || specialChars.test(password)) {\n        validationResult.push(\"密码长度必须至少为8个字符，且不能包含特殊字符。\");\n        isFormValid = false;\n    }\n\n    // 如果表单验证未通过，显示验证结果\n    if (!isFormValid) {\n        showAlert(validationResult);\n    }\n\n    // 返回验证结果列表\n    return validationResult;\n}\n```\n\n描述：\nvalidateForm函数首先获取用户名和密码的输入值，然后通过正则表达式检查密码是否包含特殊字符，并验证用户名和密码的长度是否符合要求。如果输入不符合规定的条件，函数会收集所有的验证错误信息，并最终通过alert显示给用户。如果表单验证未通过，函数将返回一个包含错误信息的列表。如果表单验证通过，则函数将不会显示任何错误信息，允许用户提交表单。这个过程确保了只有符合要求的用户名和密码才能被用于登录请求。",
+                            "identifier": "13fede8763af47a0a82008c0dd407d34",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "1. 条件名：用户名异常状态\n2. 条件名：超长无特殊字符密码\n3. 条件名：角色选择状态\n4. 条件名：验证表单属性等价\n5. 条件名：请求失败参数错误\n6. 条件名：用户名字符有效性\n7. 条件名：文件状态等价类验证",
+                            "identifier": "f7251a0474084502a05eabc995adfab6",
+                            "states": [
+                                "1e42abf122074637adfc4adfcb0c7088"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为\"validateForm\"的操作，其目的是验证表单输入的用户名和密码是否符合要求，并在符合要求的情况下发起登录请求。操作涉及多个变量，包括用户名、密码、角色选择以及文件上传等，同时定义了两个关键函数：validateForm函数和validateUpload函数，以及使用fetch API向服务器发送请求。\n\n具体来说，JSON内容描述了以下几个关键点：\n\n1. **操作名称与描述**：操作名为\"validateForm\"，其描述是验证登录表单的输入项，并在输入有效时发送登录请求。\n\n2. **输入变量**：包括用户名、密码、角色选择和文件，每个变量都有其标识符和描述。\n\n3. **环境变量**：包括validateForm函数、fetch API和validateUpload函数，这些是操作过程中会用到的函数和接口。\n\n4. **条件描述**：列举了七个条件，涉及用户名、密码的状态和有效性，角色选择状态，以及表单提交时的验证等。\n\n5. **状态描述**：详细列出了多个状态描述，每个状态描述都包含了特定的属性和等价类描述。例如，用户名异常状态可能包括用户名包含特殊字符或长度不符合要求；密码状态描述可能包括密码长度不符合要求或包含特殊字符等。\n\n6. **文件上传验证**：validateUpload函数用于验证上传文件是否存在以及文件扩展名是否符合要求。\n\n7. **请求参数异常处理**：描述了使用fetch API发送请求时可能遇到的参数异常情况，如请求头、请求体以及HTTP请求类型的错误。\n\n8. **用户名和密码的字符有效性检查**：包括用户名和密码的字符限制，如不能包含特殊字符，长度限制等。\n\n9. **文件状态等价类验证**：描述了文件上传时，文件名和扩展名的验证规则，如文件名是否以点开始，是否包含特殊字符等。\n\n整体来看，这个JSON定义了一个完整的表单验证流程，包括了输入验证、角色选择、文件上传验证以及请求参数异常处理等多个方面。",
+                        "identifier": "43fa1b83f04d495a87542a4feb7abb68",
+                        "name": "场景6",
+                        "nextCar": [],
+                        "result": {
+                            "description": "伪代码：\n```\nfunction validateForm() {\n    // 定义输入变量\n    var username = document.getElementById(\"username\").value;\n    var password = document.getElementById(\"password\").value;\n    var role = document.getElementById(\"role\").value; // 假设角色选择元素的id为role\n    var specialChars = /[ `!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?~]/;\n\n    // 定义输出变量\n    var isValidUsername = true;\n    var isValidPassword = true;\n    var roleSelected = true;\n    var loginSuccess = false;\n    var errorMessage = \"\";\n\n    // 定义操作影响结果列表\n    var operationResults = [];\n\n    // 验证用户名\n    if(username.length < 5 || username.length > 20 || specialChars.test(username)) {\n        isValidUsername = false;\n        operationResults.push(\"用户名验证失败\");\n    }\n\n    // 验证密码\n    if(password.length < 8 || specialChars.test(password)) {\n        isValidPassword = false;\n        operationResults.push(\"密码验证失败\");\n    }\n\n    // 验证角色是否选择\n    if(role === \"\") {\n        roleSelected = false;\n        operationResults.push(\"角色未选择\");\n    }\n\n    // 如果输入验证未通过，显示错误信息并返回\n    if(!isValidUsername || !isValidPassword || !roleSelected) {\n        errorMessage = operationResults.join(\"; \");\n        alert(errorMessage);\n        return false;\n    }\n\n    // 发起登录请求\n    fetch('/login', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/x-www-form-urlencoded',\n        },\n        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&role=${encodeURIComponent(role)}`\n    })\n    .then(response => response.json())\n    .then(data => {\n        if(data.success) {\n            loginSuccess = true;\n            operationResults.push(\"登录成功\");\n            // 跳转到文件上传页面\n            window.location.href = 'upload.html';\n        } else {\n            operationResults.push(\"登录失败：\" + data.message);\n            alert('登录失败，请重试。');\n        }\n    })\n    .catch(error => {\n        operationResults.push(\"登录请求失败：\" + error);\n        alert('登录请求失败，请稍后再试。');\n    });\n\n    // 返回操作结果\n    return operationResults;\n}\n```\n\n中文自然语言描述：\n在validateForm函数中，首先对用户名和密码进行格式和长度的校验，确保用户名在5到20个字符之间，不包含特殊字符，密码长度至少为8个字符且同样不包含特殊字符。接着检查用户是否选择了角色，如果任一校验未通过，将收集所有错误信息并通过弹窗提示用户。若输入均合法，函数将通过fetch API向服务器发送包含用户名、密码和角色的POST请求。根据服务器的响应，如果登录成功，用户将被重定向到文件上传页面；如果失败，将显示相应的错误信息。所有操作结果，无论是成功还是失败，都会被记录并返回，以供进一步处理或记录。",
+                            "identifier": "5283dfa785d64bf7ada704469607c88b",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "验证表单输入的用户名和密码是否符合要求，如果符合则发起登录请求\n\n        操作相关变量部分：\n        variable name: 用户名\n        identifier: e6b6691074db4d598f3096fa2e8461b7\n        description: 用户登录时输入的用户名，用于身份验证。\n 是validateForm操作的input变量。\n\n        \n        variable name: 密码\n        identifier: 8aaa38bd42f949ec9b9d8ebbca3e2e6c\n        description: 用户登录时输入的密码，用于身份验证。\n 是validateForm操作的input变量。\n\n        \n        variable name: 角色选择\n        identifier: f4caa91431c046b699447775f9d1eea8\n        description: 用户登录时选择的角色，可能影响用户权限。\n 是validateForm操作的input变量。\n\n        \n        variable name: validateForm 函数\n        identifier: bb2b736af4504338a5a4b21f5e48cc83\n        description: 登录表单提交时调用的验证函数，用于进行基本的验证。\n 是validateForm操作的environment变量。\n\n        \n        variable name: fetch API\n        identifier: 7159d3d2cd944048a9f862a77d9726c6\n        description: 用于向服务器发送登录请求的 API。\n 是validateForm操作的environment变量。\n\n        \n        variable name: 文件\n        identifier: bb48adb9dc174799ba772cbe6e8957b8\n        description: 用户选择的文件，用于上传。\n 是validateForm操作的input变量。\n\n        \n        variable name: validateUpload 函数\n        identifier: 734de84bfd134083a409e63922555bd2\n        description: 文件上传表单提交时调用的验证函数，用于检查文件是否存在以及文件的扩展名是否符合要求。\n 是validateForm操作的environment变量。\n\n        ",
+                "identifier": "c8ce30fe304741a1aaabc6b4e24f1058",
+                "name": "validateForm"
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "这个页面包含一个表单，用户需要输入用户名和密码，并且可以选择一个角色。表单提交后，会触发validateForm函数进行验证。",
+        "identifier": "599dcf91062a4ee6b9044259f5919395",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "用户名的长度必须在5到20个字符之间，确保用户名既不会过短也不会过长。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户名长度在5到20个字符之间。",
+                                "identifier": "fbcd9323970d4f229cc648c7f1806c90",
+                                "name": "Valid Length"
+                            },
+                            {
+                                "description": "用户名长度小于5个字符。",
+                                "identifier": "0875806199864e5f9883a9625855a77d",
+                                "name": "Too Short"
+                            },
+                            {
+                                "description": "用户名长度大于20个字符。",
+                                "identifier": "f7f4fa17fa22486da6f91ece3a486ed8",
+                                "name": "Too Long"
+                            }
+                        ],
+                        "identifier": "a8e6bf3c70ca48ba9fc704755c4fd557",
+                        "name": "用户名长度"
+                    },
+                    {
+                        "description": "用户名中不能包含特殊字符，保证用户名的格式规范性。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类包括任何包含正则表达式定义的特殊字符的用户名。",
+                                "identifier": "f8e2b067d9ab4772a6b5ea920355eafd",
+                                "name": "Contains Special Characters"
+                            },
+                            {
+                                "description": "此等价类包括不包含任何正则表达式定义的特殊字符的用户名。",
+                                "identifier": "9d83d49b5dcd40e28b827fd975394091",
+                                "name": "No Special Characters"
+                            },
+                            {
+                                "description": "此等价类包括空的用户名，即没有任何字符。",
+                                "identifier": "1a0408c2fcf541d9b85c88a1b4503e46",
+                                "name": "Empty String"
+                            },
+                            {
+                                "description": "此等价类包括长度小于5个字符或大于20个字符的用户名。",
+                                "identifier": "b0b2d6f01e174e5997bf1921140c6545",
+                                "name": "Exceeds Length Limits"
+                            },
+                            {
+                                "description": "此等价类包括长度在5到20个字符之间的用户名，且不包含特殊字符。",
+                                "identifier": "81510716fe2342c4acf13881d99260ae",
+                                "name": "Appropriate Length"
+                            },
+                            {
+                                "description": "此等价类包括包含除数字和字母之外的字符的用户名，尽管正则表达式没有明确排除这些字符，但通常用户名可能期望只包含字母数字字符。",
+                                "identifier": "953e57e6714a4afc917b8144013b1672",
+                                "name": "Includes Non-Alphanumeric Characters"
+                            },
+                            {
+                                "description": "此等价类包括仅由字母和数字组成的用户名，且长度在5到20个字符之间，不包含特殊字符。",
+                                "identifier": "fce90667b4a84e7bbf934b88f05abf8f",
+                                "name": "Alphanumeric Only"
+                            }
+                        ],
+                        "identifier": "78f2a02508f041bd8e9f1423d71d6168",
+                        "name": "用户名特殊字符"
+                    }
+                ],
+                "description": "用户登录时输入的用户名，用于身份验证。",
+                "identifier": "e6b6691074db4d598f3096fa2e8461b7",
+                "name": "用户名",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a8e6bf3c70ca48ba9fc704755c4fd557",
+                                "equivalenceClassId": "0875806199864e5f9883a9625855a77d"
+                            },
+                            {
+                                "attributeId": "78f2a02508f041bd8e9f1423d71d6168",
+                                "equivalenceClassId": "f8e2b067d9ab4772a6b5ea920355eafd"
+                            }
+                        ],
+                        "identifier": "96dd56490f804617a030073c12daeb2f",
+                        "name": "状态名：用户名异常状态"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a8e6bf3c70ca48ba9fc704755c4fd557",
+                                "equivalenceClassId": "0875806199864e5f9883a9625855a77d"
+                            },
+                            {
+                                "attributeId": "78f2a02508f041bd8e9f1423d71d6168",
+                                "equivalenceClassId": "1a0408c2fcf541d9b85c88a1b4503e46"
+                            }
+                        ],
+                        "identifier": "c6825ad67c4a4ebbb590f0316e700741",
+                        "name": "状态名：用户名无效-长度短且无特殊字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a8e6bf3c70ca48ba9fc704755c4fd557",
+                                "equivalenceClassId": "0875806199864e5f9883a9625855a77d"
+                            },
+                            {
+                                "attributeId": "78f2a02508f041bd8e9f1423d71d6168",
+                                "equivalenceClassId": "9d83d49b5dcd40e28b827fd975394091"
+                            }
+                        ],
+                        "identifier": "05fdd24193d34ae38f44f695c5421854",
+                        "name": "状态名：用户名过短且无特殊字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a8e6bf3c70ca48ba9fc704755c4fd557",
+                                "equivalenceClassId": "0875806199864e5f9883a9625855a77d"
+                            },
+                            {
+                                "attributeId": "78f2a02508f041bd8e9f1423d71d6168",
+                                "equivalenceClassId": "b0b2d6f01e174e5997bf1921140c6545"
+                            }
+                        ],
+                        "identifier": "4b1fca406dd942e792f3a7490315d557",
+                        "name": "状态名：用户名异常状态"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a8e6bf3c70ca48ba9fc704755c4fd557",
+                                "equivalenceClassId": "0875806199864e5f9883a9625855a77d"
+                            },
+                            {
+                                "attributeId": "78f2a02508f041bd8e9f1423d71d6168",
+                                "equivalenceClassId": "fce90667b4a84e7bbf934b88f05abf8f"
+                            }
+                        ],
+                        "identifier": "57fbd423363c4dcbb0b7360cb076a1c0",
+                        "name": "状态名：用户名过短且仅含字母数字"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a8e6bf3c70ca48ba9fc704755c4fd557",
+                                "equivalenceClassId": "f7f4fa17fa22486da6f91ece3a486ed8"
+                            },
+                            {
+                                "attributeId": "78f2a02508f041bd8e9f1423d71d6168",
+                                "equivalenceClassId": "fce90667b4a84e7bbf934b88f05abf8f"
+                            }
+                        ],
+                        "identifier": "c0c84539c5074c76b75d9777642fd67d",
+                        "name": "状态名：用户名过长且仅含字母数字"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "密码的长度必须至少为8个字符。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码长度正好是8个字符，符合最小长度要求。",
+                                "identifier": "eaf334b336fc48d0b7d7bb9a9c05860d",
+                                "name": "8 Characters"
+                            },
+                            {
+                                "description": "密码长度达到设定的最大长度，假设为20个字符，符合最大长度要求。",
+                                "identifier": "682de0d1278645678f182e822d21377a",
+                                "name": "Maximum Length"
+                            },
+                            {
+                                "description": "密码长度少于8个字符，不满足最小长度要求。",
+                                "identifier": "078e9ea34b1c46d2bbafca8c886b4bdc",
+                                "name": "Less Than Minimum Length"
+                            },
+                            {
+                                "description": "密码长度超过20个字符，超出了最大长度限制。",
+                                "identifier": "52a000c94c9d4057925866522c21dc77",
+                                "name": "More Than Maximum Length"
+                            }
+                        ],
+                        "identifier": "bb778826497249b7a5382ea94d6a6b07",
+                        "name": "长度"
+                    },
+                    {
+                        "description": "密码不能包含特殊字符。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码不包含任何特殊字符（此等价类表示密码完全由字母和数字组成，符合要求）。",
+                                "identifier": "10cff521db73448f84950d24480d8474",
+                                "name": "No Special Characters"
+                            },
+                            {
+                                "description": "密码包含至少一个特殊字符（此等价类表示密码不符合要求，因为密码中包含了不允许的特殊字符）。",
+                                "identifier": "35d1656c1c3f44d296b068f7150f0a11",
+                                "name": "Contains Special Characters"
+                            }
+                        ],
+                        "identifier": "17b25f0747104aef980ae234dcf8300f",
+                        "name": "特殊字符"
+                    }
+                ],
+                "description": "用户登录时输入的密码，用于身份验证。",
+                "identifier": "8aaa38bd42f949ec9b9d8ebbca3e2e6c",
+                "name": "密码",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bb778826497249b7a5382ea94d6a6b07",
+                                "equivalenceClassId": "52a000c94c9d4057925866522c21dc77"
+                            },
+                            {
+                                "attributeId": "17b25f0747104aef980ae234dcf8300f",
+                                "equivalenceClassId": "35d1656c1c3f44d296b068f7150f0a11"
+                            }
+                        ],
+                        "identifier": "41d521401a3441e9889ff5d457a50bc6",
+                        "name": "状态名：超长含特殊字符密码"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bb778826497249b7a5382ea94d6a6b07",
+                                "equivalenceClassId": "eaf334b336fc48d0b7d7bb9a9c05860d"
+                            },
+                            {
+                                "attributeId": "17b25f0747104aef980ae234dcf8300f",
+                                "equivalenceClassId": "35d1656c1c3f44d296b068f7150f0a11"
+                            }
+                        ],
+                        "identifier": "0c75bcb77a0246c2b8f92c1c486067eb",
+                        "name": "\"密码复杂度验证\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bb778826497249b7a5382ea94d6a6b07",
+                                "equivalenceClassId": "52a000c94c9d4057925866522c21dc77"
+                            },
+                            {
+                                "attributeId": "17b25f0747104aef980ae234dcf8300f",
+                                "equivalenceClassId": "10cff521db73448f84950d24480d8474"
+                            }
+                        ],
+                        "identifier": "04446375a5c24fc0ae57db234a086351",
+                        "name": "\"超长无特殊字符密码\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bb778826497249b7a5382ea94d6a6b07",
+                                "equivalenceClassId": "eaf334b336fc48d0b7d7bb9a9c05860d"
+                            },
+                            {
+                                "attributeId": "17b25f0747104aef980ae234dcf8300f",
+                                "equivalenceClassId": "10cff521db73448f84950d24480d8474"
+                            }
+                        ],
+                        "identifier": "98ae0c5a905b416fb059c8656d960f01",
+                        "name": "密码状态名：\"无特殊字符8位密码\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bb778826497249b7a5382ea94d6a6b07",
+                                "equivalenceClassId": "078e9ea34b1c46d2bbafca8c886b4bdc"
+                            },
+                            {
+                                "attributeId": "17b25f0747104aef980ae234dcf8300f",
+                                "equivalenceClassId": "10cff521db73448f84950d24480d8474"
+                            }
+                        ],
+                        "identifier": "bab5b46ee9ec454d9db1979d94b0f6f1",
+                        "name": "密码状态名：长度不足且无特殊字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bb778826497249b7a5382ea94d6a6b07",
+                                "equivalenceClassId": "682de0d1278645678f182e822d21377a"
+                            },
+                            {
+                                "attributeId": "17b25f0747104aef980ae234dcf8300f",
+                                "equivalenceClassId": "35d1656c1c3f44d296b068f7150f0a11"
+                            }
+                        ],
+                        "identifier": "c7535f74c94a4e77b2760b9617adfe96",
+                        "name": "密码复杂度检查"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "用户在登录时选择的角色，影响用户权限和可访问资源。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "选择管理员角色，表示用户希望以管理员身份登录系统。",
+                                "identifier": "a709e4a343a645a5998d6009f40ab2ec",
+                                "name": "AdminRoleSelection"
+                            },
+                            {
+                                "description": "选择用户角色，表示用户希望以普通用户身份登录系统。",
+                                "identifier": "cdb2cf472a4a4892926d52058adf1853",
+                                "name": "UserRoleSelection"
+                            },
+                            {
+                                "description": "角色选择下拉菜单没有选择任何选项，用户未指定角色。",
+                                "identifier": "ceda141cc1b440e8be22e6e1b3e1ccaf",
+                                "name": "EmptyRoleSelection"
+                            },
+                            {
+                                "description": "角色选择下拉菜单的值不是预定义的有效选项（例如，如果下拉菜单被篡改或损坏）。",
+                                "identifier": "3089bd73758242d8865fb452b211edcc",
+                                "name": "NullRoleSelection"
+                            }
+                        ],
+                        "identifier": "40e35ffb14b94a35b818507302895d34",
+                        "name": "roleSelection"
+                    }
+                ],
+                "description": "用户登录时选择的角色，可能影响用户权限。",
+                "identifier": "f4caa91431c046b699447775f9d1eea8",
+                "name": "角色选择",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "40e35ffb14b94a35b818507302895d34",
+                                "equivalenceClassId": "3089bd73758242d8865fb452b211edcc"
+                            }
+                        ],
+                        "identifier": "bd714d65f85940769c78d168bf746a3b",
+                        "name": "\"角色未选择状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "40e35ffb14b94a35b818507302895d34",
+                                "equivalenceClassId": "cdb2cf472a4a4892926d52058adf1853"
+                            }
+                        ],
+                        "identifier": "4f9611f5dc1741f88c33faf713bf5e28",
+                        "name": "角色选择状态"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "40e35ffb14b94a35b818507302895d34",
+                                "equivalenceClassId": "ceda141cc1b440e8be22e6e1b3e1ccaf"
+                            }
+                        ],
+                        "identifier": "76a3cc97119541e3b91dbe352e2db3dc",
+                        "name": "角色选择为空"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "40e35ffb14b94a35b818507302895d34",
+                                "equivalenceClassId": "a709e4a343a645a5998d6009f40ab2ec"
+                            }
+                        ],
+                        "identifier": "b8778a6382024095bb35456ed9e2864f",
+                        "name": "\"管理员角色选择\""
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "用户名是用户登录时输入的身份标识。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户名长度在5到20个字符之间，这是符合要求的有效用户名。",
+                                "identifier": "d93dcb49adea4d14a12bafda1ec008fd",
+                                "name": "Valid Length"
+                            },
+                            {
+                                "description": "用户名长度小于5个字符，这是不符合要求的无效用户名。",
+                                "identifier": "34dc180dcac144758cc5ea701c160365",
+                                "name": "Too Short"
+                            },
+                            {
+                                "description": "用户名长度超过20个字符，这是不符合要求的无效用户名。",
+                                "identifier": "3bf79411f3414d52a068e36ba0f35fa1",
+                                "name": "Too Long"
+                            },
+                            {
+                                "description": "用户名包含非字母数字或下划线的字符，这可能取决于系统的具体要求，但在此代码段中没有提及，所以假设为有效用户名。",
+                                "identifier": "7f699dcb490b457ca29f7da6bb83e067",
+                                "name": "Contains Special Characters"
+                            },
+                            {
+                                "description": "用户名仅由数字组成，这在某些系统中可能是有效的，但在此代码段中没有明确说明，所以假设为有效用户名。",
+                                "identifier": "fbf9d2eb8f6f4765b1fbff459db72941",
+                                "name": "Numeric Only"
+                            },
+                            {
+                                "description": "用户名仅由字母组成，这通常被视为有效用户名。",
+                                "identifier": "50fc8c382c5947e39f14b533b72cba05",
+                                "name": "Alphabetic Only"
+                            },
+                            {
+                                "description": "用户名由字母和数字组成，这通常被视为有效用户名。",
+                                "identifier": "026727931bac4834bc94ed3cff01eb4a",
+                                "name": "Alphanumeric"
+                            },
+                            {
+                                "description": "用户名以非字母数字字符开头，这可能在某些系统中是不允许的，但在此代码段中没有提及，所以假设为有效用户名。",
+                                "identifier": "a19b2713ed43480480cd6bbdfc5829ea",
+                                "name": "Starts with Special Character"
+                            },
+                            {
+                                "description": "用户名以非字母数字字符结尾，这可能在某些系统中是不允许的，但在此代码段中没有提及，所以假设为有效用户名。",
+                                "identifier": "130bf44c30784feab3a2ba02be627f26",
+                                "name": "Ends with Special Character"
+                            }
+                        ],
+                        "identifier": "2dacaadd1d02430a9c1e28a7cefe7968",
+                        "name": "用户名"
+                    },
+                    {
+                        "description": "密码是用户登录时输入的保护账户安全的凭证。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码长度必须至少为8个字符。",
+                                "identifier": "b6a7cab3dfe1491587d9076b1c9db8e8",
+                                "name": "Valid Length"
+                            },
+                            {
+                                "description": "密码长度小于8个字符。",
+                                "identifier": "6c59493b22084daba8299ae8a2786b7d",
+                                "name": "Invalid Length"
+                            },
+                            {
+                                "description": "密码中不包含任何特殊字符。",
+                                "identifier": "88ac44bcaca44088b52afe6e765a735a",
+                                "name": "No Special Characters"
+                            },
+                            {
+                                "description": "密码中包含至少一个特殊字符。",
+                                "identifier": "8529d94e4400434b913c5f52f5ff2bb7",
+                                "name": "Contains Special Characters"
+                            },
+                            {
+                                "description": "密码长度至少为8个字符，且不包含特殊字符。",
+                                "identifier": "19b53617f25244199d94f2ba7e33e678",
+                                "name": "Valid Password"
+                            },
+                            {
+                                "description": "密码长度小于8个字符，不考虑特殊字符。",
+                                "identifier": "eccd9441b53f4fe29190e956377163d2",
+                                "name": "Invalid Password - Short"
+                            },
+                            {
+                                "description": "密码包含特殊字符，不考虑长度。",
+                                "identifier": "d1417a50f7e24a42acedb047b815ab4c",
+                                "name": "Invalid Password - Special Characters"
+                            },
+                            {
+                                "description": "密码长度小于8个字符，并且包含特殊字符。",
+                                "identifier": "2010471ed4f64cb7b1ed627824a0f22b",
+                                "name": "Invalid Password - Both"
+                            }
+                        ],
+                        "identifier": "b29bf3b667864d3f87a5d07452f34c0f",
+                        "name": "密码"
+                    },
+                    {
+                        "description": "特殊字符用于验证密码中是否含有不允许的字符。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码仅由字母和数字组成。",
+                                "identifier": "49424c0eafe44ac687b3f8c0f3aa74a3",
+                                "name": "Alphanumeric Characters"
+                            },
+                            {
+                                "description": "密码为空。",
+                                "identifier": "b44f3d6b353a438799d97efa1439e71f",
+                                "name": "Empty String"
+                            },
+                            {
+                                "description": "密码只包含一个字符。",
+                                "identifier": "aa21efe9512f412c8d564dd210c616f3",
+                                "name": "Single Character"
+                            },
+                            {
+                                "description": "密码长度小于8个字符。",
+                                "identifier": "c5719b9325e9430287a2c6e86add1350",
+                                "name": "Short String"
+                            },
+                            {
+                                "description": "密码由字母、数字和至少一个特殊字符组成。",
+                                "identifier": "b5d90a2d62d14fc18894825794f0459a",
+                                "name": "Alphanumeric with Special Characters"
+                            },
+                            {
+                                "description": "密码只包含特殊字符。",
+                                "identifier": "fd535033d3dd4b30b39652c622023626",
+                                "name": "Special Characters Only"
+                            },
+                            {
+                                "description": "密码包含大小写字母、数字和至少一个特殊字符。",
+                                "identifier": "381a256c045948a892ac1e5642607db5",
+                                "name": "Mixed Case with Special Characters"
+                            },
+                            {
+                                "description": "密码长度超过8个字符，并且包含至少一个特殊字符。",
+                                "identifier": "18db99b04ec3412ab4e80ca5677dad86",
+                                "name": "Long String with Special Characters"
+                            },
+                            {
+                                "description": "密码以特殊字符开始或结束。",
+                                "identifier": "c95b36c1a4f84302b3a44b3ac7598ccb",
+                                "name": "Special Character at Beginning/End"
+                            },
+                            {
+                                "description": "密码中特殊字符连续出现。",
+                                "identifier": "76fbc90e8f58425a98c8ed1e069f4d43",
+                                "name": "Consecutive Special Characters"
+                            },
+                            {
+                                "description": "密码中特殊字符与其他字符交错出现。",
+                                "identifier": "e3c8c42b9b3643419201f0b255ab23c6",
+                                "name": "Special Characters Interspersed"
+                            }
+                        ],
+                        "identifier": "28e0d1fdf0334c28a59e0400a650a27c",
+                        "name": "特殊字符"
+                    }
+                ],
+                "description": "登录表单提交时调用的验证函数，用于进行基本的验证。",
+                "identifier": "bb2b736af4504338a5a4b21f5e48cc83",
+                "name": "validateForm 函数",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "2dacaadd1d02430a9c1e28a7cefe7968",
+                                "equivalenceClassId": "34dc180dcac144758cc5ea701c160365"
+                            },
+                            {
+                                "attributeId": "b29bf3b667864d3f87a5d07452f34c0f",
+                                "equivalenceClassId": "88ac44bcaca44088b52afe6e765a735a"
+                            },
+                            {
+                                "attributeId": "28e0d1fdf0334c28a59e0400a650a27c",
+                                "equivalenceClassId": "c5719b9325e9430287a2c6e86add1350"
+                            }
+                        ],
+                        "identifier": "4f2d8d5ee21b4ed4a286ebf795506f7d",
+                        "name": "\"验证表单状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "2dacaadd1d02430a9c1e28a7cefe7968",
+                                "equivalenceClassId": "fbf9d2eb8f6f4765b1fbff459db72941"
+                            },
+                            {
+                                "attributeId": "b29bf3b667864d3f87a5d07452f34c0f",
+                                "equivalenceClassId": "19b53617f25244199d94f2ba7e33e678"
+                            },
+                            {
+                                "attributeId": "28e0d1fdf0334c28a59e0400a650a27c",
+                                "equivalenceClassId": "381a256c045948a892ac1e5642607db5"
+                            }
+                        ],
+                        "identifier": "93305fce8c5940088eb5f978499a8331",
+                        "name": "\"验证表单状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "2dacaadd1d02430a9c1e28a7cefe7968",
+                                "equivalenceClassId": "d93dcb49adea4d14a12bafda1ec008fd"
+                            },
+                            {
+                                "attributeId": "b29bf3b667864d3f87a5d07452f34c0f",
+                                "equivalenceClassId": "8529d94e4400434b913c5f52f5ff2bb7"
+                            },
+                            {
+                                "attributeId": "28e0d1fdf0334c28a59e0400a650a27c",
+                                "equivalenceClassId": "aa21efe9512f412c8d564dd210c616f3"
+                            }
+                        ],
+                        "identifier": "f3a0f7a7ba60459c957bb5122d807de1",
+                        "name": "\"验证表单状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "2dacaadd1d02430a9c1e28a7cefe7968",
+                                "equivalenceClassId": "130bf44c30784feab3a2ba02be627f26"
+                            },
+                            {
+                                "attributeId": "b29bf3b667864d3f87a5d07452f34c0f",
+                                "equivalenceClassId": "6c59493b22084daba8299ae8a2786b7d"
+                            },
+                            {
+                                "attributeId": "28e0d1fdf0334c28a59e0400a650a27c",
+                                "equivalenceClassId": "76fbc90e8f58425a98c8ed1e069f4d43"
+                            }
+                        ],
+                        "identifier": "6a2227716d884e7a9f315e6e921d175c",
+                        "name": "\"验证表单状态异常\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "2dacaadd1d02430a9c1e28a7cefe7968",
+                                "equivalenceClassId": "130bf44c30784feab3a2ba02be627f26"
+                            },
+                            {
+                                "attributeId": "b29bf3b667864d3f87a5d07452f34c0f",
+                                "equivalenceClassId": "88ac44bcaca44088b52afe6e765a735a"
+                            },
+                            {
+                                "attributeId": "28e0d1fdf0334c28a59e0400a650a27c",
+                                "equivalenceClassId": "b44f3d6b353a438799d97efa1439e71f"
+                            }
+                        ],
+                        "identifier": "4286797eadd44612bcdcf5b359f1abf4",
+                        "name": "状态名：验证表单属性等价类"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "2dacaadd1d02430a9c1e28a7cefe7968",
+                                "equivalenceClassId": "34dc180dcac144758cc5ea701c160365"
+                            },
+                            {
+                                "attributeId": "b29bf3b667864d3f87a5d07452f34c0f",
+                                "equivalenceClassId": "19b53617f25244199d94f2ba7e33e678"
+                            },
+                            {
+                                "attributeId": "28e0d1fdf0334c28a59e0400a650a27c",
+                                "equivalenceClassId": "76fbc90e8f58425a98c8ed1e069f4d43"
+                            }
+                        ],
+                        "identifier": "f87bc2ac096a48e5a690d0cd0ac043ed",
+                        "name": "状态名：验证表单状态\n\n这个状态名简洁地概括了JSON对象所代表的内容，即一个表单验证的状态，其中包含了标识符、名称以及属性和等价类的信息。"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "此属性定义了HTTP请求的类型，例如POST或GET。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类表示请求用于从服务器获取资源。",
+                                "identifier": "329e31cf25884c8fa557ed3146a43256",
+                                "name": "GET"
+                            },
+                            {
+                                "description": "此等价类表示请求用于向服务器提交要处理的数据。",
+                                "identifier": "34dccfdf240f40f88b6b36595d76cb72",
+                                "name": "POST"
+                            },
+                            {
+                                "description": "此等价类表示请求用于将资源的新版本放置在服务器上。",
+                                "identifier": "3f04195c7ed047ac8164163bc7fd7a35",
+                                "name": "PUT"
+                            },
+                            {
+                                "description": "此等价类表示请求用于删除服务器上的资源。",
+                                "identifier": "2eea695dab93478794180a19ac1dbada",
+                                "name": "DELETE"
+                            },
+                            {
+                                "description": "此等价类表示请求用于获取资源的头部信息，不包含响应体。",
+                                "identifier": "5c8eb704e3654d2e9346fe5d3669d453",
+                                "name": "HEAD"
+                            },
+                            {
+                                "description": "此等价类表示请求用于获取服务器支持的 HTTP 方法。",
+                                "identifier": "74a66a99ee494c8fa5577e3d7f4dcacf",
+                                "name": "OPTIONS"
+                            },
+                            {
+                                "description": "此等价类表示请求用于对资源进行部分更新。",
+                                "identifier": "053fd1e221f34be3a7e2b57c84745837",
+                                "name": "PATCH"
+                            },
+                            {
+                                "description": "此等价类表示非标准的或者不被服务器支持的 HTTP 方法。",
+                                "identifier": "b6e61da85b0f40c392925e57e7e15f7e",
+                                "name": "INVALID_METHOD"
+                            }
+                        ],
+                        "identifier": "208d3f93f5d74683ad9d0cacc4e61378",
+                        "name": "method"
+                    },
+                    {
+                        "description": "此属性包含请求的头部信息，用于发送元数据。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "Content-Type header set to 'application/x-www-form-urlencoded', which is the expected format for form data submission.",
+                                "identifier": "772601d65dc24a448367a194ab9cc705",
+                                "name": "ValidContentType"
+                            },
+                            {
+                                "description": "Content-Type header set to 'application/json', which is not used in the actual code and is invalid for form data submission.",
+                                "identifier": "e578ef254d2f4276b9089bde416a0a1c",
+                                "name": "InvalidContentTypeJSON"
+                            },
+                            {
+                                "description": "Content-Type header set to 'text/plain', which is not the expected format for form data submission.",
+                                "identifier": "798f7afec43c4ad883cf27465a7e97a3",
+                                "name": "InvalidContentTypeText"
+                            },
+                            {
+                                "description": "Content-Type header set to 'multipart/form-data', which is typically used for file uploads and not for the form data submission in this scenario.",
+                                "identifier": "ad80cbb83b0e47c6bc0550ded9cf7068",
+                                "name": "InvalidContentTypeMultipart"
+                            },
+                            {
+                                "description": "Content-Type header set to a custom type 'custom/type', which is not a standard or expected format without specific context.",
+                                "identifier": "9923bfd56c514fd8b330c90187812c15",
+                                "name": "InvalidContentTypeCustom"
+                            },
+                            {
+                                "description": "Missing Content-Type header, which may cause the server to incorrectly parse the request body or handle the request incorrectly.",
+                                "identifier": "818a9fe1e37544a894541974173b47f1",
+                                "name": "InvalidContentTypeMissing"
+                            },
+                            {
+                                "description": "Content-Type header is empty or null, which will prevent the server from determining the format of the request body, potentially leading to parsing errors.",
+                                "identifier": "0002ba4ef4e14a6eab80419bebf1b129",
+                                "name": "InvalidContentTypeEmptyOrNull"
+                            }
+                        ],
+                        "identifier": "b03ad0f847524106aa4aae265850a98e",
+                        "name": "headers"
+                    },
+                    {
+                        "description": "此属性用于发送请求的数据体，通常用于POST或PUT请求。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类包含正确编码的表单数据，符合服务器端接收和解析的要求。",
+                                "identifier": "49ca3494dab542d9afd823209af6b5bf",
+                                "name": "Correctly Encoded Form Data"
+                            },
+                            {
+                                "description": "此等价类包含未进行URL编码的特殊字符，可能导致服务器解析错误或安全问题。",
+                                "identifier": "4e27c526b69344e981f1c33b4c79976b",
+                                "name": "Special Characters Not Encoded"
+                            },
+                            {
+                                "description": "此等价类表示body为空，没有发送任何数据，服务器将无法获取必要的登录信息。",
+                                "identifier": "578ef2b33f8a4c0cbd147bfd6fbac5bb",
+                                "name": "Empty Body"
+                            },
+                            {
+                                "description": "此等价类包含非预期的数据格式，例如JSON而不是表单URL编码格式，服务器可能无法正确解析。",
+                                "identifier": "caf0cd7c3f034064b3aac60163e74989",
+                                "name": "Unexpected Data Format"
+                            },
+                            {
+                                "description": "此等价类在body中包含了敏感信息，如密码明文，违反了安全最佳实践。",
+                                "identifier": "97f7e9e06932428a8a659fd31b20fb31",
+                                "name": "Sensitive Information Included"
+                            },
+                            {
+                                "description": "此等价类表示body数据超出了服务器配置的长度限制，可能导致请求被拒绝。",
+                                "identifier": "1b603265a41f441d959c66a4284d8685",
+                                "name": "Exceeds Length Limit"
+                            },
+                            {
+                                "description": "此等价类包含非法字符，如控制字符或禁止的ASCII字符，可能导致服务器端处理异常。",
+                                "identifier": "c6557aac9c984264ab09b3c8d77a67b9",
+                                "name": "Contains Illegal Characters"
+                            },
+                            {
+                                "description": "此等价类使用错误的字符编码，如发送了非UTF-8编码的数据，可能导致服务器端解码错误。",
+                                "identifier": "56bc63a96c01463cb7918536737b46c7",
+                                "name": "Wrong Character Encoding"
+                            }
+                        ],
+                        "identifier": "f4fc5899e0614e5182b590bd1391a791",
+                        "name": "body"
+                    },
+                    {
+                        "description": "此属性指定了发送数据的媒体类型，例如application/x-www-form-urlencoded。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类表示客户端以 URL 编码格式发送表单数据，适用于大多数表单提交。",
+                                "identifier": "206e7579ff514789ba9404091714eeb7",
+                                "name": "application/x-www-form-urlencoded"
+                            },
+                            {
+                                "description": "此等价类用于发送文件和二进制数据，常用于文件上传。",
+                                "identifier": "0b9ce3cce19f433da18b646b4d6345d1",
+                                "name": "multipart/form-data"
+                            },
+                            {
+                                "description": "此等价类表示客户端以 JSON 格式发送数据，适用于 API 调用。",
+                                "identifier": "476266d72e5849acb4655414a171d640",
+                                "name": "application/json"
+                            },
+                            {
+                                "description": "此等价类表示数据为纯文本，不适用于表单数据的提交。",
+                                "identifier": "75a0a54d3f9a4e66b3fae8de9c1429cc",
+                                "name": "text/plain"
+                            },
+                            {
+                                "description": "此等价类用于发送 JPEG 图像数据，不适用于表单数据。",
+                                "identifier": "50f3da28cc9f4fb783438699fba64928",
+                                "name": "image/jpeg"
+                            },
+                            {
+                                "description": "此等价类用于发送二进制数据流，不适用于表单数据。",
+                                "identifier": "094587e359c848b799cbb1be39faa396",
+                                "name": "application/octet-stream"
+                            },
+                            {
+                                "description": "不设置或为空的 `Content-Type` 可能会导致服务器无法正确解析数据。",
+                                "identifier": "12f19a23691e41b3a031dbb559317743",
+                                "name": "Empty or Undefined"
+                            },
+                            {
+                                "description": "包含非法字符的 `Content-Type` 值可能会导致服务器解析错误。",
+                                "identifier": "35353d19b6134313bc48939a6e48ab78",
+                                "name": "String with Special Characters"
+                            },
+                            {
+                                "description": "错误的 MIME 类型，如 `applicaton/x-www-form-urlencoded`（拼写错误），将不被服务器正确识别。",
+                                "identifier": "086badca28b84a8e8b40ffe40c6f7e53",
+                                "name": "Incorrect MIME Type"
+                            },
+                            {
+                                "description": "过长的 MIME 类型字符串可能会超出服务器处理能力或不符合规范要求。",
+                                "identifier": "0247c58ff0704bbdba5c0a5d74ff7041",
+                                "name": "Excessively Long MIME Type String"
+                            }
+                        ],
+                        "identifier": "40f943690b7540c6b54dea4d29f2de24",
+                        "name": "Content-Type"
+                    },
+                    {
+                        "description": "此属性在请求体中表示用户的登录名。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "Username length is between 5 to 20 characters, without any special characters.",
+                                "identifier": "7fc37bd10c55450c8b6620e4953ea561",
+                                "name": "Valid Username"
+                            },
+                            {
+                                "description": "Username length is less than 5 characters.",
+                                "identifier": "c2ec1ef1a154446b98e7a4300267f43a",
+                                "name": "Too Short"
+                            },
+                            {
+                                "description": "Username length is more than 20 characters.",
+                                "identifier": "25222a5174024515bf3ee50b45c4c16a",
+                                "name": "Too Long"
+                            },
+                            {
+                                "description": "Username contains any character from the defined special character set.",
+                                "identifier": "2d43a594d6244b43a95e7cda45412f41",
+                                "name": "Contains Special Characters"
+                            }
+                        ],
+                        "identifier": "166d696505e448788a59e991893e5bcb",
+                        "name": "username"
+                    },
+                    {
+                        "description": "此属性在请求体中表示用户的登录密码。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码长度至少为8个字符，且不包含任何特殊字符，符合安全要求。",
+                                "identifier": "5ff355043e01475592acc45e5edeebc8",
+                                "name": "Strong Password"
+                            },
+                            {
+                                "description": "密码长度小于8个字符，不符合最小长度要求。",
+                                "identifier": "714a566abcec4f69996892ee718c6187",
+                                "name": "Insufficient Length"
+                            },
+                            {
+                                "description": "密码包含特殊字符，违反了不包含特殊字符的规则。",
+                                "identifier": "93de9785b28d4b5db7da3cf1f10cb548",
+                                "name": "Contains Special Characters"
+                            },
+                            {
+                                "description": "密码长度恰好为8个字符，且不包含任何特殊字符，满足最小安全标准。",
+                                "identifier": "db1db15ff57743f9aa9598246ab973b1",
+                                "name": "Minimum Length No Special Characters"
+                            },
+                            {
+                                "description": "密码长度超过8个字符，且不包含任何特殊字符，提供了更高级别的安全性。",
+                                "identifier": "310ea92aff704184811a1dc4fc28c748",
+                                "name": "Exceeds Minimum Length No Special Characters"
+                            },
+                            {
+                                "description": "密码字段为空，没有输入任何字符，无法满足基本的密码要求。",
+                                "identifier": "83eafd3f7ea74eaba9ebc9200e54f117",
+                                "name": "Empty Password"
+                            },
+                            {
+                                "description": "密码只由特殊字符组成，没有达到至少8个字符的要求，且违反了密码规则。",
+                                "identifier": "500a8d7e85e544e19ae7897bb0f7e385",
+                                "name": "Only Special Characters"
+                            },
+                            {
+                                "description": "虽然密码长度超过8个字符，但超过了20个字符的限制，不符合最大长度要求。",
+                                "identifier": "81173b1acc9d4981ae7b1324d7b5ff1a",
+                                "name": "Exceeds Maximum Length"
+                            }
+                        ],
+                        "identifier": "ad857d92f045401da3567acbe6f07333",
+                        "name": "password"
+                    },
+                    {
+                        "description": "此属性在响应数据中表示登录请求是否成功。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "表示服务器端验证用户登录信息正确，允许用户登录。",
+                                "identifier": "861cecdbe0844f77a46d08862ae6febb",
+                                "name": "True"
+                            },
+                            {
+                                "description": "表示服务器端验证用户登录信息失败，拒绝用户登录。",
+                                "identifier": "7f24242b1b9246ae866d2a7161888d8c",
+                                "name": "False"
+                            },
+                            {
+                                "description": "由于`success`属性预期为布尔值，任何非布尔值都不符合预期，可能导致客户端逻辑错误或异常。",
+                                "identifier": "ae733918564942529f6d01eaf3c5188f",
+                                "name": "Non-Boolean"
+                            },
+                            {
+                                "description": "如果`success`属性未被定义或未能从服务器返回，客户端将无法正确判断登录操作的结果。",
+                                "identifier": "8449dc6ed7134b5d8f4117b0e7186c55",
+                                "name": "Undefined or Not Returned"
+                            }
+                        ],
+                        "identifier": "540019a97e194521ae9bc3bc8d1c409d",
+                        "name": "success"
+                    }
+                ],
+                "description": "用于向服务器发送登录请求的 API。",
+                "identifier": "7159d3d2cd944048a9f862a77d9726c6",
+                "name": "fetch API",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "208d3f93f5d74683ad9d0cacc4e61378",
+                                "equivalenceClassId": "5c8eb704e3654d2e9346fe5d3669d453"
+                            },
+                            {
+                                "attributeId": "b03ad0f847524106aa4aae265850a98e",
+                                "equivalenceClassId": "0002ba4ef4e14a6eab80419bebf1b129"
+                            },
+                            {
+                                "attributeId": "f4fc5899e0614e5182b590bd1391a791",
+                                "equivalenceClassId": "97f7e9e06932428a8a659fd31b20fb31"
+                            },
+                            {
+                                "attributeId": "40f943690b7540c6b54dea4d29f2de24",
+                                "equivalenceClassId": "35353d19b6134313bc48939a6e48ab78"
+                            },
+                            {
+                                "attributeId": "166d696505e448788a59e991893e5bcb",
+                                "equivalenceClassId": "25222a5174024515bf3ee50b45c4c16a"
+                            },
+                            {
+                                "attributeId": "ad857d92f045401da3567acbe6f07333",
+                                "equivalenceClassId": "83eafd3f7ea74eaba9ebc9200e54f117"
+                            },
+                            {
+                                "attributeId": "540019a97e194521ae9bc3bc8d1c409d",
+                                "equivalenceClassId": "861cecdbe0844f77a46d08862ae6febb"
+                            }
+                        ],
+                        "identifier": "3ea86fbab17240e380c2cb71bc9697f9",
+                        "name": "\"请求参数异常状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "208d3f93f5d74683ad9d0cacc4e61378",
+                                "equivalenceClassId": "053fd1e221f34be3a7e2b57c84745837"
+                            },
+                            {
+                                "attributeId": "b03ad0f847524106aa4aae265850a98e",
+                                "equivalenceClassId": "ad80cbb83b0e47c6bc0550ded9cf7068"
+                            },
+                            {
+                                "attributeId": "f4fc5899e0614e5182b590bd1391a791",
+                                "equivalenceClassId": "49ca3494dab542d9afd823209af6b5bf"
+                            },
+                            {
+                                "attributeId": "40f943690b7540c6b54dea4d29f2de24",
+                                "equivalenceClassId": "75a0a54d3f9a4e66b3fae8de9c1429cc"
+                            },
+                            {
+                                "attributeId": "166d696505e448788a59e991893e5bcb",
+                                "equivalenceClassId": "2d43a594d6244b43a95e7cda45412f41"
+                            },
+                            {
+                                "attributeId": "ad857d92f045401da3567acbe6f07333",
+                                "equivalenceClassId": "81173b1acc9d4981ae7b1324d7b5ff1a"
+                            },
+                            {
+                                "attributeId": "540019a97e194521ae9bc3bc8d1c409d",
+                                "equivalenceClassId": "8449dc6ed7134b5d8f4117b0e7186c55"
+                            }
+                        ],
+                        "identifier": "b98c3722535742a1a8e304a63ad47ce0",
+                        "name": "\"PATCH请求参数异常\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "208d3f93f5d74683ad9d0cacc4e61378",
+                                "equivalenceClassId": "2eea695dab93478794180a19ac1dbada"
+                            },
+                            {
+                                "attributeId": "b03ad0f847524106aa4aae265850a98e",
+                                "equivalenceClassId": "798f7afec43c4ad883cf27465a7e97a3"
+                            },
+                            {
+                                "attributeId": "f4fc5899e0614e5182b590bd1391a791",
+                                "equivalenceClassId": "578ef2b33f8a4c0cbd147bfd6fbac5bb"
+                            },
+                            {
+                                "attributeId": "40f943690b7540c6b54dea4d29f2de24",
+                                "equivalenceClassId": "12f19a23691e41b3a031dbb559317743"
+                            },
+                            {
+                                "attributeId": "166d696505e448788a59e991893e5bcb",
+                                "equivalenceClassId": "7fc37bd10c55450c8b6620e4953ea561"
+                            },
+                            {
+                                "attributeId": "ad857d92f045401da3567acbe6f07333",
+                                "equivalenceClassId": "310ea92aff704184811a1dc4fc28c748"
+                            },
+                            {
+                                "attributeId": "540019a97e194521ae9bc3bc8d1c409d",
+                                "equivalenceClassId": "ae733918564942529f6d01eaf3c5188f"
+                            }
+                        ],
+                        "identifier": "93a78a4aa00e4a8596a7c302404a01aa",
+                        "name": "无效内容类型删除请求"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "208d3f93f5d74683ad9d0cacc4e61378",
+                                "equivalenceClassId": "3f04195c7ed047ac8164163bc7fd7a35"
+                            },
+                            {
+                                "attributeId": "b03ad0f847524106aa4aae265850a98e",
+                                "equivalenceClassId": "818a9fe1e37544a894541974173b47f1"
+                            },
+                            {
+                                "attributeId": "f4fc5899e0614e5182b590bd1391a791",
+                                "equivalenceClassId": "4e27c526b69344e981f1c33b4c79976b"
+                            },
+                            {
+                                "attributeId": "40f943690b7540c6b54dea4d29f2de24",
+                                "equivalenceClassId": "094587e359c848b799cbb1be39faa396"
+                            },
+                            {
+                                "attributeId": "166d696505e448788a59e991893e5bcb",
+                                "equivalenceClassId": "c2ec1ef1a154446b98e7a4300267f43a"
+                            },
+                            {
+                                "attributeId": "ad857d92f045401da3567acbe6f07333",
+                                "equivalenceClassId": "db1db15ff57743f9aa9598246ab973b1"
+                            },
+                            {
+                                "attributeId": "540019a97e194521ae9bc3bc8d1c409d",
+                                "equivalenceClassId": "7f24242b1b9246ae866d2a7161888d8c"
+                            }
+                        ],
+                        "identifier": "4464d433855248bd9ce89fa50f18ef29",
+                        "name": "\"请求失败：参数错误\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "208d3f93f5d74683ad9d0cacc4e61378",
+                                "equivalenceClassId": "b6e61da85b0f40c392925e57e7e15f7e"
+                            },
+                            {
+                                "attributeId": "b03ad0f847524106aa4aae265850a98e",
+                                "equivalenceClassId": "ad80cbb83b0e47c6bc0550ded9cf7068"
+                            },
+                            {
+                                "attributeId": "f4fc5899e0614e5182b590bd1391a791",
+                                "equivalenceClassId": "c6557aac9c984264ab09b3c8d77a67b9"
+                            },
+                            {
+                                "attributeId": "40f943690b7540c6b54dea4d29f2de24",
+                                "equivalenceClassId": "0247c58ff0704bbdba5c0a5d74ff7041"
+                            },
+                            {
+                                "attributeId": "166d696505e448788a59e991893e5bcb",
+                                "equivalenceClassId": "25222a5174024515bf3ee50b45c4c16a"
+                            },
+                            {
+                                "attributeId": "ad857d92f045401da3567acbe6f07333",
+                                "equivalenceClassId": "714a566abcec4f69996892ee718c6187"
+                            },
+                            {
+                                "attributeId": "540019a97e194521ae9bc3bc8d1c409d",
+                                "equivalenceClassId": "7f24242b1b9246ae866d2a7161888d8c"
+                            }
+                        ],
+                        "identifier": "f47b50240246452780f7026638dfa3ea",
+                        "name": "请求验证失败"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "208d3f93f5d74683ad9d0cacc4e61378",
+                                "equivalenceClassId": "3f04195c7ed047ac8164163bc7fd7a35"
+                            },
+                            {
+                                "attributeId": "b03ad0f847524106aa4aae265850a98e",
+                                "equivalenceClassId": "772601d65dc24a448367a194ab9cc705"
+                            },
+                            {
+                                "attributeId": "f4fc5899e0614e5182b590bd1391a791",
+                                "equivalenceClassId": "1b603265a41f441d959c66a4284d8685"
+                            },
+                            {
+                                "attributeId": "40f943690b7540c6b54dea4d29f2de24",
+                                "equivalenceClassId": "206e7579ff514789ba9404091714eeb7"
+                            },
+                            {
+                                "attributeId": "166d696505e448788a59e991893e5bcb",
+                                "equivalenceClassId": "2d43a594d6244b43a95e7cda45412f41"
+                            },
+                            {
+                                "attributeId": "ad857d92f045401da3567acbe6f07333",
+                                "equivalenceClassId": "5ff355043e01475592acc45e5edeebc8"
+                            },
+                            {
+                                "attributeId": "540019a97e194521ae9bc3bc8d1c409d",
+                                "equivalenceClassId": "ae733918564942529f6d01eaf3c5188f"
+                            }
+                        ],
+                        "identifier": "0c7ce9afc6504d9abeb6d01422a46274",
+                        "name": "状态名：请求参数异常"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "用户名，用于登录验证的标识。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户名长度在5到20个字符之间（此等价类表示用户名符合系统规定的最小和最大长度要求）。",
+                                "identifier": "f41ad7a89f08484283ecdf3450116422",
+                                "name": "Valid Length"
+                            },
+                            {
+                                "description": "用户名长度小于5个字符（此等价类表示用户名过短，不符合系统要求）。",
+                                "identifier": "1a6f550642f544e2b389b8b2d8f3b282",
+                                "name": "Invalid Length - Too Short"
+                            },
+                            {
+                                "description": "用户名长度超过20个字符（此等价类表示用户名过长，超出系统允许的范围）。",
+                                "identifier": "be8cc8fc70684e8e989b1cd7d9e823d9",
+                                "name": "Invalid Length - Too Long"
+                            },
+                            {
+                                "description": "用户名只包含字母数字字符（此等价类表示用户名由系统允许的字符组成，没有特殊字符）。",
+                                "identifier": "97dea8d7f8e247b0bc8b8943deb4ce89",
+                                "name": "Valid Characters"
+                            },
+                            {
+                                "description": "用户名包含特殊字符（此等价类表示用户名含有系统不允许的字符，如空格、标点符号等）。",
+                                "identifier": "fd622abe70c6473baf8e3bbe63736c3b",
+                                "name": "Invalid Characters - Contains Special Characters"
+                            }
+                        ],
+                        "identifier": "3ebaab89c628455697ecd4e07ef864b0",
+                        "name": "username"
+                    },
+                    {
+                        "description": "密码，用于验证用户身份的凭证。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码长度小于8个字符。",
+                                "identifier": "0a49cd86a44a4fb2833951c85d56775c",
+                                "name": "Invalid Length"
+                            },
+                            {
+                                "description": "密码包含特殊字符（`/[ `!@#$%^&*()_+\\-=\\[\\]{};':\"\\|,.<>/?~]/`）。",
+                                "identifier": "491f0e0ec3b443f69e8bc213d360ac88",
+                                "name": "Contains Special Characters"
+                            },
+                            {
+                                "description": "密码不包含任何特殊字符。",
+                                "identifier": "9e24ad19d5c24d6097924e41846d6a74",
+                                "name": "Does Not Contain Special Characters"
+                            },
+                            {
+                                "description": "密码完全由字母和数字组成。",
+                                "identifier": "8ac2c81290fa4bb9ae1c4fbaa55918ed",
+                                "name": "Alphanumeric"
+                            },
+                            {
+                                "description": "密码包含非字母数字的字符。",
+                                "identifier": "e1a3010d483247c5b91f7b9a3da21f9a",
+                                "name": "Non-Alphanumeric"
+                            },
+                            {
+                                "description": "密码包含大小写字母。",
+                                "identifier": "09078868546448f089d1fe1ef99249ee",
+                                "name": "Mixed Case"
+                            },
+                            {
+                                "description": "密码全部为大写或全部为小写字母。",
+                                "identifier": "92a615b0f2464acface35580636c1426",
+                                "name": "Single Case"
+                            },
+                            {
+                                "description": "密码字段为空。",
+                                "identifier": "3e832475473a43b49b512d9cdba42296",
+                                "name": "Empty"
+                            },
+                            {
+                                "description": "密码字段只包含空白字符。",
+                                "identifier": "ec026e6de4c244c7af64224dd7b58dc4",
+                                "name": "Whitespace"
+                            },
+                            {
+                                "description": "假设没有明确的最大长度限制，可以认为密码可以非常长。",
+                                "identifier": "a5cb99c1db55498aac15e6909a3a76ec",
+                                "name": "Maximum Length"
+                            },
+                            {
+                                "description": "密码包含连续的字符（例如，'123456'或'abcde'）。",
+                                "identifier": "29ceea614f4449bd880f99631c5fdf6b",
+                                "name": "Consecutive Characters"
+                            },
+                            {
+                                "description": "密码中的字符不是连续的。",
+                                "identifier": "8db249d40fbf4c6e9ae5ae59c1f5e0e5",
+                                "name": "Non-Consecutive Characters"
+                            },
+                            {
+                                "description": "密码是常见的密码（例如，'password', '123456'等）。",
+                                "identifier": "06b4ceaeb78d45588a2efac1c7957f41",
+                                "name": "Common Passwords"
+                            },
+                            {
+                                "description": "密码不是常见的密码。",
+                                "identifier": "f07095145f5343a3855f397503ee0bce",
+                                "name": "Uncommon Passwords"
+                            }
+                        ],
+                        "identifier": "66da8930c4ec41c9a23b96c0a0f65040",
+                        "name": "password"
+                    }
+                ],
+                "description": "用户选择的文件，用于上传。",
+                "identifier": "bb48adb9dc174799ba772cbe6e8957b8",
+                "name": "文件",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3ebaab89c628455697ecd4e07ef864b0",
+                                "equivalenceClassId": "97dea8d7f8e247b0bc8b8943deb4ce89"
+                            },
+                            {
+                                "attributeId": "66da8930c4ec41c9a23b96c0a0f65040",
+                                "equivalenceClassId": "ec026e6de4c244c7af64224dd7b58dc4"
+                            }
+                        ],
+                        "identifier": "e47a1ef535a74db6ab2c2cee8f9cc5ef",
+                        "name": "\"用户名字符有效性检查\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3ebaab89c628455697ecd4e07ef864b0",
+                                "equivalenceClassId": "be8cc8fc70684e8e989b1cd7d9e823d9"
+                            },
+                            {
+                                "attributeId": "66da8930c4ec41c9a23b96c0a0f65040",
+                                "equivalenceClassId": "a5cb99c1db55498aac15e6909a3a76ec"
+                            }
+                        ],
+                        "identifier": "c0f08931ecb94dca99d741ab060e7d5f",
+                        "name": "\"用户名超长密码最大长度\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3ebaab89c628455697ecd4e07ef864b0",
+                                "equivalenceClassId": "fd622abe70c6473baf8e3bbe63736c3b"
+                            },
+                            {
+                                "attributeId": "66da8930c4ec41c9a23b96c0a0f65040",
+                                "equivalenceClassId": "491f0e0ec3b443f69e8bc213d360ac88"
+                            }
+                        ],
+                        "identifier": "32e0b1a081484d2096aad4f7abc7a5a2",
+                        "name": "特殊字符用户名密码无效"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3ebaab89c628455697ecd4e07ef864b0",
+                                "equivalenceClassId": "97dea8d7f8e247b0bc8b8943deb4ce89"
+                            },
+                            {
+                                "attributeId": "66da8930c4ec41c9a23b96c0a0f65040",
+                                "equivalenceClassId": "29ceea614f4449bd880f99631c5fdf6b"
+                            }
+                        ],
+                        "identifier": "1152348aca35450081e09b279c0c878b",
+                        "name": "\"用户名字符有效性\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3ebaab89c628455697ecd4e07ef864b0",
+                                "equivalenceClassId": "fd622abe70c6473baf8e3bbe63736c3b"
+                            },
+                            {
+                                "attributeId": "66da8930c4ec41c9a23b96c0a0f65040",
+                                "equivalenceClassId": "e1a3010d483247c5b91f7b9a3da21f9a"
+                            }
+                        ],
+                        "identifier": "51597be6e7414bf38ebae8b657e5181d",
+                        "name": "特殊字符用户名与非字母数字密码"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3ebaab89c628455697ecd4e07ef864b0",
+                                "equivalenceClassId": "be8cc8fc70684e8e989b1cd7d9e823d9"
+                            },
+                            {
+                                "attributeId": "66da8930c4ec41c9a23b96c0a0f65040",
+                                "equivalenceClassId": "ec026e6de4c244c7af64224dd7b58dc4"
+                            }
+                        ],
+                        "identifier": "727bc133bc7048ee9483ab27a9ea74e9",
+                        "name": "\"用户名过长或密码空白\""
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "文件输入控件，用于获取用户选择的文件。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "The class where the file input is either present or absent.",
+                                "identifier": "aca9380118d740f4927e870f851c8c95",
+                                "name": "Existence Equivalence Class"
+                            },
+                            {
+                                "description": "The class where the file has an extension of xlsx, xls, pdf, docx, doc, or txt, case insensitive.",
+                                "identifier": "2cb0c1bbeba14e8d978229c81103b74f",
+                                "name": "File Type Equivalence Class"
+                            },
+                            {
+                                "description": "The class where the file content meets specific format or standards, though not directly checked in the validateUpload function.",
+                                "identifier": "1fdfa732183e427c989e1bb277842dfa",
+                                "name": "File Content Equivalence Class"
+                            },
+                            {
+                                "description": "The class where the file size is within the allowed range, though not checked in the validateUpload function.",
+                                "identifier": "effffb9b36eb4707a3cf157cd2882ad3",
+                                "name": "File Size Equivalence Class"
+                            },
+                            {
+                                "description": "The class where the filename adheres to specific naming rules or formats, though not checked in the validateUpload function.",
+                                "identifier": "edb4811b024043618fac240f8e137440",
+                                "name": "Filename Equivalence Class"
+                            },
+                            {
+                                "description": "The class where the file is readable and not corrupted, though not checked in the validateUpload function.",
+                                "identifier": "fd86f6b07eaf4c3d979ee0987cb5e92e",
+                                "name": "File Status Equivalence Class"
+                            },
+                            {
+                                "description": "The class where the file has the necessary permissions for upload, though not checked in the validateUpload function.",
+                                "identifier": "865e9e8689f849cea6c0c99126c0eadd",
+                                "name": "File Permission Equivalence Class"
+                            }
+                        ],
+                        "identifier": "df1c69ee4e4e47318ec6203ad850866b",
+                        "name": "fileInput"
+                    },
+                    {
+                        "description": "文件名，用于校验文件的扩展名是否符合要求。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "文件名包含允许的扩展名（xlsx, xls, pdf, docx, doc, txt），大小写不敏感。",
+                                "identifier": "bfd7d13ac56747c2b68dd4a9bdcfe5a3",
+                                "name": "Valid Extension"
+                            },
+                            {
+                                "description": "文件名包含不允许的扩展名，或者没有扩展名。",
+                                "identifier": "9493f586de8b4d729093e06062d1ef3e",
+                                "name": "Invalid Extension"
+                            },
+                            {
+                                "description": "文件名为空字符串，没有指定任何扩展名。",
+                                "identifier": "5f271a00072a4942b179802ef211c8e5",
+                                "name": "Empty Filename"
+                            },
+                            {
+                                "description": "文件名包含特殊字符，尽管不在扩展名中，但可能影响文件的识别和处理。",
+                                "identifier": "456a0ba6ccb94627b9045de3c642b75f",
+                                "name": "Special Characters in Filename"
+                            },
+                            {
+                                "description": "文件名的扩展名以前导点开始，例如'.file.txt'。",
+                                "identifier": "5c605aa4328e43ff82342189e406cc4f",
+                                "name": "Extension with Leading Period"
+                            },
+                            {
+                                "description": "文件名包含多个扩展名，例如'document.tar.gz'。",
+                                "identifier": "6a098663b1314b7b82781d53483b260c",
+                                "name": "Multiple Extensions"
+                            },
+                            {
+                                "description": "文件名的扩展名包含数字，例如'photo.20230401.jpg'。",
+                                "identifier": "dba141b52d33402e8825bc3ae860c1a5",
+                                "name": "Extension with Numbers"
+                            },
+                            {
+                                "description": "文件名的扩展名全部大写，例如'FILE.PDF'。",
+                                "identifier": "03cb08cdafad437cb69b958cc0eb917e",
+                                "name": "Uppercase Extension"
+                            },
+                            {
+                                "description": "文件名包含空格，例如'report.xlsx'。",
+                                "identifier": "fd54372eb1384d229692ebb77931f40f",
+                                "name": "Filename with Spaces"
+                            },
+                            {
+                                "description": "文件名包含非英文字符，例如'rapport.xlsx'（法文中的报告）。",
+                                "identifier": "180a5f303eb1442f959af8a8d07ee79d",
+                                "name": "Filename with Non-English Characters"
+                            }
+                        ],
+                        "identifier": "fab9e1cea75740f08c790825ec8df95d",
+                        "name": "fileInput.name"
+                    },
+                    {
+                        "description": "匹配操作，用于检查文件名是否符合规定的格式。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "这个等价类包括所有文件名，其扩展名是允许的格式，如 '.xlsx', '.xls', '.pdf', '.docx', '.doc' 或 '.txt'。",
+                                "identifier": "c1ea80d0f559456ca032a0759f769bf8",
+                                "name": "Extension Matches Allowed Types"
+                            },
+                            {
+                                "description": "这个等价类包括所有文件名，其扩展名不是上述允许的格式，例如 '.jpg', '.png', '.mp4' 等。",
+                                "identifier": "5eb1ad62d650476289f341969ae7238b",
+                                "name": "Extension Does Not Match Allowed Types"
+                            },
+                            {
+                                "description": "这个等价类包括所有文件名，其扩展名在不区分大小写的情况下匹配允许的格式，例如 '.TXT', '.Docx'。",
+                                "identifier": "22ae505b37ba482fa3a27f812b919114",
+                                "name": "Case Insensitivity"
+                            },
+                            {
+                                "description": "这个等价类包括所有没有扩展名的文件名，例如 'report' 或 'image'。",
+                                "identifier": "544b986cf67c471692d6bca9592d296c",
+                                "name": "File Without Extension"
+                            },
+                            {
+                                "description": "这个等价类包括所有文件名，它们可能有多个点，但最后一个点之后的部分不匹配允许的格式，例如 'archive.tar.gz' 或 'presentation.pptx'。",
+                                "identifier": "f3b5d60088a74615991c906f861035ed",
+                                "name": "File With Multiple Extensions"
+                            },
+                            {
+                                "description": "这个等价类包括所有文件名，其扩展名被隐藏或不可见，例如在某些操作系统中，文件名可能不显示扩展名。",
+                                "identifier": "180a74198071472face2a9a9028cf9b1",
+                                "name": "File With Hidden Extension"
+                            },
+                            {
+                                "description": "这个等价类包括所有文件名，它们包含特殊字符，这些字符可能影响文件扩展名的识别，例如 'report#2023.xlsx'。",
+                                "identifier": "693e4bbdb6c946c3a6c5bd50a635b0e4",
+                                "name": "File With Special Characters"
+                            },
+                            {
+                                "description": "这个等价类包括没有文件名的情况，例如用户上传了一个没有命名的文件。",
+                                "identifier": "ea73dff9ddd24386b46ac5808741ac77",
+                                "name": "File With No Name"
+                            },
+                            {
+                                "description": "这个等价类包括文件名以点开头的情况，这在某些操作系统中可能表示隐藏文件，例如 '.important_document.txt'。",
+                                "identifier": "dc312976860b4aaba41424fd58ea5e0c",
+                                "name": "File With Leading Period"
+                            },
+                            {
+                                "description": "这个等价类包括文件名在扩展名之后有额外字符的情况，这些字符不应该是文件名的一部分，例如 'report2023v2.xlsxv2'。",
+                                "identifier": "28ee4d5e75d846e1a83dbb24a2e31d93",
+                                "name": "File With Trailing Characters After Extension"
+                            }
+                        ],
+                        "identifier": "f548ee788f6646b1b2b8a6d734c215f6",
+                        "name": "fileInput.name.match"
+                    }
+                ],
+                "description": "文件上传表单提交时调用的验证函数，用于检查文件是否存在以及文件的扩展名是否符合要求。",
+                "identifier": "734de84bfd134083a409e63922555bd2",
+                "name": "validateUpload 函数",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "df1c69ee4e4e47318ec6203ad850866b",
+                                "equivalenceClassId": "1fdfa732183e427c989e1bb277842dfa"
+                            },
+                            {
+                                "attributeId": "fab9e1cea75740f08c790825ec8df95d",
+                                "equivalenceClassId": "456a0ba6ccb94627b9045de3c642b75f"
+                            },
+                            {
+                                "attributeId": "f548ee788f6646b1b2b8a6d734c215f6",
+                                "equivalenceClassId": "dc312976860b4aaba41424fd58ea5e0c"
+                            }
+                        ],
+                        "identifier": "78376778f0d7468e8aae63937615f917",
+                        "name": "\"文件属性验证状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "df1c69ee4e4e47318ec6203ad850866b",
+                                "equivalenceClassId": "aca9380118d740f4927e870f851c8c95"
+                            },
+                            {
+                                "attributeId": "fab9e1cea75740f08c790825ec8df95d",
+                                "equivalenceClassId": "180a5f303eb1442f959af8a8d07ee79d"
+                            },
+                            {
+                                "attributeId": "f548ee788f6646b1b2b8a6d734c215f6",
+                                "equivalenceClassId": "544b986cf67c471692d6bca9592d296c"
+                            }
+                        ],
+                        "identifier": "b60a8487425b4e69bdd49bd93ff0d35f",
+                        "name": "\"文件上传验证状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "df1c69ee4e4e47318ec6203ad850866b",
+                                "equivalenceClassId": "1fdfa732183e427c989e1bb277842dfa"
+                            },
+                            {
+                                "attributeId": "fab9e1cea75740f08c790825ec8df95d",
+                                "equivalenceClassId": "bfd7d13ac56747c2b68dd4a9bdcfe5a3"
+                            },
+                            {
+                                "attributeId": "f548ee788f6646b1b2b8a6d734c215f6",
+                                "equivalenceClassId": "ea73dff9ddd24386b46ac5808741ac77"
+                            }
+                        ],
+                        "identifier": "580a9c31aa1a4136995a68cf7767b065",
+                        "name": "\"文件内容与扩展名验证\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "df1c69ee4e4e47318ec6203ad850866b",
+                                "equivalenceClassId": "fd86f6b07eaf4c3d979ee0987cb5e92e"
+                            },
+                            {
+                                "attributeId": "fab9e1cea75740f08c790825ec8df95d",
+                                "equivalenceClassId": "5c605aa4328e43ff82342189e406cc4f"
+                            },
+                            {
+                                "attributeId": "f548ee788f6646b1b2b8a6d734c215f6",
+                                "equivalenceClassId": "dc312976860b4aaba41424fd58ea5e0c"
+                            }
+                        ],
+                        "identifier": "16b75e113b53403e8649fd9c5b9eeb15",
+                        "name": "文件状态验证"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "df1c69ee4e4e47318ec6203ad850866b",
+                                "equivalenceClassId": "fd86f6b07eaf4c3d979ee0987cb5e92e"
+                            },
+                            {
+                                "attributeId": "fab9e1cea75740f08c790825ec8df95d",
+                                "equivalenceClassId": "fd54372eb1384d229692ebb77931f40f"
+                            },
+                            {
+                                "attributeId": "f548ee788f6646b1b2b8a6d734c215f6",
+                                "equivalenceClassId": "693e4bbdb6c946c3a6c5bd50a635b0e4"
+                            }
+                        ],
+                        "identifier": "1e42abf122074637adfc4adfcb0c7088",
+                        "name": "状态名：文件状态等价类验证"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "df1c69ee4e4e47318ec6203ad850866b",
+                                "equivalenceClassId": "effffb9b36eb4707a3cf157cd2882ad3"
+                            },
+                            {
+                                "attributeId": "fab9e1cea75740f08c790825ec8df95d",
+                                "equivalenceClassId": "5c605aa4328e43ff82342189e406cc4f"
+                            },
+                            {
+                                "attributeId": "f548ee788f6646b1b2b8a6d734c215f6",
+                                "equivalenceClassId": "c1ea80d0f559456ca032a0759f769bf8"
+                            }
+                        ],
+                        "identifier": "7ac8ac3207ba42509bc134be2b43c105",
+                        "name": "\"文件属性验证状态\""
+                    }
+                ]
+            }
+        ],
+        "name": "登录页面",
+        "states": []
+    }
+}

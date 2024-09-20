@@ -1,0 +1,246 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "9bb529e0e1bcaf68dbe4f444a2c25bf9",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "8d4da3e2713fb49656f4a69af4b39d36",
+                        "name": "图书列表",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开图书列表页面",
+                            "identifier": "6a72582acdb48729111e1a39cc5a9380",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "5bfdc5e24864cf345bc22b46a5a52ffc",
+                "name": "图书列表",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "0acac2db10c78d9d503094405ccfb2b9",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "844225994ff6b97a186e924759f6435e",
+                        "name": "图书商家",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开图书商家页面",
+                            "identifier": "14321afecf648ef40e8502b11850a1b6",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "460ff52d7d48f08c556a1867c5dc45d5",
+                "name": "图书上架",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "57d53a380ed107858ef8af242ff3b13b",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "d9ba2af4aadb4591a8090743babbfc93",
+                        "name": "搜索图书",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开搜索图书页面",
+                            "identifier": "cb3111674a490eb8c1b094cabd36e449",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "c20deb79161fb5797204abe6a6b1ce35",
+                "name": "搜索图书",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "89453cea8afe32b4fcd914698cc7dac2",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "ae9c1818c666ca75c305858d22bbf6f2",
+                        "name": "借阅图书",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开借阅图书页面",
+                            "identifier": "245e1ff95a2f0aac04d5e44ac8977152",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "bfe21f3f7558fe0cc31d40d637a666b1",
+                "name": "借阅图书",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "63975f79739e0265398f73f16cf39256",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "e9d7cbfd76a973ad569f4e2d9dc5446d",
+                        "name": "归还图书",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开归还图书页面",
+                            "identifier": "1ff211e111abf55718c8d9f84e21f24e",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "e1e3b08c39cb5af9b2608c597684e1f7",
+                "name": "归还图书",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "f6896c2ba4d4c82019299ebcf16dbed2",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "9efc8a235d8a4aee5ff0c03deffe9bf7",
+                        "name": "读者列表",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开读者列表页面",
+                            "identifier": "d5a73189be8a25ebe98753b615d78c31",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "dcbc954009f40d1b72a88b12d72cd071",
+                "name": "读者列表",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "caa66a7f86f8859cb96cc5db64825dec",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "b43ee7282288a28b168a2a8bf34861a4",
+                        "name": "读者添加",
+                        "nextCar": [],
+                        "result": {
+                            "description": "添加读者添加页面",
+                            "identifier": "c17f8065965f432dd142f118a790a9a5",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "b25e394ec38254e12ae12a473108412c",
+                "name": "读者添加",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "5176f8953a4142560657afcdc9bb8408",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "b5db679dbaa6f268caa7de12392279c9",
+                        "name": "个人信息",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开个人信息页面",
+                            "identifier": "4412a01eb4f7a4bb47410fb3f4b5a11e",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "1998587887957fce495cda73a887ab07",
+                "name": "个人信息",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "a7a292dcb45930617e876000ed23c2df",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "ec86274aa7530c9fb67a3254299f3c30",
+                        "name": "用户管理",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开用户管理页面",
+                            "identifier": "314a1bc783fd8206afb0b026f64fbb31",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "62f6b20e503c0df2fe5edf0a374fdce1",
+                "name": "用户管理",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "65ceb6adc1044a1b9f28f24affb9aa14",
+        "memberObjects": [],
+        "name": "图书管理系统首页",
+        "states": []
+    }
+}

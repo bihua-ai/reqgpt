@@ -1,0 +1,394 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "My Support Team",
+            "url": "https://www.example.com/support"
+        },
+        "description": "项目描述：一个包含用户登录验证和文件上传功能的网页应用，支持特定格式的文件上传，并在前端进行基本的输入验证。",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "项目描述：一个包含用户登录验证和文件上传功能的网页应用，支持特定格式的文件上传，并在前端进行基本的输入验证。",
+        "termsOfService": "https://example.com/terms/",
+        "title": "安全文件上传与登录验证系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "description": "用户通过输入账号和密码进行系统登录\n\n        操作相关变量部分：\n        variable name: username\n        identifier: b502d675a0804abaaf78b33c8b5b07d4\n        description: 用户名，用于登录系统的身份验证。\n 是登录操作的输入变量变量。\n\n        \n        variable name: password\n        identifier: 338ab458b28f4c699553583174a4dad6\n        description: 密码，与用户名一起用于登录系统的身份验证。\n 是登录操作的输入变量变量。\n\n        ",
+                "identifier": "4ba9385548b64fd19ad7612e7d526e7c",
+                "name": "登录"
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "包含账号、密码输入框和角色选择下拉菜单，以及一个登录按钮。",
+        "identifier": "863043973c704a89afc0045301cfa0c2",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "用户在输入框中输入的文本，用作登录的用户名。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户名长度在5到20个字符之间",
+                                "identifier": "2ea24bf2d68248ebaf42fc3b70d4f3c8",
+                                "name": "有效长度"
+                            },
+                            {
+                                "description": "用户名长度少于5个字符",
+                                "identifier": "8e379786987740ec9f5a709acba41982",
+                                "name": "无效长度-短"
+                            },
+                            {
+                                "description": "用户名长度超过20个字符",
+                                "identifier": "e6f4e30c3378419b87076ad9eee60b10",
+                                "name": "无效长度-长"
+                            }
+                        ],
+                        "identifier": "6a5c75d4efe4446fb369b4ff97d426df",
+                        "name": "value"
+                    },
+                    {
+                        "description": "用户名字符串的长度，根据validateForm函数中的校验逻辑，长度应在5到20个字符之间。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户名长度小于5个字符，不符合要求。",
+                                "identifier": "427e735ad1e84a20bcbba4fe8375f0ed",
+                                "name": "小于5个字符"
+                            },
+                            {
+                                "description": "用户名长度恰好为5个字符，符合最小长度要求。",
+                                "identifier": "68b556bde6744692b3d86d2ac317f53a",
+                                "name": "等于5个字符"
+                            },
+                            {
+                                "description": "用户名长度在5到20个字符之间，符合长度要求。",
+                                "identifier": "474b11a3feaf44ffa7ce8ff007ce2a96",
+                                "name": "大于5个字符小于等于20个字符"
+                            },
+                            {
+                                "description": "用户名长度超过20个字符，不符合要求。",
+                                "identifier": "425abb811c5e47b699fb68070a1cc65a",
+                                "name": "大于20个字符"
+                            }
+                        ],
+                        "identifier": "319dfe6883a94d169f5e3b359bf2fb3f",
+                        "name": "length"
+                    }
+                ],
+                "description": "用户名，用于登录系统的身份验证。\n 是登录操作的输入变量变量。",
+                "identifier": "b502d675a0804abaaf78b33c8b5b07d4",
+                "name": "username",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "8e379786987740ec9f5a709acba41982"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "474b11a3feaf44ffa7ce8ff007ce2a96"
+                            }
+                        ],
+                        "identifier": "4cbde98d232742389433485f9136803c",
+                        "name": "无效长度用户名"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "e6f4e30c3378419b87076ad9eee60b10"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "425abb811c5e47b699fb68070a1cc65a"
+                            }
+                        ],
+                        "identifier": "4ab96b37c5dc4df2a27bff8410371913",
+                        "name": "用户名长度超限制"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "e6f4e30c3378419b87076ad9eee60b10"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "474b11a3feaf44ffa7ce8ff007ce2a96"
+                            }
+                        ],
+                        "identifier": "b47e25a033134d908e7d6dd341b3a16f",
+                        "name": "用户名长度合规但初始为空"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "2ea24bf2d68248ebaf42fc3b70d4f3c8"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "425abb811c5e47b699fb68070a1cc65a"
+                            }
+                        ],
+                        "identifier": "15249d9265c847f58fc33f2b43ac017c",
+                        "name": "用户名长度超限"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "8e379786987740ec9f5a709acba41982"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "427e735ad1e84a20bcbba4fe8375f0ed"
+                            }
+                        ],
+                        "identifier": "4391216f80044f26ae7798f9f5f477cd",
+                        "name": "用户名长度不足"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "8e379786987740ec9f5a709acba41982"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "68b556bde6744692b3d86d2ac317f53a"
+                            }
+                        ],
+                        "identifier": "7cc6486cf0154139913ac6a8008d590e",
+                        "name": "用户名长度刚好5字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "2ea24bf2d68248ebaf42fc3b70d4f3c8"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "474b11a3feaf44ffa7ce8ff007ce2a96"
+                            }
+                        ],
+                        "identifier": "6852853742564d579ced6345ebfbcd3d",
+                        "name": "用户名长度适中"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "2ea24bf2d68248ebaf42fc3b70d4f3c8"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "68b556bde6744692b3d86d2ac317f53a"
+                            }
+                        ],
+                        "identifier": "5340ba50eaf74e36a284bbd7cc5bf9ef",
+                        "name": "用户名长度恰好5字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "e6f4e30c3378419b87076ad9eee60b10"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "427e735ad1e84a20bcbba4fe8375f0ed"
+                            }
+                        ],
+                        "identifier": "458bb1a49e594011a062d411e73e50f0",
+                        "name": "用户名长度恰好5字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "e6f4e30c3378419b87076ad9eee60b10"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "68b556bde6744692b3d86d2ac317f53a"
+                            }
+                        ],
+                        "identifier": "ec47cde63c774cc5a0d53ca522f30e27",
+                        "name": "用户名长度合规"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "2ea24bf2d68248ebaf42fc3b70d4f3c8"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "427e735ad1e84a20bcbba4fe8375f0ed"
+                            }
+                        ],
+                        "identifier": "7ae0e3017f3f46c0a8005385a82ff7be",
+                        "name": "用户名长度不足"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6a5c75d4efe4446fb369b4ff97d426df",
+                                "equivalenceClassId": "8e379786987740ec9f5a709acba41982"
+                            },
+                            {
+                                "attributeId": "319dfe6883a94d169f5e3b359bf2fb3f",
+                                "equivalenceClassId": "425abb811c5e47b699fb68070a1cc65a"
+                            }
+                        ],
+                        "identifier": "d235581b60cb484a8d7b414d5b9e4d15",
+                        "name": "用户名长度异常"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "密码的长度，必须至少为8个字符。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码长度等于8个字符",
+                                "identifier": "cf0576ff4be54360992a6ee9a13bc86b",
+                                "name": "最小长度"
+                            },
+                            {
+                                "description": "密码长度大于等于8个字符且不包含特殊字符",
+                                "identifier": "00850dc4ebc04025931cfb0efb706eba",
+                                "name": "最大长度"
+                            },
+                            {
+                                "description": "密码长度小于8个字符或包含至少一个特殊字符",
+                                "identifier": "527b85b269b9493d95ae1eb68319f21b",
+                                "name": "特殊字符存在"
+                            }
+                        ],
+                        "identifier": "e88f79810b684bfb97800d0b6da7274a",
+                        "name": "length"
+                    },
+                    {
+                        "description": "密码中不能包含特殊字符。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "密码不包含任何特殊字符，只由字母和数字组成。",
+                                "identifier": "1bdb17ea5dbd4494a6278b057d0b5a7f",
+                                "name": "无特殊字符"
+                            },
+                            {
+                                "description": "密码包含至少一个特殊字符，如 `!@#$%^&*()_+\\-=[]{};':\"\\|,.<>/?~ 等。",
+                                "identifier": "1fb99927b25742ec9d11fa9aa9ee45be",
+                                "name": "包含特殊字符"
+                            }
+                        ],
+                        "identifier": "b9c598fd3aef490ca7fc259af068026e",
+                        "name": "special characters"
+                    }
+                ],
+                "description": "密码，与用户名一起用于登录系统的身份验证。\n 是登录操作的输入变量变量。",
+                "identifier": "338ab458b28f4c699553583174a4dad6",
+                "name": "password",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e88f79810b684bfb97800d0b6da7274a",
+                                "equivalenceClassId": "00850dc4ebc04025931cfb0efb706eba"
+                            },
+                            {
+                                "attributeId": "b9c598fd3aef490ca7fc259af068026e",
+                                "equivalenceClassId": "1bdb17ea5dbd4494a6278b057d0b5a7f"
+                            }
+                        ],
+                        "identifier": "77e5fa27b87540838737a763c0b6d897",
+                        "name": "密码长度合规且无特殊字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e88f79810b684bfb97800d0b6da7274a",
+                                "equivalenceClassId": "527b85b269b9493d95ae1eb68319f21b"
+                            },
+                            {
+                                "attributeId": "b9c598fd3aef490ca7fc259af068026e",
+                                "equivalenceClassId": "1bdb17ea5dbd4494a6278b057d0b5a7f"
+                            }
+                        ],
+                        "identifier": "77ed1ccedacc4b23a0b79d3ac3fbb9b4",
+                        "name": "密码无特殊字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e88f79810b684bfb97800d0b6da7274a",
+                                "equivalenceClassId": "cf0576ff4be54360992a6ee9a13bc86b"
+                            },
+                            {
+                                "attributeId": "b9c598fd3aef490ca7fc259af068026e",
+                                "equivalenceClassId": "1fb99927b25742ec9d11fa9aa9ee45be"
+                            }
+                        ],
+                        "identifier": "1dcb7e624bb34cb6bd52144e1b00c095",
+                        "name": "密码长度不足且含有特殊字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e88f79810b684bfb97800d0b6da7274a",
+                                "equivalenceClassId": "00850dc4ebc04025931cfb0efb706eba"
+                            },
+                            {
+                                "attributeId": "b9c598fd3aef490ca7fc259af068026e",
+                                "equivalenceClassId": "1fb99927b25742ec9d11fa9aa9ee45be"
+                            }
+                        ],
+                        "identifier": "5ba0fc80b1484427baeaacf82c6842f9",
+                        "name": "密码长度超标且含特殊字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e88f79810b684bfb97800d0b6da7274a",
+                                "equivalenceClassId": "527b85b269b9493d95ae1eb68319f21b"
+                            },
+                            {
+                                "attributeId": "b9c598fd3aef490ca7fc259af068026e",
+                                "equivalenceClassId": "1fb99927b25742ec9d11fa9aa9ee45be"
+                            }
+                        ],
+                        "identifier": "e7e47284ea574ff4b6d28ba1d9cddb76",
+                        "name": "密码长度与特殊字符不符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e88f79810b684bfb97800d0b6da7274a",
+                                "equivalenceClassId": "cf0576ff4be54360992a6ee9a13bc86b"
+                            },
+                            {
+                                "attributeId": "b9c598fd3aef490ca7fc259af068026e",
+                                "equivalenceClassId": "1bdb17ea5dbd4494a6278b057d0b5a7f"
+                            }
+                        ],
+                        "identifier": "02c3b8de7958461096358bc9332d041b",
+                        "name": "密码长度合规无特殊字符"
+                    }
+                ]
+            }
+        ],
+        "name": "登录页面",
+        "states": []
+    }
+}

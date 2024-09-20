@@ -1,0 +1,54 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "打开页面",
+                            "identifier": "a53404abf0c14fbd922711343e56f4e5",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "450651b74619163b73e7f30375d539f3",
+                        "name": "场景1",
+                        "nextCar": [],
+                        "result": {
+                            "description": "展示个人信息",
+                            "identifier": "96227083ae9eaede66d4326ce5a15e55",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "c80dde8b5ed865838ebf49ab3424f24a",
+                "name": "展示信息",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "f51f17c0990f447596f30fa3fedd2b38",
+        "memberObjects": [],
+        "name": "个人信息页面",
+        "states": []
+    }
+}

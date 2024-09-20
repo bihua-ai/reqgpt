@@ -1,0 +1,190 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "项目17",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "3f71bfe102d764b36145c9b08716e3ca",
+                "name": "操作1",
+                "variables": [
+                    "b44092fd09cce2e07d61e0e338016d09"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "017ae13da1a84fc89daf43fe987e43ef",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "新属性描述",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "ff0cc8193159d2d67bdc2029642d429d",
+                                "name": "新等价类11"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "57b096b40fbdf0e0beef54b963f302ad",
+                                "name": "新等价类12"
+                            }
+                        ],
+                        "identifier": "e599b4791089a6e3a961b526f638409a",
+                        "name": "新属性1"
+                    },
+                    {
+                        "description": "新属性描述",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "1a6df9105c83ef1105d308c2027019bd",
+                                "name": "新等价类21"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "31643ace907d836e3317e8518674203c",
+                                "name": "新等价类22"
+                            }
+                        ],
+                        "identifier": "6552c4f6798be9ab6faca029854e41f7",
+                        "name": "新属性2"
+                    },
+                    {
+                        "description": "新属性描述",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "4fe565e85e8df08dafc355a80e3737bd",
+                                "name": "新等价类31"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "2452c647a727dec7e017369ddbb84979",
+                                "name": "新等价类32"
+                            }
+                        ],
+                        "identifier": "c8642a3c6784915955bb735ee43af9e2",
+                        "name": "新属性3"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "b44092fd09cce2e07d61e0e338016d09",
+                "name": "变量1",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e599b4791089a6e3a961b526f638409a",
+                                "equivalenceClassId": "ff0cc8193159d2d67bdc2029642d429d"
+                            },
+                            {
+                                "attributeId": "6552c4f6798be9ab6faca029854e41f7",
+                                "equivalenceClassId": "31643ace907d836e3317e8518674203c"
+                            },
+                            {
+                                "attributeId": "c8642a3c6784915955bb735ee43af9e2",
+                                "equivalenceClassId": "4fe565e85e8df08dafc355a80e3737bd"
+                            }
+                        ],
+                        "identifier": "f45258ee816a4a148e675fff11f4db9d",
+                        "name": "1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e599b4791089a6e3a961b526f638409a",
+                                "equivalenceClassId": "57b096b40fbdf0e0beef54b963f302ad"
+                            },
+                            {
+                                "attributeId": "6552c4f6798be9ab6faca029854e41f7",
+                                "equivalenceClassId": "1a6df9105c83ef1105d308c2027019bd"
+                            },
+                            {
+                                "attributeId": "c8642a3c6784915955bb735ee43af9e2",
+                                "equivalenceClassId": "2452c647a727dec7e017369ddbb84979"
+                            }
+                        ],
+                        "identifier": "ed8e96d6ee64477397615ff669f56df9",
+                        "name": "2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e599b4791089a6e3a961b526f638409a",
+                                "equivalenceClassId": "ff0cc8193159d2d67bdc2029642d429d"
+                            },
+                            {
+                                "attributeId": "6552c4f6798be9ab6faca029854e41f7",
+                                "equivalenceClassId": "1a6df9105c83ef1105d308c2027019bd"
+                            },
+                            {
+                                "attributeId": "c8642a3c6784915955bb735ee43af9e2",
+                                "equivalenceClassId": "4fe565e85e8df08dafc355a80e3737bd"
+                            }
+                        ],
+                        "identifier": "4533f973f4a6449a97c5199f3da54fd8",
+                        "name": "3"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e599b4791089a6e3a961b526f638409a",
+                                "equivalenceClassId": "57b096b40fbdf0e0beef54b963f302ad"
+                            },
+                            {
+                                "attributeId": "6552c4f6798be9ab6faca029854e41f7",
+                                "equivalenceClassId": "31643ace907d836e3317e8518674203c"
+                            },
+                            {
+                                "attributeId": "c8642a3c6784915955bb735ee43af9e2",
+                                "equivalenceClassId": "4fe565e85e8df08dafc355a80e3737bd"
+                            }
+                        ],
+                        "identifier": "d57d4151c40846a9a34a88f94121fed4",
+                        "name": "4"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e599b4791089a6e3a961b526f638409a",
+                                "equivalenceClassId": "ff0cc8193159d2d67bdc2029642d429d"
+                            },
+                            {
+                                "attributeId": "6552c4f6798be9ab6faca029854e41f7",
+                                "equivalenceClassId": "31643ace907d836e3317e8518674203c"
+                            },
+                            {
+                                "attributeId": "c8642a3c6784915955bb735ee43af9e2",
+                                "equivalenceClassId": "2452c647a727dec7e017369ddbb84979"
+                            }
+                        ],
+                        "identifier": "1ea976c64164471494229b546d1b06e6",
+                        "name": "5"
+                    }
+                ]
+            }
+        ],
+        "name": "规约3",
+        "states": []
+    }
+}

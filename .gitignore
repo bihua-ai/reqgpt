@@ -1,0 +1,7 @@
+./data/neo4j_db/
+./seagent/component-template/template/st_action_component/frontend/node_modules/
+./seagent/component-template/template/st_attributes_component/frontend/node_modules/
+./seagent/component-template/template/st_navigation_component/frontend/node_modules/
+./seagent/component-template/template/st_states_component/frontend/node_modules/
+./seagent/specmap_neo4j_3.0.tar
+./seagent/__pycache__/

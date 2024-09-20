@@ -1,0 +1,93 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "5bfdc5e24864cf345bc22b46a5a52ffc",
+                "name": "图书列表",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "460ff52d7d48f08c556a1867c5dc45d5",
+                "name": "图书上架",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "c20deb79161fb5797204abe6a6b1ce35",
+                "name": "搜索图书",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "bfe21f3f7558fe0cc31d40d637a666b1",
+                "name": "借阅图书",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "e1e3b08c39cb5af9b2608c597684e1f7",
+                "name": "归还图书",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "dcbc954009f40d1b72a88b12d72cd071",
+                "name": "读者列表",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "b25e394ec38254e12ae12a473108412c",
+                "name": "读者添加",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "1998587887957fce495cda73a887ab07",
+                "name": "个人信息",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "62f6b20e503c0df2fe5edf0a374fdce1",
+                "name": "用户管理",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "65ceb6adc1044a1b9f28f24affb9aa14",
+        "memberObjects": [],
+        "name": "图书管理系统首页",
+        "states": []
+    }
+}

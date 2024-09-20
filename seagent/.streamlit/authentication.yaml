@@ -1,0 +1,21 @@
+cookie:
+  expiry_days: 0
+  key: dalian
+  name: auth_cookie
+credentials:
+  usernames:
+    '15612345678':
+      name: 王五
+      password: a123456
+    admin:
+      name: Administrator
+      password: admin
+    eric:
+      name: 李春明
+      password: abc123
+    张三:
+      name: 张三
+      password: abc123
+preauthorized:
+  emails:
+  - eric99519@gmail.com

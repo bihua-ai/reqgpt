@@ -1,0 +1,650 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "简单商城",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "Condition A",
+                            "identifier": "60013a963cfd466983b4ce96d7e9a470",
+                            "states": [
+                                "bc107b1e08064dabb76189ce60604c0d",
+                                "be136fc118a14a59b633fc719d13c494"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "4db4db1dcef9464aa85481f7d8438f51",
+                        "name": "",
+                        "nextCar": [
+                            "f22f1a73c02044ac9135a8df3b339414",
+                            "c495b73d4f61466ba27fe93dd68683e8"
+                        ],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "1493afc636d94194a5316202d11e6fb1",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "B",
+                            "identifier": "3a73001c6ed04408a57c41cd80c75804",
+                            "states": [
+                                "bc107b1e08064dabb76189ce60604c0d",
+                                "5770ee99a3ec4141b92bdadfde6c6819"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "5c8750810abe45d6b2cbc324530864b5",
+                        "name": "",
+                        "nextCar": [
+                            "c495b73d4f61466ba27fe93dd68683e8",
+                            "d45284fa2374471e924d668783e6b2e8",
+                            "a6ad27186feeb2116f9d6c823ebbd614"
+                        ],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "16eb44ec31b14dabb7c12905b1309408",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "9fd0a6276c894eb8b7147a31d12f12c2",
+                            "states": [
+                                "f3f2c8cb71ae4c2e8f44968f65dbd23e",
+                                "be136fc118a14a59b633fc719d13c494"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "19fe9a7bedca4f1583725169b312fd98",
+                        "name": "",
+                        "nextCar": [
+                            "e565ad08149583ae84110dc48dc6f81d",
+                            "c495b73d4f61466ba27fe93dd68683e8",
+                            "a6ad27186feeb2116f9d6c823ebbd614"
+                        ],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "a6a277ff9c50492fb622650c0b3e2af0",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "8fa0d47760be434d820acd0ee528fc20",
+                            "states": [
+                                "f3f2c8cb71ae4c2e8f44968f65dbd23e",
+                                "5770ee99a3ec4141b92bdadfde6c6819"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "d45284fa2374471e924d668783e6b2e8",
+                        "name": "特殊t",
+                        "nextCar": [
+                            "2dfccc671bc1185c53a885715ffa3518",
+                            "a6ad27186feeb2116f9d6c823ebbd614",
+                            "f22f1a73c02044ac9135a8df3b339414"
+                        ],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "423f3c3e6b764e0cac2ccf440b2b4759",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "9c86fdd56200abc5a9c65adf137beb1e",
+                "name": "登录操作",
+                "variables": [
+                    "4d0071dcff718a046776a76d6e869f14",
+                    "7ae5b4c5f6dfb3e8631e3f31a7bc7708"
+                ]
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "特色",
+                            "identifier": "1449865e281a47db8a1708fe19f3b94c",
+                            "states": [
+                                "b2149006610745b49f60342089bcb56e"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "c495b73d4f61466ba27fe93dd68683e8",
+                        "name": "特色",
+                        "nextCar": [
+                            "2dfccc671bc1185c53a885715ffa3518"
+                        ],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "57683e81b07844f0bdd117cb33211e20",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "产品情况二",
+                            "identifier": "2d45b7e7f4e64d298b6707f4169a5588",
+                            "states": [
+                                "aaa0cb1f02e54cd0849f56797e203a82"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "f22f1a73c02044ac9135a8df3b339414",
+                        "name": "TEST 产品情况二",
+                        "nextCar": [],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "95a55100f7924247a8ba22d31d5078ad",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "你好！test this",
+                            "identifier": "cd67d25083850ac691af432249025db6",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "e565ad08149583ae84110dc48dc6f81d",
+                        "name": "你好！test this",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "23915ea5c75ff8c122117cc16083ade9",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件描述",
+                            "identifier": "7ad0150155d56d93bb127068b5955e24",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "690a696b019521f5efa978b97212d284",
+                        "name": "条件描述",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "dffc3e795384d041b1a8899970e26727",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件描述",
+                            "identifier": "ce56ba235901ecb476eb5b280589fec3",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "2f57ea61cfe2d96832f9a978191d6233",
+                        "name": "条件描述",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "9e235d8514f189a013b547a08b067f3f",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件描述change",
+                            "identifier": "f27ef26064fb74202221995f1dbe3f8c",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "b76eed19446fab534f5e731607cda756",
+                        "name": "TEST条件描述",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "c4fdddb961c684074ffe055514899925",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件描述",
+                            "identifier": "82c980a5ba64ad7b35b757e6f2cc1b65",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "c3b5b9e04aae57c35ab5628d7f2dd90a",
+                        "name": "条件描述",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "cf93dfb5ee56875d01913b3469ffb4bf",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件描述",
+                            "identifier": "fd6820a050e65bb8182c2e6fb975c595",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "4f50800e7bbb56df2889064f390e9267",
+                        "name": "Case One",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "0d42b221264f3f9538b65d12378d8112",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件描述",
+                            "identifier": "002c1024f33670fc2cf09be4fbce18f7",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "b5bd376a090cc5c15b916afed28f8184",
+                        "name": "条件描述",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "53e1478b6d5aa23853064cb2d7db59b0",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "Tes123",
+                            "identifier": "d6a86300685826b615b66016d1d1a4b1",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "a6ad27186feeb2116f9d6c823ebbd614",
+                        "name": "Tes123456",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "732e18835a20b6dfcceed0f5cdde04a8",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "tesctesdcTest",
+                            "identifier": "61ecfaac7a4b00b17153382fba2a1e63",
+                            "states": []
+                        },
+                        "description": "新场景描述",
+                        "identifier": "2dfccc671bc1185c53a885715ffa3518",
+                        "name": "Test",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果描述",
+                            "identifier": "ff1d983449db4fe555bc6f7f0ea2ceed",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "0b27aaf521e8ef0bd01c5971a4cdee7a",
+                "name": "购买",
+                "variables": [
+                    "769a43c951b42e57ddcd57bec782f9d8"
+                ]
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "11272c16f85b4e2113cf68b3b16c6e47",
+                "name": "操作1",
+                "variables": [
+                    "ba74739d34dcf6dd9e1843fb81752abc",
+                    "6a9e494f99bc737ddeaa56ac335ae48a",
+                    "bb1903438fae11716677abce5976770b"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "caea4361c7aaf493f832db2be01fab705",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "注册状态",
+                        "equivalenceClasses": [
+                            {
+                                "description": "已注册",
+                                "identifier": "ba423021ea621b2fc322a65b44108ea1",
+                                "name": "正确"
+                            },
+                            {
+                                "description": "未注册",
+                                "identifier": "b95c9d24bbbc63aaad681e10d000fbd5",
+                                "name": "错误\n"
+                            }
+                        ],
+                        "identifier": "3b2ee9f3dba319c2044d8d870b583a79",
+                        "name": "是否正确"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "4d0071dcff718a046776a76d6e869f14",
+                "name": "用户名",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3b2ee9f3dba319c2044d8d870b583a79",
+                                "equivalenceClassId": "b95c9d24bbbc63aaad681e10d000fbd5"
+                            }
+                        ],
+                        "identifier": "f3f2c8cb71ae4c2e8f44968f65dbd23e",
+                        "name": "错误"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3b2ee9f3dba319c2044d8d870b583a79",
+                                "equivalenceClassId": "ba423021ea621b2fc322a65b44108ea1"
+                            }
+                        ],
+                        "identifier": "bc107b1e08064dabb76189ce60604c0d",
+                        "name": "正确"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "是否匹配用户名",
+                        "equivalenceClasses": [
+                            {
+                                "description": "匹配",
+                                "identifier": "93a56534eacfb3fc238971a0a755a9de",
+                                "name": "正确"
+                            },
+                            {
+                                "description": "不匹配",
+                                "identifier": "b7d9f1672371f42f284bcc777f408f8c",
+                                "name": "错误"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "018bd1412a225bba00e6a0b882c66951",
+                                "name": "新等价类"
+                            }
+                        ],
+                        "identifier": "f13df1843cee9355e0ff72c8ec55af5c",
+                        "name": "正确性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "7ae5b4c5f6dfb3e8631e3f31a7bc7708",
+                "name": "密码",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "f13df1843cee9355e0ff72c8ec55af5c",
+                                "equivalenceClassId": "b7d9f1672371f42f284bcc777f408f8c"
+                            }
+                        ],
+                        "identifier": "5770ee99a3ec4141b92bdadfde6c6819",
+                        "name": "错误"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "f13df1843cee9355e0ff72c8ec55af5c",
+                                "equivalenceClassId": "93a56534eacfb3fc238971a0a755a9de"
+                            }
+                        ],
+                        "identifier": "be136fc118a14a59b633fc719d13c494",
+                        "name": "正确"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "S-ffa73e6f9c021cb888fe9f1faf9b96cd",
+                                "equivalenceClassId": "S-4f7f64a1a9b206ccaee95688c49404d9"
+                            }
+                        ],
+                        "identifier": "46bfc4cf24798dbf72c179e008484819",
+                        "name": "新状态1"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "新属性描述",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "895f247e89a96d9a897950eba9bdaca6",
+                                "name": "有货"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "b38baac512a38e2ab6be5582b6c967a6",
+                                "name": "无货"
+                            }
+                        ],
+                        "identifier": "9d248445fb65ee50db83666e8e97297e",
+                        "name": "是否twts有货"
+                    },
+                    {
+                        "description": "新属性描述",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "9a4deda1f183aa00d745ee134582d48a",
+                                "name": "新等价类"
+                            }
+                        ],
+                        "identifier": "a6a1642e340a23938e8971c37e733d36",
+                        "name": "新属性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "769a43c951b42e57ddcd57bec782f9d8",
+                "name": "产品",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "9d248445fb65ee50db83666e8e97297e",
+                                "equivalenceClassId": "b38baac512a38e2ab6be5582b6c967a6"
+                            }
+                        ],
+                        "identifier": "aaa0cb1f02e54cd0849f56797e203a82",
+                        "name": ""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "9d248445fb65ee50db83666e8e97297e",
+                                "equivalenceClassId": "895f247e89a96d9a897950eba9bdaca6"
+                            }
+                        ],
+                        "identifier": "b2149006610745b49f60342089bcb56e",
+                        "name": "State 2"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "新属性描述",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "12b59452251774cf5d9e753a42b48f84",
+                                "name": "新等价类"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "250858517114dfb3f3603a6c219c3ab8",
+                                "name": "新等价类"
+                            }
+                        ],
+                        "identifier": "565fbcf16e95d5afcf03b4ea8c25a588",
+                        "name": "新属性1"
+                    },
+                    {
+                        "description": "新属性描述",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "1a1df344d7a6691d3ac130bd8b0789d9",
+                                "name": "新等价类"
+                            }
+                        ],
+                        "identifier": "f7891f7aadff7c082182264a916bcddf",
+                        "name": "新属性2"
+                    },
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "9d40074a80d6561f183259c33dc9b424",
+                                "name": ""
+                            }
+                        ],
+                        "identifier": "5eeb6049798f5fb68648bec8489c20ce",
+                        "name": ""
+                    },
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "9d40074a80d6561f183259c33dc9b424",
+                                "name": ""
+                            }
+                        ],
+                        "identifier": "5eeb6049798f5fb68648bec8489c20ce",
+                        "name": ""
+                    }
+                ],
+                "description": "待填",
+                "identifier": "ba74739d34dcf6dd9e1843fb81752abc",
+                "name": "变量1",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "565fbcf16e95d5afcf03b4ea8c25a588",
+                                "equivalenceClassId": "250858517114dfb3f3603a6c219c3ab8"
+                            },
+                            {
+                                "attributeId": "f7891f7aadff7c082182264a916bcddf",
+                                "equivalenceClassId": "1a1df344d7a6691d3ac130bd8b0789d9"
+                            }
+                        ],
+                        "identifier": "86a80378651746c297614d76cfd24bd1",
+                        "name": ""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "565fbcf16e95d5afcf03b4ea8c25a588",
+                                "equivalenceClassId": "12b59452251774cf5d9e753a42b48f84"
+                            },
+                            {
+                                "attributeId": "f7891f7aadff7c082182264a916bcddf",
+                                "equivalenceClassId": "1a1df344d7a6691d3ac130bd8b0789d9"
+                            }
+                        ],
+                        "identifier": "37eed4f0d55642a8a643fa174d43411b",
+                        "name": ""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "S-fa3d2f7958004d434ee8a8c1014d25e1",
+                                "equivalenceClassId": "S-da889a014c3ac77ad008f07a527c404e"
+                            }
+                        ],
+                        "identifier": "75f37fd91967a0b7b9ef12d724416102",
+                        "name": ""
+                    }
+                ]
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "6a9e494f99bc737ddeaa56ac335ae48a",
+                "name": "变量2",
+                "states": []
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "7142318da4d6493d95bc090c396aa30b",
+                                "name": "0-5"
+                            }
+                        ],
+                        "identifier": "f07320d4a6da8726732b33129aaf58c5",
+                        "name": "字长"
+                    },
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "178ee5707687e72adc38b37e6a87d3e1",
+                                "name": "6-20"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "41e58126f4d574fa8cfe7df8843a7440",
+                                "name": ""
+                            },
+                            {
+                                "description": "",
+                                "identifier": "86254edaa76730be40c41bb506e47ae7",
+                                "name": ""
+                            }
+                        ],
+                        "identifier": "770de98b9aa3e4cb58074706ddcb1ee7",
+                        "name": ""
+                    }
+                ],
+                "description": "待填",
+                "identifier": "bb1903438fae11716677abce5976770b",
+                "name": "变量3",
+                "states": []
+            }
+        ],
+        "name": "登录页面",
+        "states": []
+    }
+}

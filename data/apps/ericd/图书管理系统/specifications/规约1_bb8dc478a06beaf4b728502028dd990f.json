@@ -1,0 +1,119 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "bef43a4b2ee42250b696db5741b6ad41",
+                "name": "保存",
+                "variables": [
+                    "7a311c2b7ac75c33553759ab7d2384de",
+                    "f0bacc7f3f40213d1cab7f2905cc6bd0",
+                    "227bfa2fc8fdebd0037c5551db5ade20",
+                    "0dde0ef65daed3e9da0e97bb559a7ecc",
+                    "dca3f444cdc12d26ab47b77fa506c99a",
+                    "26e601a46d3b0c4760826367a6b91166",
+                    "7dbf07351120c516986651458a9d9a0b",
+                    "3d70f3923a11597a0db7aa3b8b658125",
+                    "28c6f33ab9f8a8aea1334ff73ba05198",
+                    "0b59da815069a5538ee37117afd54584"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "9e08759daabf4e3f9e03de6186e57ca5",
+        "memberObjects": [
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "7a311c2b7ac75c33553759ab7d2384de",
+                "name": "头像",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "f0bacc7f3f40213d1cab7f2905cc6bd0",
+                "name": "昵称",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "227bfa2fc8fdebd0037c5551db5ade20",
+                "name": "用户名",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "0dde0ef65daed3e9da0e97bb559a7ecc",
+                "name": "密码",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "dca3f444cdc12d26ab47b77fa506c99a",
+                "name": "生日",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "26e601a46d3b0c4760826367a6b91166",
+                "name": "手机号",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "7dbf07351120c516986651458a9d9a0b",
+                "name": "身份",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "3d70f3923a11597a0db7aa3b8b658125",
+                "name": "邮箱",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "28c6f33ab9f8a8aea1334ff73ba05198",
+                "name": "地址",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "0b59da815069a5538ee37117afd54584",
+                "name": "可借数",
+                "states": []
+            }
+        ],
+        "name": "读者信息编辑页面",
+        "states": []
+    }
+}

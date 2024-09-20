@@ -1,0 +1,127 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "561b2ce226bd0b551271d5deed923acf",
+                "name": "保存",
+                "variables": [
+                    "2d76333949d44242316d352e6e4ac9d3",
+                    "1a9d431cc4538822b8e6c49f2e7c304a",
+                    "edda3959e11e499efcf28828644ea907",
+                    "9e4337caade991a0a496b55caa7657c3",
+                    "244169ab9a033f35c13fe942390beaed",
+                    "e17f40e4672730ab19b627f4820daee0",
+                    "6d1b7651323b3aeb6690d73e4f2a8ed9",
+                    "e283067a0123189442ed2dca4d59cf95",
+                    "1b2634007ead8fc79f76c1c3cbb652b8",
+                    "0e955c0beb6a3aed784c538498ecc072",
+                    "537ae6d881f6907c8200dff633f64438"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "c86b62494af947beb8e2dab1aaddd95f",
+        "memberObjects": [
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "2d76333949d44242316d352e6e4ac9d3",
+                "name": "图书名称",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "1a9d431cc4538822b8e6c49f2e7c304a",
+                "name": "ISBN编号",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "edda3959e11e499efcf28828644ea907",
+                "name": "封面图",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "9e4337caade991a0a496b55caa7657c3",
+                "name": "作者",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "244169ab9a033f35c13fe942390beaed",
+                "name": "分类",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "e17f40e4672730ab19b627f4820daee0",
+                "name": "页数",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "6d1b7651323b3aeb6690d73e4f2a8ed9",
+                "name": "定价",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "e283067a0123189442ed2dca4d59cf95",
+                "name": "出版社",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "1b2634007ead8fc79f76c1c3cbb652b8",
+                "name": "出版时间",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "0e955c0beb6a3aed784c538498ecc072",
+                "name": "图书分类",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "537ae6d881f6907c8200dff633f64438",
+                "name": "翻译",
+                "states": []
+            }
+        ],
+        "name": "图书添加页面",
+        "states": []
+    }
+}

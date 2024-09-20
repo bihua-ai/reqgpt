@@ -1,0 +1,54 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "要还图书在在借图书表",
+                            "identifier": "894f4dd04fd8edbe67f6276b3656e0a2",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "19a5e28bc958f834b348985db695ae98",
+                        "name": "长相场景",
+                        "nextCar": [],
+                        "result": {
+                            "description": "弹出信息框，归还成功",
+                            "identifier": "741e0b1d2694deb12c16cad4f471ad0a",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "c54c3b4b5419edcf73271e138ec1ae33",
+                "name": "归还",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "3f38db69606e4eb48f1372dc33bf22e8",
+        "memberObjects": [],
+        "name": "图书归还页面",
+        "states": []
+    }
+}

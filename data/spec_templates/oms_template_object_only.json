@@ -1,0 +1,32 @@
+{
+	"oms": "1.0.0",
+	"info": {
+		"title": "project name",
+		"summary": "project summary",
+		"description": "project description",
+		"termsOfService": "https://example.com/terms/",
+		"contact": {
+			"name": "Supprt team name",
+			"url": "https://www.example.com/support",
+			"email": "support@example.com"
+		},
+		"license": {
+			"name": "MPL-2.0",
+			"url": "https://opensource.org/licenses/MPL-2.0"
+		},
+		"version": "1.0.0"
+	},
+	"omsObject": {
+		"classification": "ui",
+		"identifier": "caea4361c7aaf493f832db2be01fab705",
+		"name": "object name",
+		"description": "",
+		"memberObjects": [],
+		"attributes": [],
+		"states": [],
+		"actions":[]
+	}
+	
+}
+
+				

@@ -1,0 +1,71 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "0e56b4277a1205a9d0dc67eae1a2f729",
+                "name": "登录按钮",
+                "variables": [
+                    "1986d600c928c547074999cd72968e1d",
+                    "f140599cdf4140d50acc729531a484c7",
+                    "e53ccb0dcb614e075fa377bf91c98dfc",
+                    "33b15f6a6cc0dd912b44503f987a29a2"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "f11562b7dd1448b9bc84fd5c661bbc89",
+        "memberObjects": [
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "1986d600c928c547074999cd72968e1d",
+                "name": "账号",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "f140599cdf4140d50acc729531a484c7",
+                "name": "密码",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "e53ccb0dcb614e075fa377bf91c98dfc",
+                "name": "角色",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "33b15f6a6cc0dd912b44503f987a29a2",
+                "name": "记住我",
+                "states": []
+            }
+        ],
+        "name": "图书管理系统登录页面",
+        "states": []
+    }
+}

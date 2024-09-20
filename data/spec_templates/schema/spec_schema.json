@@ -1,0 +1,227 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "oms": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "info": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "termsOfService": {
+                    "type": "string"
+                },
+                "contact": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "license": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "enum": ["MPL-2.0"]
+                        },
+                        "url": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "version": {
+                    "type": "string",
+                    "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+                }
+            }
+        },
+        "omsObject": {
+            "$ref": "#/definitions/omsObjectType"
+        }
+    },
+    "definitions": {
+        "omsObjectType": {
+            "type": "object",
+            "properties": {
+                "classification": {
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "equivalenceClasses": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "identifier": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "tags": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "states": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "attributeAndEquivalenceClasses": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "attributeId": {
+                                            "type": "string"
+                                        },
+                                        "equivalenceClassId": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "actions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "cars": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "identifier": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "condition": {
+                                            "type": "object",
+                                            "properties": {
+                                                "identifier": {
+                                                    "type": "string"
+                                                },
+                                                "states": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "description": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "tags": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "result": {
+                                            "type": "object",
+                                            "properties": {
+                                                "identifier": {
+                                                    "type": "string"
+                                                },
+                                                "description": {
+                                                    "type": "string"
+                                                },
+                                                "states": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+				"memberObjects": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/omsObjectType"
+                    }
+                }
+            }
+        }
+    }
+}

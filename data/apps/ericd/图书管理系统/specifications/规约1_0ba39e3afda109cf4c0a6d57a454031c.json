@@ -1,0 +1,51 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "96a22bb684a42d09dc9e67460f813016",
+                "name": "搜索",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "2e5b9bb6c6f091190fcd9ce99d7f9f38",
+                "name": "编辑",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "b801c9e8a87ef5e3a7d0244e64096640",
+                "name": "删除",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "eecef809f56244f193318900345dbb47",
+        "memberObjects": [],
+        "name": "用户列表页面",
+        "states": []
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "0021be425a93408889b7276d2c04c11c",
+                            "states": [
+                                "2c6fda1fdf244a99a81578b8f71407e3"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "2f7cb8ea758349f2b87cf6e0231ec477",
+                        "name": "场景1",
+                        "nextCar": [],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "631477b30715458091ff50ac92efff43",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "cbc1a2318fa3494282a534fc2cdcbd94",
+                            "states": [
+                                "eeb86cbe59b848eb94514cee7020b8d3"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "44ade626b81640e39c8c8a30b1171e4d",
+                        "name": "场景2",
+                        "nextCar": [],
+                        "result": {
+                            "description": "请填写结果描述",
+                            "identifier": "3f1fe9fdd2f5447b8c602ffe7e020e4e",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "96a22bb684a42d09dc9e67460f813016",
+                "name": "搜索",
+                "variables": [
+                    "ce431421df2c8bf5b92ea2305bcb0407"
+                ]
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "用户列表展示用户",
+                            "identifier": "d9f3383f8ab8c14db06d73bb4be395f6",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "e28c68662f5e8d9ab9f2466e0f31d1b5",
+                        "name": "编辑已有用户",
+                        "nextCar": [],
+                        "result": {
+                            "description": "打开用户编辑页面",
+                            "identifier": "23dce95630890efb83c718947cee733a",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "2e5b9bb6c6f091190fcd9ce99d7f9f38",
+                "name": "编辑",
+                "variables": []
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "用户列表展示被删除用户",
+                            "identifier": "3c24003d3c87e5705fdad371df221019",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "3e8144d3ce6ef65e1200aaa85a616da8",
+                        "name": "删除存在用户",
+                        "nextCar": [],
+                        "result": {
+                            "description": "信息提示框，提示删除成功",
+                            "identifier": "e284ceebde534eeb5f2c54a12dec8e3d",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "b801c9e8a87ef5e3a7d0244e64096640",
+                "name": "删除",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "eecef809f56244f193318900345dbb47",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "3791854587c665b3c4198fdfe0985302",
+                                "name": "是"
+                            }
+                        ],
+                        "identifier": "7043566973a2e2054339c0b91edab59a",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "0a74e82430faf9d2c77d4453b1bfa207",
+                                "name": "用户名"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "554bc8766501849e08ae628be0c4ba11",
+                                "name": "昵称"
+                            }
+                        ],
+                        "identifier": "40baf0848b41a4c7870bf1e3344855db",
+                        "name": "搜索词"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "ce431421df2c8bf5b92ea2305bcb0407",
+                "name": "搜索关键字",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "7043566973a2e2054339c0b91edab59a",
+                                "equivalenceClassId": "3791854587c665b3c4198fdfe0985302"
+                            },
+                            {
+                                "attributeId": "40baf0848b41a4c7870bf1e3344855db",
+                                "equivalenceClassId": "554bc8766501849e08ae628be0c4ba11"
+                            }
+                        ],
+                        "identifier": "eeb86cbe59b848eb94514cee7020b8d3",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "7043566973a2e2054339c0b91edab59a",
+                                "equivalenceClassId": "3791854587c665b3c4198fdfe0985302"
+                            },
+                            {
+                                "attributeId": "40baf0848b41a4c7870bf1e3344855db",
+                                "equivalenceClassId": "0a74e82430faf9d2c77d4453b1bfa207"
+                            }
+                        ],
+                        "identifier": "2c6fda1fdf244a99a81578b8f71407e3",
+                        "name": "状态2"
+                    }
+                ]
+            }
+        ],
+        "name": "用户列表页面",
+        "states": []
+    }
+}

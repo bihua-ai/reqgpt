@@ -1,0 +1,905 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "My Support Team",
+            "url": "https://www.example.com/support"
+        },
+        "description": "本项目是一个包含登录和文件上传功能的网页应用。用户首先需要通过登录页面输入用户名和密码进行身份验证，用户名长度限制在5到20个字符之间，密码长度至少为8个字符，且不能包含特殊字符。登录成功后，用户将被重定向到文件上传页面。在文件上传页面，用户可以选择上传文件，但文件格式必须为XLSX、XLS、PDF、DOCX、DOC或TXT。上传过程中，系统会对文件类型进行校验，确保上传的文件符合要求。如果用户未选择文件或文件格式不正确，系统会提示错误信息。",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "本项目是一个包含登录和文件上传功能的网页应用。用户首先需要通过登录页面输入用户名和密码进行身份验证，用户名长度限制在5到20个字符之间，密码长度至少为8个字符，且不能包含特殊字符。登录成功后，用户将被重定向到文件上传页面。在文件上传页面，用户可以选择上传文件，但文件格式必须为XLSX、XLS、PDF、DOCX、DOC或TXT。上传过程中，系统会对文件类型进行校验，确保上传的文件符合要求。如果用户未选择文件或文件格式不正确，系统会提示错误信息。",
+        "termsOfService": "https://example.com/terms/",
+        "title": "安全文件上传与登录验证系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "条件名：属性冲突与文件限制\n\n这个条件名简洁地概括了JSON中定义的`id`变量的状态名，即存在属性冲突和文件限制的问题。",
+                            "identifier": "37606e8d5b1b4e7587fc00f0bdba9603",
+                            "states": [
+                                "cdb9f614bca2427c9de088a446dbc03b"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为\"validateUpload\"的操作，其主要目的是验证用户上传文件的类型是否符合系统要求。如果文件类型不符合要求，系统会弹出警告框并阻止表单提交。操作涉及的变量包括：\n\n- `id`：作为输出变量，是用户的唯一标识符。\n- `username`：作为输入变量，是用户登录时使用的用户名。\n- `role`：作为输出变量，是分配给用户的角色。\n\n定义的操作有多个状态描述，主要围绕属性冲突、文件限制、用户名规范和用户角色等方面。例如：\n\n- 文件名可能不符合正则表达式模式，包含非法字符，或者用户选择的文件大小超出了系统允许的范围。\n- 用户名可能包含特殊字符，长度不符合要求，或者为空且含有空格。\n- 用户角色可能未定义，选择了系统不支持的角色，或者角色信息未被正确设置。\n\n这些状态描述涵盖了不同的场景，用以确保上传操作的安全性和有效性。",
+                        "identifier": "9864aa40554d467f8a3576e9458707b6",
+                        "name": "场景1",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的HTML代码和已有信息，`validateUpload` 函数的伪代码可以构建如下：\n\n```plaintext\nfunction validateUpload() {\n    // 获取文件输入控件的文件对象\n    fileInput = getFileInputById(\"fileUpload\");\n\n    // 检查文件对象是否存在\n    if (fileInput is None) {\n        showAlert(\"请选择一个文件进行上传。\");\n        return false;\n    }\n\n    // 获取文件的扩展名\n    extension = getFileExtension(fileInput.name);\n\n    // 定义允许的文件扩展名正则表达式\n    allowedExtensions = /(\\.(xlsx|xls|pdf|docx|doc|txt))$/i;\n\n    // 检查文件扩展名是否在允许的列表中\n    if (!extension.match(allowedExtensions)) {\n        showAlert(\"只允许上传以下格式的文件：XLSX, XLS, PDF, DOCX, DOC, TXT。\");\n        return false;\n    }\n\n    // 如果文件检查通过，返回true允许表单提交\n    return true;\n}\n```\n\n在这段伪代码中，`validateUpload` 函数首先通过 `getFileInputById` 函数获取文件上传控件的文件对象。然后，它检查文件对象是否存在，如果不存在，则弹出提示并返回 `false` 阻止表单提交。如果文件对象存在，函数将获取文件的扩展名，并使用正则表达式检查该扩展名是否在允许的文件类型列表中。如果文件类型不允许，同样会弹出提示并返回 `false`。如果文件类型检查通过，则函数返回 `true`，允许表单提交。\n\n中文自然语言描述输出和操作影响结果列表如下：\n\n`validateUpload` 函数的作用是验证用户选择的文件是否符合系统规定的上传要求。函数通过检查文件对象是否存在，并验证文件的扩展名是否匹配预设的正则表达式来确定文件类型是否被允许。如果用户未选择文件或文件类型不符合要求，函数将弹出相应的警告框，并返回 `false` 以阻止表单提交。反之，如果文件检查通过，函数返回 `true`，允许用户提交表单进行文件上传。这个过程确保了只有符合特定格式要求的文件才能被上传到服务器，从而维护了系统的安全性和数据的一致性。",
+                            "identifier": "169f1baf1cb54233b6c96b6f39eb9360",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件名：属性不一致异常\n\n条件名：用户名长度小于5且含下划线\n\n条件名：用户角色定义",
+                            "identifier": "468d00bdac60412f9df469a3ba0f7b03",
+                            "states": [
+                                "5d86d1e485974011b73e42603e467a08"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为\"validateUpload\"的操作，其目的是验证上传文件的类型是否符合系统要求。如果文件类型不符合规定，将弹出警告框并阻止表单提交。操作涉及的变量包括用户的唯一标识符（id）、用户登录名（username）和用户角色（role）。其中，id和role是输出变量，而username是输入变量。\n\nCAR（条件-操作-结果）定义了多个场景（场景2），其中详细列出了各种条件和状态描述。条件包括用户名长度小于5且含有下划线，以及用户角色的定义。状态描述涵盖了属性不一致异常、属性冲突与无效值、属性等价类定义、属性冲突与异常字符、属性等价类异常、属性冲突与文件限制等多种情况。\n\n具体到每个状态，都详细列出了属性描述和等价类描述。例如，对于文件名的属性描述可能包括匹配正则表达式模式、文件名包含非法字符、用户选择的文件大小超出范围等。等价类描述则进一步细分了这些属性的不同情况，如文件扩展名的匹配不区分大小写、文件名包含非法字符导致服务器解析问题、用户选择的文件超出了系统允许的大小范围等。\n\n此外，还定义了用户名和用户角色的不同状态，例如用户名未设置且符合规范、用户名空且含空格、用户名长度小于5且含下划线、特殊字符用户名待完善、用户名长度不足5字符等，以及用户角色定义、无效角色定义、未定义属性与管理员角色等状态。\n\n这些定义帮助确保系统能够根据不同的用户属性和上传文件的属性，进行恰当的验证和反馈，以维护系统的安全性和数据的一致性。",
+                        "identifier": "8994aaa1fa264977b8ee18232faf0495",
+                        "name": "场景2",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的代码和已有信息，validateUpload操作的伪代码可以构建如下：\n\n```javascript\nfunction validateUpload() {\n    let fileInput = document.getElementById(\"fileUpload\").files[0];\n    let isValid = true;\n    let operationResults = [];\n\n    if (!fileInput) {\n        operationResults.push(\"未选择文件\");\n        isValid = false;\n    } else if (!fileInput.name.match(/\\.(xlsx|xls|pdf|docx?|txt)$/i)) {\n        operationResults.push(\"文件格式不支持\");\n        isValid = false;\n    }\n\n    // 如果文件验证通过，则可以添加其他操作结果，例如：\n    // operationResults.push(\"文件验证通过\");\n\n    return {\n        isValid: isValid,\n        operationResults: operationResults\n    };\n}\n```\n\n在中文自然语言中，对输出和操作影响结果列表的描述如下：\n\nvalidateUpload函数首先检查用户是否选择了文件，如果没有选择，则记录“未选择文件”并标记验证失败。接着，函数使用正则表达式检查文件的扩展名是否属于允许的格式（XLSX, XLS, PDF, DOCX, DOC, TXT），如果文件扩展名不符合要求，则记录“文件格式不支持”并标记验证失败。如果文件验证通过，函数可以记录“文件验证通过”。函数最终返回一个对象，包含验证是否有效（isValid）和操作影响结果列表（operationResults），其中包含了所有影响验证结果的信息。",
+                            "identifier": "182c6a62eb2145829e18f6857e0644c1",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件名：属性不一致异常\n\n条件名：用户名空格异常\n\n条件名：未命名角色状态",
+                            "identifier": "9ded47af7c5c4ebcad11ca023d0c7af6",
+                            "states": [
+                                "4c022227c2c44e55a5b8add07bce3861"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为\"validateUpload\"的操作，其目的是验证上传文件的类型是否符合要求，并在不符合的情况下弹出警告框阻止表单提交。操作涉及的变量包括：\n\n- `id`：用户的唯一标识符，作为操作的输出变量。\n- `username`：用户登录时使用的名称，作为操作的输入变量。\n- `role`：分配给用户的角色，作为操作的输出变量。\n\nJSON中的\"场景3\"定义了多个条件状态，包括属性不一致异常、用户名空格异常和未命名角色状态等，每个状态都详细描述了属性和等价类，例如：\n\n- 文件名是否符合正则表达式模式。\n- 文件名是否包含非法字符。\n- 用户选择的文件大小是否超出系统允许的范围。\n- 用户名是否符合长度和字符要求。\n- 用户角色是否被系统支持。\n\n这些状态描述了在不同情况下验证上传文件和用户输入的规则，确保文件上传和用户信息符合系统的安全和规范要求。",
+                        "identifier": "ae44441e1b9e48059934f7ba01ac6f42",
+                        "name": "场景3",
+                        "nextCar": [],
+                        "result": {
+                            "description": "伪代码如下：\n\n```javascript\nfunction validateUpload() {\n    let fileInput = document.getElementById(\"fileUpload\").files[0];\n    let allowedExtensions = /\\.(xlsx|xls|pdf|docx?|txt)$/i;\n    let validationResult = [];\n\n    if (!fileInput) {\n        validationResult.push({ id: 'fileUpload', description: '未选择文件', valid: false });\n        return validationResult;\n    }\n\n    if (!fileInput.name.match(allowedExtensions)) {\n        validationResult.push({\n            id: 'fileUpload',\n            description: '文件类型不允许',\n            valid: false\n        });\n    } else {\n        validationResult.push({\n            id: 'fileUpload',\n            description: '文件类型允许',\n            valid: true\n        });\n    }\n\n    // 假设其他属性如id, username, role在此场景中不参与validateUpload函数的逻辑\n    // 如果需要，可以添加额外的逻辑来验证这些属性\n\n    return validationResult;\n}\n```\n\n中文自然语言描述：\n\nvalidateUpload函数的主要作用是验证用户上传的文件类型是否符合系统规定的格式。它首先检查用户是否选择了文件，如果没有选择，函数会记录一条表示未选择文件的验证结果。然后，函数使用正则表达式检查文件的扩展名是否为系统允许的格式之一，包括XLSX、XLS、PDF、DOCX、DOC或TXT，不区分大小写。如果文件类型不符合要求，函数会记录一条表示文件类型不允许的验证结果；如果符合要求，则记录一条表示文件类型允许的验证结果。此外，虽然函数接收了id、username和role作为输入变量，但在此特定场景中，这些变量并未参与validateUpload函数的逻辑判断。函数最终返回一个包含所有验证结果的列表。如果文件验证未通过，表单将不会提交；如果通过，则允许表单提交。",
+                            "identifier": "adf7f2ffe0dd46ff8a4d0e5c3c1da9cc",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件名：属性冲突与文件限制\n\n这个条件名简洁地概括了JSON中第一个条件的主要特点，即存在属性冲突和对文件的限制。",
+                            "identifier": "fd48d914efc64655ac69323dc6104ee9",
+                            "states": [
+                                "387df04c2c484f7a8411932373ff95e7"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为\"validateUpload\"的操作，其目的是验证用户上传的文件类型是否符合系统规定。如果文件类型不符合要求，系统将弹出警告框并阻止表单提交。操作涉及到的变量包括用户的唯一标识符`id`、用户登录名`username`和用户角色`role`。其中`id`和`role`是输出变量，而`username`是输入变量。\n\nJSON中定义了多个状态描述，每个状态描述都涉及到属性和等价类。例如，文件名属性需要符合正则表达式模式，文件列表属性需要检查用户选择的文件大小是否超出系统允许的范围，`name`属性值不能为空字符串，以确保服务器端能正确识别表单数据等。同时，还定义了用户名和用户角色的不同情况，如用户名的长度、特殊字符的使用，以及用户角色的权限等。\n\n具体的状态描述包括但不限于：\n\n- 文件名属性的匹配和文件扩展名的合法性。\n- 用户名的合法性，包括长度和特殊字符的使用。\n- 用户角色的合法性，包括角色的选择和权限。\n\n这些状态描述和属性等价类定义了在不同情况下验证上传文件的规则和条件，以确保上传操作的安全性和符合性。",
+                        "identifier": "18710ac9714c4569b54de4f21ba113d4",
+                        "name": "场景4",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的HTML代码和已有信息，validateUpload函数的伪代码可以构建如下：\n\n```javascript\nfunction validateUpload() {\n    // 获取文件输入控件选择的文件\n    var file = document.getElementById(\"fileUpload\").files[0];\n\n    // 检查是否选择了文件\n    if (file === undefined) {\n        alert(\"请选择一个文件进行上传。\");\n        return false;\n    }\n\n    // 检查文件扩展名是否符合要求\n    var allowedExtensions = /\\.(xlsx|xls|pdf|docx|doc|txt)$/i;\n    if (!file.name.match(allowedExtensions)) {\n        alert(\"只允许上传以下格式的文件：XLSX, XLS, PDF, DOCX, DOC, TXT。\");\n        return false;\n    }\n\n    // 如果通过所有检查，返回true允许表单提交\n    return true;\n}\n```\n\n输出和操作影响结果列表如下：\n\n- `file`：表示用户选择的文件对象，如果未选择文件，则此变量为`undefined`。\n- 弹出警告框：如果未选择文件或文件类型不符合要求，会弹出相应的警告框。\n- `return false`：在用户未选择文件或文件类型不符合要求的情况下，阻止表单提交。\n- `return true`：当文件选择正确且类型符合要求时，允许表单提交。\n\n描述：\nvalidateUpload函数首先检查用户是否选择了文件，如果没有选择，会弹出警告并返回false以阻止表单提交。如果用户选择了文件，函数接着检查文件的扩展名是否符合规定的格式（XLSX, XLS, PDF, DOCX, DOC, TXT），如果不符合，同样会弹出警告并返回false。只有当用户选择了文件且文件类型符合要求时，函数才会返回true，允许表单提交。这个过程通过弹出警告框与用户交互，确保了文件上传的安全性和合规性。",
+                            "identifier": "7a99d71998194b63843d294dc6450f9d",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件名：属性冲突与无效值\n\n条件名：用户名空且含空格\n\n条件名：无效角色定义",
+                            "identifier": "1279950412c04adfb728cb818946e928",
+                            "states": [
+                                "cdb9f614bca2427c9de088a446dbc03b"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为validateUpload的操作，其目的是验证上传文件的类型是否符合特定要求。如果文件类型不符合要求，操作将弹出警告框并阻止表单提交。以下是对JSON内容的自然语言中文总结：\n\n操作validateUpload涉及以下变量：\n- id：用户的唯一标识符，作为操作的输出变量。\n- username：用户登录时使用的名称，作为操作的输入变量。\n- role：分配给用户的角色，作为操作的输出变量。\n\n该操作的测试场景命名为“场景5”，具体条件包括：\n- 用户名为空且含有空格。\n- 角色定义无效。\n\n操作涉及多个状态描述，包括属性不一致异常、属性冲突与无效值、属性等价类定义、属性冲突与异常字符、属性等价类异常、属性冲突与文件限制等。每个状态描述都详细列出了属性和等价类，例如：\n- 文件名是否符合正则表达式模式。\n- 文件名是否包含非法字符。\n- 用户选择的文件大小是否超出系统允许的范围。\n- 文件类型是否被允许。\n- 用户名是否只包含字母和数字，长度是否在5到20个字符之间。\n- 角色是否为管理员或普通用户，以及角色选择是否为空或无效。\n\n这些状态描述和等价类定义用于确保validateUpload操作能够正确地验证文件上传过程中的多种情况，确保文件的安全性和合规性。",
+                        "identifier": "ec73155441e344e6b9f6bf68dfc0b42c",
+                        "name": "场景5",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的HTML代码和已有信息，我们可以构建`validateUpload`函数的伪代码，该函数用于验证上传文件的类型是否符合要求。如果文件类型不符合要求或用户未选择文件，则会弹出警告框并阻止表单提交。以下是`validateUpload`函数的伪代码：\n\n```pseudo\nfunction validateUpload() {\n    // 获取文件输入控件的文件对象\n    fileInput = document.getElementById(\"fileUpload\").files[0]\n    \n    // 检查是否有文件被选择\n    if (fileInput is None) {\n        alert(\"请选择一个文件进行上传。\")\n        return false\n    }\n    \n    // 正则表达式匹配允许的文件扩展名\n    allowedExtensions = /\\.xlsx$|.xls$|.pdf$|.docx$|.doc$|.txt$/i\n    \n    // 检查文件扩展名是否符合要求\n    if (!fileInput.name.match(allowedExtensions)) {\n        alert(\"只允许上传以下格式的文件：XLSX, XLS, PDF, DOCX, DOC, TXT。\")\n        return false\n    }\n    \n    // 如果所有检查通过，返回true允许表单提交\n    return true\n}\n```\n\n在这段伪代码中，`validateUpload`函数首先获取文件输入控件选定的文件对象。然后，它检查是否有文件被选择，如果没有，则弹出警告并返回`false`。接着，函数使用正则表达式来检查文件的扩展名是否在允许的列表中。如果文件类型不符合要求，同样会弹出警告并返回`false`。如果文件通过了所有的验证，函数最终返回`true`，允许表单提交。\n\n中文自然语言描述输出和操作影响结果列表如下：\n\n`validateUpload`函数对上传的文件进行验证，确保用户选择的文件是系统所允许的类型。如果用户未选择文件或文件类型不符合规定（即不是XLSX、XLS、PDF、DOCX、DOC或TXT格式），函数将通过弹出警告框通知用户，并阻止表单提交。只有当用户选择的文件符合所有条件时，函数才会允许表单继续提交。这个过程确保了上传操作的安全性和合规性，防止了不合规文件的上传。",
+                            "identifier": "4d05e07706114d41a0407ce0037d3ffa",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件名：属性等价类异常\n\n条件名：用户名空含空格\n\n条件名：用户角色定义",
+                            "identifier": "82a788af413f494d82cff86d3f1a6b99",
+                            "states": [
+                                "5d86d1e485974011b73e42603e467a08"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为validateUpload的操作，其目的是验证上传文件的类型是否符合要求，并在不符合要求的情况下弹出警告框阻止表单提交。操作涉及几个变量，包括用户的唯一标识符id、用户登录名username和用户角色role。其中，id和role是输出变量，而username是输入变量。\n\n操作的CAR（条件-操作-结果）场景被命名为“场景6”，涵盖了多种条件和状态描述。条件描述包括用户名为空或只含空格、用户角色的定义等。状态描述则详细列出了属性不一致异常、属性冲突与无效值、属性等价类定义、属性冲突与异常字符、属性等价类异常、属性冲突与文件限制等多种情况，并对每种情况的属性和等价类进行了详细说明。\n\n例如，状态描述中的“属性不一致异常”涉及到文件名与正则表达式模式的匹配问题，文件名包含非法字符，用户选择的文件大小超出范围等；而“用户名空且含空格”状态则关注用户名字段是否只包含空格或特殊字符，以及用户名长度是否符合要求。\n\n此外，还定义了用户角色的不同状态，如“用户角色定义”、“无效角色定义”、“未定义属性与管理员角色”等，这些状态关注用户选择的角色是否符合系统要求，以及角色权限对上传操作的影响。\n\n整体上，这个JSON详细描述了validateUpload操作在不同条件下应该进行的验证和处理，确保上传的文件符合系统的安全和规范要求。",
+                        "identifier": "42d7a46ad69a4efc812213eac012834e",
+                        "name": "场景6",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的HTML代码和已有信息，validateUpload函数的伪代码可以构建如下：\n\n```javascript\nfunction validateUpload() {\n    let fileInput = document.getElementById(\"fileUpload\").files[0];\n    let isValid = true; // 假设开始时上传是有效的\n    let validationResults = []; // 存储验证结果的列表\n\n    if (!fileInput) {\n        validationResults.push(\"请选择一个文件进行上传。\");\n        isValid = false;\n    } else if (!fileInput.name.match(/\\.(xlsx|xls|pdf|docx?|txt)$/i)) {\n        validationResults.push(\"只允许上传以下格式的文件：XLSX, XLS, PDF, DOCX, DOC, TXT。\");\n        isValid = false;\n    }\n\n    // 返回验证结果列表和是否有效\n    return { isValid: isValid, validationResults: validationResults };\n}\n```\n\nvalidateUpload函数的输出包括一个布尔值isValid，表示文件上传是否有效，以及一个字符串数组validationResults，存储所有的验证结果信息。如果isValid为false，则validationResults将包含相应的错误信息，这些信息用于向用户显示为什么文件上传失败。如果isValid为true，则表示文件上传验证通过，可以继续进行文件上传的后续操作。\n\n中文自然语言描述如下：\nvalidateUpload函数执行文件上传验证操作，首先检查用户是否选择了文件，如果没有选择文件，则输出提示信息并标记上传无效。接着，函数检查文件的扩展名是否符合规定的格式，如果不符合，同样输出相应的提示信息并标记上传无效。函数最终返回一个对象，其中包含一个布尔值表示上传是否有效，以及一个包含所有验证结果的列表。这些结果可以用于向用户反馈上传过程中遇到的问题，或者在上传有效时继续执行文件上传的后续流程。",
+                            "identifier": "0d5a419919654d9d9c118be1b4c2d0d8",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "验证上传文件的类型是否符合要求，如果不符合则弹出警告框并阻止表单提交。\n\n        操作相关变量部分：\n        variable name: id\n        identifier: dffdb7b3844b40d188c01812ab8a905a\n        description: The unique identifier for the user.\n 是validateUpload操作的output变量。\n\n        \n        variable name: username\n        identifier: 8b606599e93344baa976077437dc5df9\n        description: The name used by the user to log in.\n 是validateUpload操作的input变量。\n\n        \n        variable name: role\n        identifier: ec47b4a4e2b94be3b201591686c08cf5\n        description: The role assigned to the user.\n 是validateUpload操作的output变量。\n\n        ",
+                "identifier": "88e47eef5ceb45b49c7ba7df2ed70b93",
+                "name": "validateUpload"
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "这个页面包含一个表单，用户可以从中选择一个文件进行上传。表单提交后，会触发validateUpload函数进行验证。",
+        "identifier": "db688cd3e3c4432dbe111e8337ee0074",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "标识符，用于在HTML文档中唯一标识一个元素。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类代表有效的用户名输入字段，用户必须输入用户名才能进行登录。",
+                                "identifier": "fd6d4c403128405f98725c3f1f507c35",
+                                "name": "username"
+                            },
+                            {
+                                "description": "此等价类代表有效的密码输入字段，用户必须输入密码才能进行登录。",
+                                "identifier": "4ae1d07d93f54574a1008e9f3e707537",
+                                "name": "password"
+                            },
+                            {
+                                "description": "此等价类代表有效的文件上传输入字段，用户必须选择文件才能进行上传。",
+                                "identifier": "2e888db785684fcd8c519df3620bd3aa",
+                                "name": "fileUpload"
+                            },
+                            {
+                                "description": "此等价类代表没有提供 `id` 属性，元素将无法通过 `getElementById` 方法访问。",
+                                "identifier": "8bc65f3bbc6a42ff82b01c25c6597572",
+                                "name": "Empty String"
+                            },
+                            {
+                                "description": "此等价类代表 `id` 属性包含不允许的特殊字符，可能导致JavaScript操作失败。",
+                                "identifier": "564a8aefdaa943fa9aa3d1840582899d",
+                                "name": "Special Characters"
+                            },
+                            {
+                                "description": "此等价类代表 `id` 属性为纯数值，虽然技术上可行，但在HTML中用作 `id` 并不常见，可能会造成混淆。",
+                                "identifier": "ff2e689b9b0841298ca83d3c3c1bb277",
+                                "name": "Numeric Values"
+                            },
+                            {
+                                "description": "此等价类代表页面上有多个元素使用相同的 `id` 属性，这违反了HTML规范，因为 `id` 应该是唯一的。",
+                                "identifier": "b48e886957be4a2da974955182c7c66f",
+                                "name": "Duplicate IDs"
+                            },
+                            {
+                                "description": "此等价类代表 `id` 属性的长度过长，虽然技术上不限制长度，但过长的ID可能会影响性能和可读性。",
+                                "identifier": "abbb4e7b19eb421697f2adc0364266ac",
+                                "name": "Long IDs"
+                            },
+                            {
+                                "description": "此等价类代表 `id` 属性以数字开头，虽然在技术上不禁止，但按照命名约定通常不推荐。",
+                                "identifier": "8898622f0f5349278f87b8a861c59c86",
+                                "name": "IDs Starting with Digit"
+                            },
+                            {
+                                "description": "此等价类代表 `id` 属性包含空格，虽然可以在HTML5中使用，但传统上 `id` 不包含空格，可能会导致兼容性问题。",
+                                "identifier": "16adc6c3aec9438ca16941649a238785",
+                                "name": "IDs with Spaces"
+                            }
+                        ],
+                        "identifier": "0f8c39f4c4ff452387ed5eb538c0679e",
+                        "name": "id"
+                    },
+                    {
+                        "description": "名称，用于表单元素，提交表单时作为参数名发送到服务器。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类指文件上传表单元素的 `name` 属性值为 'fileUpload'，符合预期的表单数据提交字段名称。",
+                                "identifier": "1aeb5fa7d80047c4a856aaf39cf78318",
+                                "name": "fileUpload"
+                            },
+                            {
+                                "description": "此等价类指 `name` 属性值为空字符串，这将导致服务器端无法正确识别表单数据。",
+                                "identifier": "87dc0e43daa2469ea3fa4bf68d52415c",
+                                "name": "Empty String"
+                            },
+                            {
+                                "description": "此等价类指 `name` 属性值包含特殊字符，可能会在服务器端解析时引起问题。",
+                                "identifier": "30392010dacf43c59365ef1a08c318f2",
+                                "name": "Special Characters"
+                            },
+                            {
+                                "description": "此等价类指 `name` 属性值仅由数字组成，虽然技术上可能有效，但不符合常见的命名约定。",
+                                "identifier": "a654e84eb47a4a1c85c12df25c8669a6",
+                                "name": "Numbers Only"
+                            },
+                            {
+                                "description": "此等价类指 `name` 属性值长度超出服务器端或客户端处理能力，可能导致处理错误或性能问题。",
+                                "identifier": "dccfc7296e7c48f6a277869b25293bb8",
+                                "name": "Excessively Long"
+                            },
+                            {
+                                "description": "此等价类指 `name` 属性值为 `null`，这在HTML中不常见，但技术上可能存在，将导致无法正确提交表单数据。",
+                                "identifier": "ddd09b612ca9446b9f7731448d54a964",
+                                "name": "Null"
+                            },
+                            {
+                                "description": "此等价类指 `name` 属性未被定义，将导致表单元素无法被正确识别和处理。",
+                                "identifier": "d9d337560f2d4bf898119f2d489afc8f",
+                                "name": "Undefined"
+                            }
+                        ],
+                        "identifier": "99c698209c1049889c977071f39a2b50",
+                        "name": "name"
+                    },
+                    {
+                        "description": "文件列表，包含用户通过文件输入控件选择的所有文件。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户选择了至少一个文件。",
+                                "identifier": "ad1ecb45b47c4f59854cd1b0fb27e305",
+                                "name": "文件列表存在"
+                            },
+                            {
+                                "description": "用户没有选择任何文件。",
+                                "identifier": "a21ec5e835774c238ea6aa0c2d31ba58",
+                                "name": "文件列表为空"
+                            },
+                            {
+                                "description": "用户选择的文件是允许的类型，例如XLSX, XLS, PDF, DOCX, DOC, TXT。",
+                                "identifier": "3ee7ff3c9cd54c5d9226f9122f9055d8",
+                                "name": "允许的文件类型"
+                            },
+                            {
+                                "description": "用户选择的文件不是允许的类型。",
+                                "identifier": "464dcd5f9ab44c9d97f705fdcd5a5c8b",
+                                "name": "不允许的文件类型"
+                            },
+                            {
+                                "description": "用户选择了单个文件。",
+                                "identifier": "f84766a25e0345cc87db2545162b2769",
+                                "name": "单一文件"
+                            },
+                            {
+                                "description": "用户选择了多个文件，尽管可能只允许上传单个文件。",
+                                "identifier": "ceface3ac1d74868baac0751314a9353",
+                                "name": "多文件选择"
+                            },
+                            {
+                                "description": "用户选择的文件大小符合系统要求。",
+                                "identifier": "97164290d05e48d4b81473dab464957f",
+                                "name": "文件大小合规"
+                            },
+                            {
+                                "description": "用户选择的文件大小超出系统允许的范围。",
+                                "identifier": "dc250070c47f48a8b7178c99f24d3f1b",
+                                "name": "文件大小超标"
+                            },
+                            {
+                                "description": "文件内容符合特定的业务规则或格式要求。",
+                                "identifier": "dcfd49142eca48ed9d0a9adbabc9f6dd",
+                                "name": "文件内容合规"
+                            },
+                            {
+                                "description": "文件内容不符合特定的业务规则或格式要求。",
+                                "identifier": "0d4164e98c9c46bb8dc62a5fa9da9908",
+                                "name": "文件内容违规"
+                            }
+                        ],
+                        "identifier": "d3fa13422ad243bcadc4ea95f8a41808",
+                        "name": "files"
+                    },
+                    {
+                        "description": "文件名，表示文件的原始名称。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户名字段，用于登录时输入用户账号。",
+                                "identifier": "4910217fa3e64600a0e220d6312eb13f",
+                                "name": "username"
+                            },
+                            {
+                                "description": "密码字段，用于登录时输入用户密码。",
+                                "identifier": "1a10d18527c14901ab85352c9439d162",
+                                "name": "password"
+                            },
+                            {
+                                "description": "不提供`name`属性值，导致无法识别表单元素。",
+                                "identifier": "6d2c5c0f553342a182e1a6b2852879ea",
+                                "name": "Empty String"
+                            },
+                            {
+                                "description": "包含非法字符的`name`属性值，可能不被服务器正确解析。",
+                                "identifier": "341acfa891ff46d2bdd3cbcd50b88d75",
+                                "name": "Special Characters"
+                            },
+                            {
+                                "description": "`name`属性值过长，可能导致浏览器或服务器无法正确处理。",
+                                "identifier": "0fc60ae16214401f80eb1548148328ef",
+                                "name": "Excessively Long String"
+                            },
+                            {
+                                "description": "文件上传字段，用于选择并上传文件。",
+                                "identifier": "48c55cc758cd4e43882aa99d2ea30837",
+                                "name": "fileUpload"
+                            },
+                            {
+                                "description": "`name`属性值中包含空格，可能影响服务器端的参数解析。",
+                                "identifier": "11fc56816b414325880285ffbc475b47",
+                                "name": "Spaces in String"
+                            },
+                            {
+                                "description": "使用HTML保留字作为`name`属性值，可能导致与HTML元素冲突。",
+                                "identifier": "7056abaaa1524bbc8b9a5d91035f574f",
+                                "name": "Conflict with HTML Reserved Words"
+                            },
+                            {
+                                "description": "`name`属性值包含非ASCII字符，可能不被所有服务器端环境支持。",
+                                "identifier": "7fb1669c288c48c980896a60bad84917",
+                                "name": "Non-ASCII Characters"
+                            },
+                            {
+                                "description": "`name`属性值符合常见的命名规范，易于服务器端处理和识别。",
+                                "identifier": "2849aa7d2cac4db593be3bf3107edad8",
+                                "name": "Standard Naming Convention"
+                            }
+                        ],
+                        "identifier": "9265f548cd784cad9f78e255d5de45b6",
+                        "name": "name"
+                    },
+                    {
+                        "description": "匹配，用于检查文件名是否符合特定的正则表达式模式。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "匹配文件扩展名为 .xlsx, .xls, .pdf, .docx, .doc, 或 .txt 的情况。",
+                                "identifier": "1275c744a6f14255af78c7129614c473",
+                                "name": "Allowed File Extensions"
+                            },
+                            {
+                                "description": "匹配文件扩展名不是上述允许的格式，例如 .jpg, .png, .mp4 等。",
+                                "identifier": "8d00fd3d367e45f19361d0cb35d2240a",
+                                "name": "Disallowed File Extensions"
+                            },
+                            {
+                                "description": "匹配时不区分大小写，例如 .PDF 和 .pdf 都被接受。",
+                                "identifier": "cc32542f033441f89ab3dcae829bbd91",
+                                "name": "Case Insensitivity"
+                            },
+                            {
+                                "description": "文件名为空或文件名不包含扩展名，例如 ' '（空格）或 'filename'（没有扩展名）。",
+                                "identifier": "6c7e5709153847e18cc44930e4427013",
+                                "name": "Empty Filename"
+                            },
+                            {
+                                "description": "文件名中包含多个点，但最后一个点之后的部分符合允许的扩展名，例如 'archive.tar.gz' 中的 .gz。",
+                                "identifier": "d01d7bce76f943478b513658b3cbbe89",
+                                "name": "Multiple Dots in Extension"
+                            },
+                            {
+                                "description": "文件名以点开头，通常表示隐藏文件，例如 .htaccess，但这不被视为无效等价类，因为正则表达式没有明确排除这种情况。",
+                                "identifier": "3489a3067edb452ea394bca3dbc9970b",
+                                "name": "Hidden Files"
+                            },
+                            {
+                                "description": "文件名没有扩展名，例如 'image1'。",
+                                "identifier": "e62fbce7cf244e238d988d8f6602d04a",
+                                "name": "Files Without Extension"
+                            },
+                            {
+                                "description": "文件名在扩展名前包含非法字符，例如 'image@1.jpg'。",
+                                "identifier": "875fbb37fe4f4c50a6b981e66ab3680c",
+                                "name": "Illegal Characters Before Extension"
+                            },
+                            {
+                                "description": "扩展名长度符合规定的最小长度，例如 .doc。",
+                                "identifier": "7d4105596e5e4dd9a23e641b73d4a8e1",
+                                "name": "Extension Length"
+                            },
+                            {
+                                "description": "扩展名长度异常长，例如 'image.verylongextension'。",
+                                "identifier": "152fc5b7cd5d44be9f73885e6e1ff1a9",
+                                "name": "Excessively Long Extension"
+                            }
+                        ],
+                        "identifier": "58f8d893a3d342efb696e1e58a3b6032",
+                        "name": "match"
+                    }
+                ],
+                "description": "The unique identifier for the user.",
+                "identifier": "dffdb7b3844b40d188c01812ab8a905a",
+                "name": "id",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "0f8c39f4c4ff452387ed5eb538c0679e",
+                                "equivalenceClassId": "ff2e689b9b0841298ca83d3c3c1bb277"
+                            },
+                            {
+                                "attributeId": "99c698209c1049889c977071f39a2b50",
+                                "equivalenceClassId": "87dc0e43daa2469ea3fa4bf68d52415c"
+                            },
+                            {
+                                "attributeId": "d3fa13422ad243bcadc4ea95f8a41808",
+                                "equivalenceClassId": "dc250070c47f48a8b7178c99f24d3f1b"
+                            },
+                            {
+                                "attributeId": "9265f548cd784cad9f78e255d5de45b6",
+                                "equivalenceClassId": "341acfa891ff46d2bdd3cbcd50b88d75"
+                            },
+                            {
+                                "attributeId": "58f8d893a3d342efb696e1e58a3b6032",
+                                "equivalenceClassId": "cc32542f033441f89ab3dcae829bbd91"
+                            }
+                        ],
+                        "identifier": "f7c772f3f0fd41e281ac3c9af759b10c",
+                        "name": "状态名：属性不一致异常"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "0f8c39f4c4ff452387ed5eb538c0679e",
+                                "equivalenceClassId": "b48e886957be4a2da974955182c7c66f"
+                            },
+                            {
+                                "attributeId": "99c698209c1049889c977071f39a2b50",
+                                "equivalenceClassId": "a654e84eb47a4a1c85c12df25c8669a6"
+                            },
+                            {
+                                "attributeId": "d3fa13422ad243bcadc4ea95f8a41808",
+                                "equivalenceClassId": "a21ec5e835774c238ea6aa0c2d31ba58"
+                            },
+                            {
+                                "attributeId": "9265f548cd784cad9f78e255d5de45b6",
+                                "equivalenceClassId": "4910217fa3e64600a0e220d6312eb13f"
+                            },
+                            {
+                                "attributeId": "58f8d893a3d342efb696e1e58a3b6032",
+                                "equivalenceClassId": "875fbb37fe4f4c50a6b981e66ab3680c"
+                            }
+                        ],
+                        "identifier": "4bdcf67b25ca47228b5c973cd0c581ee",
+                        "name": "状态名：属性冲突与无效值"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "0f8c39f4c4ff452387ed5eb538c0679e",
+                                "equivalenceClassId": "ff2e689b9b0841298ca83d3c3c1bb277"
+                            },
+                            {
+                                "attributeId": "99c698209c1049889c977071f39a2b50",
+                                "equivalenceClassId": "1aeb5fa7d80047c4a856aaf39cf78318"
+                            },
+                            {
+                                "attributeId": "d3fa13422ad243bcadc4ea95f8a41808",
+                                "equivalenceClassId": "464dcd5f9ab44c9d97f705fdcd5a5c8b"
+                            },
+                            {
+                                "attributeId": "9265f548cd784cad9f78e255d5de45b6",
+                                "equivalenceClassId": "4910217fa3e64600a0e220d6312eb13f"
+                            },
+                            {
+                                "attributeId": "58f8d893a3d342efb696e1e58a3b6032",
+                                "equivalenceClassId": "7d4105596e5e4dd9a23e641b73d4a8e1"
+                            }
+                        ],
+                        "identifier": "8d8f90a9a8e44ecc89594d4391b7f58e",
+                        "name": "状态名：属性等价类定义"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "0f8c39f4c4ff452387ed5eb538c0679e",
+                                "equivalenceClassId": "b48e886957be4a2da974955182c7c66f"
+                            },
+                            {
+                                "attributeId": "99c698209c1049889c977071f39a2b50",
+                                "equivalenceClassId": "dccfc7296e7c48f6a277869b25293bb8"
+                            },
+                            {
+                                "attributeId": "d3fa13422ad243bcadc4ea95f8a41808",
+                                "equivalenceClassId": "ceface3ac1d74868baac0751314a9353"
+                            },
+                            {
+                                "attributeId": "9265f548cd784cad9f78e255d5de45b6",
+                                "equivalenceClassId": "7fb1669c288c48c980896a60bad84917"
+                            },
+                            {
+                                "attributeId": "58f8d893a3d342efb696e1e58a3b6032",
+                                "equivalenceClassId": "152fc5b7cd5d44be9f73885e6e1ff1a9"
+                            }
+                        ],
+                        "identifier": "432a708db55947159577f397ea98251b",
+                        "name": "状态名：属性冲突与异常字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "0f8c39f4c4ff452387ed5eb538c0679e",
+                                "equivalenceClassId": "16adc6c3aec9438ca16941649a238785"
+                            },
+                            {
+                                "attributeId": "99c698209c1049889c977071f39a2b50",
+                                "equivalenceClassId": "30392010dacf43c59365ef1a08c318f2"
+                            },
+                            {
+                                "attributeId": "d3fa13422ad243bcadc4ea95f8a41808",
+                                "equivalenceClassId": "0d4164e98c9c46bb8dc62a5fa9da9908"
+                            },
+                            {
+                                "attributeId": "9265f548cd784cad9f78e255d5de45b6",
+                                "equivalenceClassId": "7fb1669c288c48c980896a60bad84917"
+                            },
+                            {
+                                "attributeId": "58f8d893a3d342efb696e1e58a3b6032",
+                                "equivalenceClassId": "3489a3067edb452ea394bca3dbc9970b"
+                            }
+                        ],
+                        "identifier": "8cd5b3ceb9474d2582e89d3108df8d8a",
+                        "name": "状态名：属性等价类异常"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "0f8c39f4c4ff452387ed5eb538c0679e",
+                                "equivalenceClassId": "b48e886957be4a2da974955182c7c66f"
+                            },
+                            {
+                                "attributeId": "99c698209c1049889c977071f39a2b50",
+                                "equivalenceClassId": "d9d337560f2d4bf898119f2d489afc8f"
+                            },
+                            {
+                                "attributeId": "d3fa13422ad243bcadc4ea95f8a41808",
+                                "equivalenceClassId": "464dcd5f9ab44c9d97f705fdcd5a5c8b"
+                            },
+                            {
+                                "attributeId": "9265f548cd784cad9f78e255d5de45b6",
+                                "equivalenceClassId": "1a10d18527c14901ab85352c9439d162"
+                            },
+                            {
+                                "attributeId": "58f8d893a3d342efb696e1e58a3b6032",
+                                "equivalenceClassId": "1275c744a6f14255af78c7129614c473"
+                            }
+                        ],
+                        "identifier": "ef38138933c5469f8142ce2c7f2d7125",
+                        "name": "状态名：属性冲突与文件限制"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "用户名的长度必须在5到20个字符之间，确保用户名既不会太短也不会太长，以符合系统安全和识别要求。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类包括所有长度在5到20个字符之间的用户名，符合用户名长度要求。",
+                                "identifier": "a8a82a1e22eb466cb24eabbff36f20ea",
+                                "name": "5 to 20 Characters"
+                            },
+                            {
+                                "description": "此等价类包括所有长度小于5个字符的用户名，不符合用户名长度要求。",
+                                "identifier": "d4a665d722fc4cadaaebdc3f24223738",
+                                "name": "Less than 5 Characters"
+                            },
+                            {
+                                "description": "此等价类包括所有长度超过20个字符的用户名，不符合用户名长度要求。",
+                                "identifier": "c3d99b4b6f8e471285075905ab69827f",
+                                "name": "More than 20 Characters"
+                            }
+                        ],
+                        "identifier": "672a13ab15914f4ca829469414ba6de2",
+                        "name": "长度"
+                    },
+                    {
+                        "description": "用户名不能包含特殊字符，以避免安全风险和输入错误。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "Only contains letters and numbers.",
+                                "identifier": "7ee5d9f50970485590cc2a6c97e25a02",
+                                "name": "Pure Alphanumeric Username"
+                            },
+                            {
+                                "description": "Contains underscores, and only letters and numbers otherwise.",
+                                "identifier": "9c8797994b234125aa3370e07977680e",
+                                "name": "Username with Underscores"
+                            },
+                            {
+                                "description": "Contains space characters.",
+                                "identifier": "227f375fa4e94b27ba938bbfe2a8431b",
+                                "name": "Username with Spaces"
+                            },
+                            {
+                                "description": "Contains characters other than letters, numbers, and underscores, such as '!@#$%^&*()_+\\-=[]{};':\"\\|,.<>/?~'.",
+                                "identifier": "5c03b1d83cf24bfa8be4fc2c580e6a6a",
+                                "name": "Username with Special Characters"
+                            },
+                            {
+                                "description": "The username field is empty.",
+                                "identifier": "d245fd8351024dceb90f0fc7a8780921",
+                                "name": "Empty Username"
+                            },
+                            {
+                                "description": "Username length exceeds 20 characters.",
+                                "identifier": "41910615e1394cdda12cf8a7326f5736",
+                                "name": "Overlength Username"
+                            },
+                            {
+                                "description": "Username length is less than 5 characters.",
+                                "identifier": "f45e9546c8c34adea87e05b505cae726",
+                                "name": "Underlength Username"
+                            }
+                        ],
+                        "identifier": "95ef973a4f8c47679ca86a4757b12336",
+                        "name": "字符类型"
+                    }
+                ],
+                "description": "The name used by the user to log in.",
+                "identifier": "8b606599e93344baa976077437dc5df9",
+                "name": "username",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "672a13ab15914f4ca829469414ba6de2",
+                                "equivalenceClassId": "d4a665d722fc4cadaaebdc3f24223738"
+                            },
+                            {
+                                "attributeId": "95ef973a4f8c47679ca86a4757b12336",
+                                "equivalenceClassId": "7ee5d9f50970485590cc2a6c97e25a02"
+                            }
+                        ],
+                        "identifier": "eff3e42024d547b68327e38bdce277a6",
+                        "name": "状态名：用户名未设置且符合规范"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "672a13ab15914f4ca829469414ba6de2",
+                                "equivalenceClassId": "d4a665d722fc4cadaaebdc3f24223738"
+                            },
+                            {
+                                "attributeId": "95ef973a4f8c47679ca86a4757b12336",
+                                "equivalenceClassId": "227f375fa4e94b27ba938bbfe2a8431b"
+                            }
+                        ],
+                        "identifier": "ff6d202fed244512a89a0ed611aecf71",
+                        "name": "状态名：用户名空且含空格"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "672a13ab15914f4ca829469414ba6de2",
+                                "equivalenceClassId": "d4a665d722fc4cadaaebdc3f24223738"
+                            },
+                            {
+                                "attributeId": "95ef973a4f8c47679ca86a4757b12336",
+                                "equivalenceClassId": "9c8797994b234125aa3370e07977680e"
+                            }
+                        ],
+                        "identifier": "eddb41f1ccf1452dabac46bbc9cae8b4",
+                        "name": "状态名：用户名长度小于5且含下划线"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "672a13ab15914f4ca829469414ba6de2",
+                                "equivalenceClassId": "d4a665d722fc4cadaaebdc3f24223738"
+                            },
+                            {
+                                "attributeId": "95ef973a4f8c47679ca86a4757b12336",
+                                "equivalenceClassId": "5c03b1d83cf24bfa8be4fc2c580e6a6a"
+                            }
+                        ],
+                        "identifier": "a612e8281edb43d4a6fef416103c95b9",
+                        "name": "状态名：特殊字符用户名待完善"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "672a13ab15914f4ca829469414ba6de2",
+                                "equivalenceClassId": "d4a665d722fc4cadaaebdc3f24223738"
+                            },
+                            {
+                                "attributeId": "95ef973a4f8c47679ca86a4757b12336",
+                                "equivalenceClassId": "f45e9546c8c34adea87e05b505cae726"
+                            }
+                        ],
+                        "identifier": "de8c33a62604430da4bf2f18aaa7e399",
+                        "name": "状态名：用户名长度不足5字符"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "672a13ab15914f4ca829469414ba6de2",
+                                "equivalenceClassId": "c3d99b4b6f8e471285075905ab69827f"
+                            },
+                            {
+                                "attributeId": "95ef973a4f8c47679ca86a4757b12336",
+                                "equivalenceClassId": "f45e9546c8c34adea87e05b505cae726"
+                            }
+                        ],
+                        "identifier": "aa3496c122ab4f7f814e80ce40037623",
+                        "name": "状态名：用户名长度不足"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "值，表示用户选择的角色类型，如管理员或用户。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "此等价类代表管理员角色，可能需要访问更高级的上传功能或对上传的文件类型有更宽松的限制。",
+                                "identifier": "b9fd80595e7a4e0a9e2eacc03589c7c6",
+                                "name": "Admin"
+                            },
+                            {
+                                "description": "此等价类代表普通用户角色，通常对上传的文件类型和大小有更严格的限制。",
+                                "identifier": "02e1906bfc84496980d9e78f7b4e8642",
+                                "name": "User"
+                            },
+                            {
+                                "description": "此等价类代表访客角色，可能不允许上传文件或只能上传特定类型的文件。",
+                                "identifier": "7cb5919f2ef641c09955f07b055ae051",
+                                "name": "Guest"
+                            },
+                            {
+                                "description": "此等价类代表无效或未定义的角色，可能导致上传功能不可用或触发错误。",
+                                "identifier": "250996c48a5b406886a1934139ee7f5a",
+                                "name": "Invalid Role"
+                            },
+                            {
+                                "description": "此等价类代表 `value` 属性为空，可能导致无法确定用户角色，从而影响文件上传的权限判断。",
+                                "identifier": "0f9cfb91906647dcafca2e27710ef6c7",
+                                "name": "Empty Value"
+                            },
+                            {
+                                "description": "此等价类代表 `value` 属性为 `null`，可能表示用户未选择角色或角色信息未被正确设置。",
+                                "identifier": "6b48b0bbb36a420d9d569cbfe30b3c19",
+                                "name": "Null Value"
+                            },
+                            {
+                                "description": "此等价类代表 `value` 属性未定义，可能因为页面加载错误或脚本未正确执行。",
+                                "identifier": "9184724307a24c9c88b7fd253a10a918",
+                                "name": "Undefined"
+                            }
+                        ],
+                        "identifier": "05c2cc0402614c14a2e589e9a29e08d4",
+                        "name": "value"
+                    },
+                    {
+                        "description": "值，表示用户选择的角色类型，如管理员或用户。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "用户选择管理员角色，拥有系统管理权限。",
+                                "identifier": "f42d8cf31ef24355855fdc8c91afd8eb",
+                                "name": "AdminRole"
+                            },
+                            {
+                                "description": "用户选择普通用户角色，拥有基本的文件操作权限。",
+                                "identifier": "9334e84bf92d4c5288337159eeb1b7ae",
+                                "name": "UserRole"
+                            },
+                            {
+                                "description": "用户未选择任何角色，无法进行任何操作。",
+                                "identifier": "b41a55af79cc4233a3a0cdb3ecca7c32",
+                                "name": "EmptyRole"
+                            },
+                            {
+                                "description": "角色选择为空，系统无法识别用户权限。",
+                                "identifier": "1d150ff7f2c746928dd8db4497f90e1d",
+                                "name": "NullRole"
+                            },
+                            {
+                                "description": "用户选择了系统不支持的角色，无法进行操作。",
+                                "identifier": "9f7de4e0c3b24ba791be64233a7806ba",
+                                "name": "InvalidRole"
+                            }
+                        ],
+                        "identifier": "625fe5e4b9444ac48a81e67cc3b2cd9a",
+                        "name": "中文翻译"
+                    }
+                ],
+                "description": "The role assigned to the user.",
+                "identifier": "ec47b4a4e2b94be3b201591686c08cf5",
+                "name": "role",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "05c2cc0402614c14a2e589e9a29e08d4",
+                                "equivalenceClassId": "02e1906bfc84496980d9e78f7b4e8642"
+                            },
+                            {
+                                "attributeId": "625fe5e4b9444ac48a81e67cc3b2cd9a",
+                                "equivalenceClassId": "9334e84bf92d4c5288337159eeb1b7ae"
+                            }
+                        ],
+                        "identifier": "5d86d1e485974011b73e42603e467a08",
+                        "name": "\"用户角色定义\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "05c2cc0402614c14a2e589e9a29e08d4",
+                                "equivalenceClassId": "6b48b0bbb36a420d9d569cbfe30b3c19"
+                            },
+                            {
+                                "attributeId": "625fe5e4b9444ac48a81e67cc3b2cd9a",
+                                "equivalenceClassId": "9f7de4e0c3b24ba791be64233a7806ba"
+                            }
+                        ],
+                        "identifier": "cdb9f614bca2427c9de088a446dbc03b",
+                        "name": "状态名：无效角色定义"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "05c2cc0402614c14a2e589e9a29e08d4",
+                                "equivalenceClassId": "9184724307a24c9c88b7fd253a10a918"
+                            },
+                            {
+                                "attributeId": "625fe5e4b9444ac48a81e67cc3b2cd9a",
+                                "equivalenceClassId": "f42d8cf31ef24355855fdc8c91afd8eb"
+                            }
+                        ],
+                        "identifier": "7d43ee64f0db49db9fae9e1463643244",
+                        "name": "状态名：未定义属性与管理员角色"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "05c2cc0402614c14a2e589e9a29e08d4",
+                                "equivalenceClassId": "b9fd80595e7a4e0a9e2eacc03589c7c6"
+                            },
+                            {
+                                "attributeId": "625fe5e4b9444ac48a81e67cc3b2cd9a",
+                                "equivalenceClassId": "1d150ff7f2c746928dd8db4497f90e1d"
+                            }
+                        ],
+                        "identifier": "387df04c2c484f7a8411932373ff95e7",
+                        "name": "状态名：管理员与空角色权限"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "05c2cc0402614c14a2e589e9a29e08d4",
+                                "equivalenceClassId": "02e1906bfc84496980d9e78f7b4e8642"
+                            },
+                            {
+                                "attributeId": "625fe5e4b9444ac48a81e67cc3b2cd9a",
+                                "equivalenceClassId": "1d150ff7f2c746928dd8db4497f90e1d"
+                            }
+                        ],
+                        "identifier": "4c022227c2c44e55a5b8add07bce3861",
+                        "name": "\"未命名角色状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "05c2cc0402614c14a2e589e9a29e08d4",
+                                "equivalenceClassId": "02e1906bfc84496980d9e78f7b4e8642"
+                            },
+                            {
+                                "attributeId": "625fe5e4b9444ac48a81e67cc3b2cd9a",
+                                "equivalenceClassId": "9f7de4e0c3b24ba791be64233a7806ba"
+                            }
+                        ],
+                        "identifier": "2b685ce8e46e40a9bf3bd43812995f01",
+                        "name": "无效角色"
+                    }
+                ]
+            }
+        ],
+        "name": "文件上传页面",
+        "states": []
+    }
+}

@@ -1,0 +1,133 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "项目1",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "9c86fdd56200abc5a9c65adf137beb1e",
+                "name": "登录操作",
+                "variables": [
+                    "4d0071dcff718a046776a76d6e869f14",
+                    "7ae5b4c5f6dfb3e8631e3f31a7bc7708"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "caea4361c7aaf493f832db2be01fab705",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "注册状态",
+                        "equivalenceClasses": [
+                            {
+                                "description": "已注册",
+                                "identifier": "ba423021ea621b2fc322a65b44108ea1",
+                                "name": "正确"
+                            },
+                            {
+                                "description": "未注册",
+                                "identifier": "b95c9d24bbbc63aaad681e10d000fbd5",
+                                "name": "错误\n"
+                            }
+                        ],
+                        "identifier": "3b2ee9f3dba319c2044d8d870b583a79",
+                        "name": "是否正确"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "4d0071dcff718a046776a76d6e869f14",
+                "name": "用户名",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3b2ee9f3dba319c2044d8d870b583a79",
+                                "equivalenceClassId": "b95c9d24bbbc63aaad681e10d000fbd5"
+                            }
+                        ],
+                        "identifier": "f3f2c8cb71ae4c2e8f44968f65dbd23e",
+                        "name": ""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3b2ee9f3dba319c2044d8d870b583a79",
+                                "equivalenceClassId": "ba423021ea621b2fc322a65b44108ea1"
+                            }
+                        ],
+                        "identifier": "bc107b1e08064dabb76189ce60604c0d",
+                        "name": ""
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "是否匹配用户名",
+                        "equivalenceClasses": [
+                            {
+                                "description": "匹配",
+                                "identifier": "93a56534eacfb3fc238971a0a755a9de",
+                                "name": "正确"
+                            },
+                            {
+                                "description": "不匹配",
+                                "identifier": "b7d9f1672371f42f284bcc777f408f8c",
+                                "name": "错误"
+                            }
+                        ],
+                        "identifier": "f13df1843cee9355e0ff72c8ec55af5c",
+                        "name": "正确性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "7ae5b4c5f6dfb3e8631e3f31a7bc7708",
+                "name": "密码",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "f13df1843cee9355e0ff72c8ec55af5c",
+                                "equivalenceClassId": "b7d9f1672371f42f284bcc777f408f8c"
+                            }
+                        ],
+                        "identifier": "5770ee99a3ec4141b92bdadfde6c6819",
+                        "name": ""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "f13df1843cee9355e0ff72c8ec55af5c",
+                                "equivalenceClassId": "93a56534eacfb3fc238971a0a755a9de"
+                            }
+                        ],
+                        "identifier": "be136fc118a14a59b633fc719d13c494",
+                        "name": ""
+                    }
+                ]
+            }
+        ],
+        "name": "登录页面",
+        "states": []
+    }
+}

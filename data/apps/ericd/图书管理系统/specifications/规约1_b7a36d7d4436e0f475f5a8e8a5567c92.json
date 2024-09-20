@@ -1,0 +1,111 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "b774f3c099dcbebc16366f46235ecf3e",
+                "name": "借阅",
+                "variables": [
+                    "94435f28fceaa4913afcac6a0526c0e8",
+                    "0e71c0ec91f99bc823ad9cfacc8e5087",
+                    "c02f39fa4b05eb8b249110209bec3988",
+                    "dc57ea65e9ca98eb0e3c0ab408bae8cf",
+                    "919b70402ddcc72c52331f4a473413fc",
+                    "cb8ef8741b95e2bbff8dcc574fd55c2d",
+                    "e8765f1e556d0e40ee68be5e145af234",
+                    "ea090b188ff32a79dcb93550246831fb",
+                    "33d6f8f6a4b4735913bc372beb746b48"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "36a158d152d74600b6a8af311fb6013d",
+        "memberObjects": [
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "94435f28fceaa4913afcac6a0526c0e8",
+                "name": "书名",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "0e71c0ec91f99bc823ad9cfacc8e5087",
+                "name": "ISBN编号",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "c02f39fa4b05eb8b249110209bec3988",
+                "name": "作者",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "dc57ea65e9ca98eb0e3c0ab408bae8cf",
+                "name": "出版社",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "919b70402ddcc72c52331f4a473413fc",
+                "name": "借阅时间",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "cb8ef8741b95e2bbff8dcc574fd55c2d",
+                "name": "图书分类",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "e8765f1e556d0e40ee68be5e145af234",
+                "name": "页数",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "ea090b188ff32a79dcb93550246831fb",
+                "name": "定价",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "33d6f8f6a4b4735913bc372beb746b48",
+                "name": "库存数量",
+                "states": []
+            }
+        ],
+        "name": "图书借阅页面",
+        "states": []
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "项目1",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "条件31",
+                            "identifier": "8caff67822a04b68b87f6faef012acca",
+                            "states": [
+                                "4f98385ad5b0409b8786f2c8643c1e48"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "c8ea7d469dbb4ff8b2797eb2b5366e7f",
+                        "name": "场景31",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果31",
+                            "identifier": "bf5ff13f39d247468b388604c33724b2",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "条件32",
+                            "identifier": "4e6651d91c6b4f2c9282fe870f57fa38",
+                            "states": [
+                                "90f46d9b1a6448699a819eddce4da35f"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "a970b94149f74e3a961e4819b94c83be",
+                        "name": "场景32",
+                        "nextCar": [],
+                        "result": {
+                            "description": "结果32",
+                            "identifier": "8ea179d2a51d4357aa830e8824d3fd27",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "652e1b505cc9c0409c6a8110421f2dea",
+                "name": "操作3",
+                "variables": [
+                    "2a09ddca85f9970456225b91304a2be7"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "973004049d5c46bcb7731e24ed048615",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "3e4fa9375c61c2c2edcd71554906fee8",
+                                "name": "等价类311"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "1ea04943032010bfdf6d73e9d4aa78fb",
+                                "name": "等价类·312"
+                            }
+                        ],
+                        "identifier": "b8cc73af9aec228f8da4deea40cdb0b0",
+                        "name": "属性31"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "2a09ddca85f9970456225b91304a2be7",
+                "name": "变量3",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "b8cc73af9aec228f8da4deea40cdb0b0",
+                                "equivalenceClassId": "1ea04943032010bfdf6d73e9d4aa78fb"
+                            }
+                        ],
+                        "identifier": "90f46d9b1a6448699a819eddce4da35f",
+                        "name": "状态31"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "b8cc73af9aec228f8da4deea40cdb0b0",
+                                "equivalenceClassId": "3e4fa9375c61c2c2edcd71554906fee8"
+                            }
+                        ],
+                        "identifier": "4f98385ad5b0409b8786f2c8643c1e48",
+                        "name": "状态32"
+                    }
+                ]
+            }
+        ],
+        "name": "规约3",
+        "states": []
+    }
+}

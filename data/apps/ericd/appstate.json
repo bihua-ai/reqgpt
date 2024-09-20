@@ -1,0 +1,21 @@
+{
+    "action_identifier": null,
+    "action_name": null,
+    "checked_elements": {
+        "checked_actions": [],
+        "checked_attributes": [],
+        "checked_cars": [],
+        "checked_documents": [],
+        "checked_projects": [],
+        "checked_specifications": [],
+        "checked_states": [],
+        "checked_variables": []
+    },
+    "navtree_return_element": null,
+    "page_visible": "home page",
+    "path_spec_with_action": null,
+    "project_name": null,
+    "project_path": null,
+    "user_id": "eric",
+    "user_identifier": "eric"
+}

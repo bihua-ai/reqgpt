@@ -1,0 +1,213 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "ee6cff144b7244f38d1115195739bc57",
+                            "states": [
+                                "d71ca72a4e314bbfb8cb26392b4707a9"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "60cbac932d094cd0a657e24d448a7ca9",
+                        "name": "场景1",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "c4237626bddf468babc5e689cca97246",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "7c19f286b61f4892bddc04e703cb1bdd",
+                            "states": [
+                                "2953c7f632d04257b649452615fb2a32"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "be5ad9e72d0a4afca08cbe2683ee1556",
+                        "name": "场景2",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "80b2d4df4f1c406fabe2b132ee155826",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "5ec6f0648fe54b469286c963daf7fc95",
+                            "states": [
+                                "29df417fad054f4faadbca8897c91deb"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "f082e46a15b443b89652f5e8e92c9ca1",
+                        "name": "场景3",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "cbb1f692cd954e2e949ed51b5b7a1a3c",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "11a1504456e14e7eb2f21717cd892e27",
+                            "states": [
+                                "9fb847286f8e4cbaaf92b6bb792ab7dd"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "1da1bac120474f6ea749c90aa62a1d77",
+                        "name": "场景4",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "d689008d1d0748679a76751ea33a7633",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "41098b6724769e134fd6492bd7be25f6",
+                "name": "搜索",
+                "variables": [
+                    "76703f0501441f42a360d5c1a680261e"
+                ]
+            },
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "书名在表中",
+                            "identifier": "7fa7d2af01eb9cc064921a7e22f8c245",
+                            "states": []
+                        },
+                        "description": "",
+                        "identifier": "7d11c111f22a4dda31a07cb0f6c8eeb5",
+                        "name": "正向场景",
+                        "nextCar": [],
+                        "result": {
+                            "description": "借阅成功",
+                            "identifier": "90c99df9a55e29c8c858b295121a077a",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "374bd9ac7223a91a58082d63c53dd700",
+                "name": "借阅",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "5a952fde686d48228d792b3765581c41",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "f1dfdb6b7d7ea13c38553772ab6be733",
+                                "name": "空"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "2d2eab294da7b6484ef25d05ae420ffe",
+                                "name": "存在书名，字长不超过255"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "1fb89a2b24a7fa2065f3dca11f87f4ec",
+                                "name": "不存在书名，字长不超过255"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "bd3cb24d14e6baddb85c21f7f96eaf7b",
+                                "name": "字长超过255"
+                            }
+                        ],
+                        "identifier": "6d6b87a9f132e740a32da5111aa1d3e6",
+                        "name": "内容"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "76703f0501441f42a360d5c1a680261e",
+                "name": "搜索词",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6d6b87a9f132e740a32da5111aa1d3e6",
+                                "equivalenceClassId": "bd3cb24d14e6baddb85c21f7f96eaf7b"
+                            }
+                        ],
+                        "identifier": "9fb847286f8e4cbaaf92b6bb792ab7dd",
+                        "name": "搜索词超长"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6d6b87a9f132e740a32da5111aa1d3e6",
+                                "equivalenceClassId": "2d2eab294da7b6484ef25d05ae420ffe"
+                            }
+                        ],
+                        "identifier": "2953c7f632d04257b649452615fb2a32",
+                        "name": "书名存在"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6d6b87a9f132e740a32da5111aa1d3e6",
+                                "equivalenceClassId": "1fb89a2b24a7fa2065f3dca11f87f4ec"
+                            }
+                        ],
+                        "identifier": "29df417fad054f4faadbca8897c91deb",
+                        "name": "书名不存在"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "6d6b87a9f132e740a32da5111aa1d3e6",
+                                "equivalenceClassId": "f1dfdb6b7d7ea13c38553772ab6be733"
+                            }
+                        ],
+                        "identifier": "d71ca72a4e314bbfb8cb26392b4707a9",
+                        "name": "书名为空"
+                    }
+                ]
+            }
+        ],
+        "name": "图书搜索页面",
+        "states": []
+    }
+}

@@ -1,0 +1,373 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "8d3ca473772848e48346947ef05f2a4f",
+                            "states": [
+                                "8d9299140c5e4d9aaa7ff5e268a9db46",
+                                "e80aed219421403784a4630401ed4234",
+                                "e861511bafe14f81afa5f8cdbf3d319e",
+                                "2e07a8d34f5f4616b2be88e47cbca516"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "f657100f2f1b4974b6878cff89a0b0f3",
+                        "name": "登陆成功",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "fef0fa2b05134337b3c1a7717ea3b4ec",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "8294e36317964ab7aaf662fc72b96eb5",
+                            "states": [
+                                "8475fda6454b49c1a74585b05db588f3",
+                                "3eb7548d90c84599a676c886cf34fa7f",
+                                "e861511bafe14f81afa5f8cdbf3d319e",
+                                "25cfb33bdecc47a8ad6aa6c9276110c1"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "be7429bd493b4c87abd03fa52ab5ffe4",
+                        "name": "场景2",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "c5db6a46b56d400da5d993aa7122e3eb",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "bf10e4ade8e3441db2f5b1f857e22c9d",
+                            "states": [
+                                "8475fda6454b49c1a74585b05db588f3",
+                                "3eb7548d90c84599a676c886cf34fa7f",
+                                "b69a513d577e4b34a46a2b5012f36ed9",
+                                "2e07a8d34f5f4616b2be88e47cbca516"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "d77a486337e6469b9580f06b61889160",
+                        "name": "场景3",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "60621db0a10f42619fbf76bd02f1b1d6",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "ad32df709ab0428fbe2147761b8c9a47",
+                            "states": [
+                                "8d9299140c5e4d9aaa7ff5e268a9db46",
+                                "3eb7548d90c84599a676c886cf34fa7f",
+                                "b69a513d577e4b34a46a2b5012f36ed9",
+                                "25cfb33bdecc47a8ad6aa6c9276110c1"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "774c7ec84ecb46fc98731339c2c2b3a8",
+                        "name": "场景4",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "46e07f64a61e4fbea229d3d3edffd96e",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "533bb3e2035c484180ba1615d327f724",
+                            "states": [
+                                "8475fda6454b49c1a74585b05db588f3",
+                                "e80aed219421403784a4630401ed4234",
+                                "b69a513d577e4b34a46a2b5012f36ed9",
+                                "25cfb33bdecc47a8ad6aa6c9276110c1"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "b38b26a89a9547c88c3674893c590f1b",
+                        "name": "场景5",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "9786f3f055dd47f6ad4610a2932330a6",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "0e56b4277a1205a9d0dc67eae1a2f729",
+                "name": "登录按钮",
+                "variables": [
+                    "1986d600c928c547074999cd72968e1d",
+                    "f140599cdf4140d50acc729531a484c7",
+                    "e53ccb0dcb614e075fa377bf91c98dfc",
+                    "33b15f6a6cc0dd912b44503f987a29a2"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "f11562b7dd1448b9bc84fd5c661bbc89",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "账号不能为空·",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "eee39d1ddc8a9bb26dcbd523f92a86ed",
+                                "name": "必填"
+                            }
+                        ],
+                        "identifier": "e6b0393c63c1e88f3a0491be337e9b2f",
+                        "name": "必填？"
+                    },
+                    {
+                        "description": "符合数据库中已存在的 `username` 字段值",
+                        "equivalenceClasses": [
+                            {
+                                "description": "符合数据库中已存在的 `username` 字段值",
+                                "identifier": "e4beb5ede5bcd25cba68a26152cf0b57",
+                                "name": "有效。符合数据库中已存在的 `username` 字段值。"
+                            },
+                            {
+                                "description": "空字符串、仅空格、不存在的用户名。",
+                                "identifier": "30160a8848c0159c064248e578ab6c87",
+                                "name": "无效。空字符串、仅空格、不存在的用户名。"
+                            }
+                        ],
+                        "identifier": "996e034773403bbdd39dac22f629066f",
+                        "name": "是否有效账号"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "1986d600c928c547074999cd72968e1d",
+                "name": "账号",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e6b0393c63c1e88f3a0491be337e9b2f",
+                                "equivalenceClassId": "eee39d1ddc8a9bb26dcbd523f92a86ed"
+                            },
+                            {
+                                "attributeId": "996e034773403bbdd39dac22f629066f",
+                                "equivalenceClassId": "30160a8848c0159c064248e578ab6c87"
+                            }
+                        ],
+                        "identifier": "8475fda6454b49c1a74585b05db588f3",
+                        "name": "无效账号"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "e6b0393c63c1e88f3a0491be337e9b2f",
+                                "equivalenceClassId": "eee39d1ddc8a9bb26dcbd523f92a86ed"
+                            },
+                            {
+                                "attributeId": "996e034773403bbdd39dac22f629066f",
+                                "equivalenceClassId": "e4beb5ede5bcd25cba68a26152cf0b57"
+                            }
+                        ],
+                        "identifier": "8d9299140c5e4d9aaa7ff5e268a9db46",
+                        "name": "有效账号"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "密码不能缺失",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "33149f0a640905312bc341db6f176bbf",
+                                "name": "是"
+                            }
+                        ],
+                        "identifier": "933d70298c54f32e1097a5f01035484a",
+                        "name": "必填"
+                    },
+                    {
+                        "description": "有效注册密码",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "359c5e2119b3b4425ed29c6bfdbc9daa",
+                                "name": "有效：与数据库中对应 `username` 的 `password` 字段值（255）匹配"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "65199e23b94de2485d478d779c219b86",
+                                "name": "无效：空字符串、仅空格、错误的密码"
+                            }
+                        ],
+                        "identifier": "56ca7cdad22b11d30d44b18a257f4680",
+                        "name": "是否有效密码"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "f140599cdf4140d50acc729531a484c7",
+                "name": "密码",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "933d70298c54f32e1097a5f01035484a",
+                                "equivalenceClassId": "33149f0a640905312bc341db6f176bbf"
+                            },
+                            {
+                                "attributeId": "56ca7cdad22b11d30d44b18a257f4680",
+                                "equivalenceClassId": "65199e23b94de2485d478d779c219b86"
+                            }
+                        ],
+                        "identifier": "3eb7548d90c84599a676c886cf34fa7f",
+                        "name": "无效密码"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "933d70298c54f32e1097a5f01035484a",
+                                "equivalenceClassId": "33149f0a640905312bc341db6f176bbf"
+                            },
+                            {
+                                "attributeId": "56ca7cdad22b11d30d44b18a257f4680",
+                                "equivalenceClassId": "359c5e2119b3b4425ed29c6bfdbc9daa"
+                            }
+                        ],
+                        "identifier": "e80aed219421403784a4630401ed4234",
+                        "name": "有效密码"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "管理员可以管理用户",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "72934109bd8b3fd06077a21df63133ea",
+                                "name": "管理员"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "40706524877ce5cc76bdd754d6de7b28",
+                                "name": "普通用户"
+                            }
+                        ],
+                        "identifier": "bf6ba453a70d217cc61d54ed4dfcf07a",
+                        "name": "身份"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "e53ccb0dcb614e075fa377bf91c98dfc",
+                "name": "角色",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bf6ba453a70d217cc61d54ed4dfcf07a",
+                                "equivalenceClassId": "40706524877ce5cc76bdd754d6de7b28"
+                            }
+                        ],
+                        "identifier": "b69a513d577e4b34a46a2b5012f36ed9",
+                        "name": "普通用户身份"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bf6ba453a70d217cc61d54ed4dfcf07a",
+                                "equivalenceClassId": "72934109bd8b3fd06077a21df63133ea"
+                            }
+                        ],
+                        "identifier": "e861511bafe14f81afa5f8cdbf3d319e",
+                        "name": "管理员身份"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "是否记住登录用户名和密码",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "bf790d0b219a342c287e5fbc9e6f6559",
+                                "name": "记住"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "420869eddf25607e7cdbbdc254725a25",
+                                "name": "不记住"
+                            }
+                        ],
+                        "identifier": "9e6559a488f76539e28b33128b90ef40",
+                        "name": "是否记住登录信息"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "33b15f6a6cc0dd912b44503f987a29a2",
+                "name": "记住我",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "9e6559a488f76539e28b33128b90ef40",
+                                "equivalenceClassId": "420869eddf25607e7cdbbdc254725a25"
+                            }
+                        ],
+                        "identifier": "25cfb33bdecc47a8ad6aa6c9276110c1",
+                        "name": "不记住登录信息"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "9e6559a488f76539e28b33128b90ef40",
+                                "equivalenceClassId": "bf790d0b219a342c287e5fbc9e6f6559"
+                            }
+                        ],
+                        "identifier": "2e07a8d34f5f4616b2be88e47cbca516",
+                        "name": "记住登录信息"
+                    }
+                ]
+            }
+        ],
+        "name": "图书管理系统登录页面",
+        "states": []
+    }
+}

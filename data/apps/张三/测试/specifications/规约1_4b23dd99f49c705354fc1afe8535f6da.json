@@ -1,0 +1,90 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "测试1",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "872dab59be564add96b0257687601c6d",
+                            "states": [
+                                "d2f8411fb5ce4081a061ba7cd865d40f"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "1ac1889761a24cf6a8593585a207b4d2",
+                        "name": "场景11",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "58284e1bda5e4e57b66ebceacce11582",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "9fc8ba76119823320687e911e556a241",
+                "name": "操作1",
+                "variables": [
+                    "cac0c80de7f476c7e49497cd8133c536"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "319c8ab7c2264f269cf06135ca1c2043",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "891e5cb74c30364e0662e89ea619078a",
+                                "name": ""
+                            }
+                        ],
+                        "identifier": "fc86afef1c9d23f14f1f94637cd69c82",
+                        "name": "A1"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "cac0c80de7f476c7e49497cd8133c536",
+                "name": "变量1",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "fc86afef1c9d23f14f1f94637cd69c82",
+                                "equivalenceClassId": "891e5cb74c30364e0662e89ea619078a"
+                            }
+                        ],
+                        "identifier": "d2f8411fb5ce4081a061ba7cd865d40f",
+                        "name": "状态1"
+                    }
+                ]
+            }
+        ],
+        "name": "规约1",
+        "states": []
+    }
+}

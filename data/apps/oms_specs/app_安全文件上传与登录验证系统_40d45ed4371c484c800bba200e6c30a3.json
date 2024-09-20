@@ -1,0 +1,329 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "My Support Team",
+            "url": "https://www.example.com/support"
+        },
+        "description": "项目描述：本项目包含一个登录页面和一个文件上传页面，登录页面通过验证用户名和密码后跳转到文件上传页面，文件上传页面允许用户上传指定格式的文件。",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "项目描述：本项目包含一个登录页面和一个文件上传页面，登录页面通过验证用户名和密码后跳转到文件上传页面，文件上传页面允许用户上传指定格式的文件。",
+        "termsOfService": "https://example.com/terms/",
+        "title": "安全文件上传与登录验证系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "\"文件属性异常检查\"",
+                            "identifier": "35bcd412146841348856259dd5570ce0",
+                            "states": [
+                                "1a6bd67790de4e4e984eea02c46c6739"
+                            ]
+                        },
+                        "description": "该JSON定义了一个名为“文件上传”的操作，具体内容如下：\n\n- 操作名称：文件上传\n- 操作描述：用户选择文件后点击上传按钮，将文件提交到服务器。\n\n操作涉及的变量部分：\n- 变量名：fileInput\n- 标识符：f4bb6ee75c524189b63cd841f0d3d86d\n- 描述：用户选择的文件对象，作为上传操作的输入变量。\n\n条件操作结果（CAR）场景包括：\n\n1. 文件属性异常检查：\n   - 检查文件名是否符合规定的格式（如XLSX, XLS, PDF, DOCX, DOC, TXT等）。\n   - 检查文件扩展名是否为允许上传的格式（如xlsx, xls, pdf, docx, doc, txt）。\n   - 检查文件大小是否符合系统或业务逻辑规定的最大文件大小限制。\n\n2. 文件属性异常状态：\n   - 文件名不符合规定格式，扩展名不在允许上传的格式内，文件大小在最小和最大限制之间。\n\n3. 无效文件名状态：\n   - 文件名不符合规定格式，但扩展名在允许上传的格式内，文件大小在最小和最大限制之间。\n\n4. 无效文件状态（两种情况）：\n   - 文件名和扩展名不符合规定，文件大小小于最小限制或等于0字节（空文件）。\n\n5. 无效文件名且超限状态：\n   - 文件名不符合规定格式，文件大小超过最大限制，但扩展名在允许上传的格式内。\n\n这些场景涵盖了文件上传过程中可能遇到的不同状态和条件，用于确保上传操作的准确性和安全性。",
+                        "identifier": "f3a31b58b4d146fbb90814b242f3099b",
+                        "name": "场景1",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的代码和信息，以下是文件上传操作的伪代码描述和结果列表：\n\n描述：\n文件上传操作首先验证用户选择的文件是否符合规定的格式和大小限制。如果文件名不符合规定的格式或者文件类型不允许上传，操作将返回错误信息。如果文件大小超出了系统规定的限制，同样会返回错误信息。只有当文件名、类型和大小都符合要求时，文件才会被上传到服务器。\n\n操作函数的输出和操作影响结果列表（JSON对象格式）：\n\n{\n  \"summary\": \"文件上传操作根据文件名、类型和大小验证文件是否符合上传条件。\",\n  \"output_variables\": [\n    {\n      \"variable_name\": \"fileValidationResult\",\n      \"variable_description\": \"文件验证结果，指示文件是否符合上传条件。\"\n    },\n    {\n      \"variable_name\": \"uploadSuccess\",\n      \"variable_description\": \"上传成功标志，指示文件是否成功上传到服务器。\"\n    },\n    {\n      \"variable_name\": \"errorMessage\",\n      \"variable_description\": \"错误信息，如果文件不符合上传条件，提供具体的错误描述。\"\n    }\n  ]\n}\n\n请注意，上述JSON对象仅提供了一个示例性的结构，实际的伪代码和具体实现可能会根据实际的业务逻辑和需求有所不同。如果找不到相关信息，将不会输出操作结果。",
+                            "identifier": "632bf190f5164e59bbc05658adc73ba1",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "\"文件名验证状态\"",
+                            "identifier": "d9e97d8c8157449e93b6fc7009c9da6d",
+                            "states": [
+                                "9b2de89bc5ac4b9bbf8de84136b1c227"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个文件上传操作的多个条件-操作-结果（CAR）场景。以下是中文总结：\n\n- **操作名称**：文件上传\n- **操作描述**：用户选择文件后点击上传按钮，将文件提交到服务器。\n\n操作涉及的变量：\n- **变量名**：fileInput\n- **标识符**：f4bb6ee75c524189b63cd841f0d3d86d\n- **描述**：用户选择的文件对象，用于文件上传操作。\n\n条件描述包括：\n1. 文件名验证状态\n2. 文件属性限制状态\n\n状态描述包括：\n- 文件属性异常：文件名、扩展名和大小不符合规定。\n- 无效文件名状态：文件名不符合规定格式，但扩展名和大小符合。\n- 无效文件状态：文件名和扩展名不符合规定，文件大小不符合最小限制或为0字节。\n- 无效文件名且超限：文件名不符合规定格式，文件大小超过最大限制。\n\n每个状态描述下，都有对应的属性和等价类描述，明确了文件名、扩展名和文件大小的验证条件。",
+                        "identifier": "eb737162816d465789f799a5b93b142b",
+                        "name": "场景2",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的代码和已有信息，以下是文件上传操作的伪代码描述以及操作函数的输出和操作影响结果列表的JSON对象格式：\n\n描述：\n文件上传操作首先验证用户选择的文件是否符合规定的格式和大小限制。如果文件名不符合规定的扩展名格式，或者文件大小超出了系统允许的最大限制，操作将返回错误信息。在文件验证通过后，文件将被上传到服务器，上传成功后，用户将收到相应的成功提示。\n\nJSON对象格式：\n{\n    \"summary\": \"文件上传操作的结果是成功或失败，依据文件的名称和大小是否符合预设的标准。\",\n    \"output_variables\": [\n        {\n            \"name\": \"fileUploadResult\",\n            \"classification\": \"output\",\n            \"description\": \"文件上传操作的结果，可能值为'success'或'error'。\"\n        },\n        {\n            \"name\": \"fileUploadErrorMessage\",\n            \"classification\": \"output\",\n            \"description\": \"如果文件上传失败，提供错误信息的描述。\"\n        }\n    ],\n    \"influenced_results\": [\n        {\n            \"name\": \"userNotification\",\n            \"description\": \"用户将收到文件上传成功或失败的通知。\"\n        },\n        {\n            \"name\": \"serverFileStorage\",\n            \"description\": \"如果上传成功，服务器上的文件存储区将增加新上传的文件。\"\n        }\n    ]\n}\n\n请注意，上述描述和JSON对象格式是根据提供的代码和信息构建的，不包含伪代码的具体实现细节。如果找不到相关信息，将不会输出操作结果。",
+                            "identifier": "8a7dd4cfe53c4f0f9a6dc965c6702615",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "\"文件输入无效\"",
+                            "identifier": "7a13bdf45c31415a984a0f0df67d32f0",
+                            "states": [
+                                "693eaa50bdbe4bbc98e60850472cc6a2"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个文件上传操作的CAR（条件-操作-结果）模型，具体内容如下：\n\n- 操作名称：文件上传\n- 操作描述：用户选择文件后点击上传按钮，将文件提交到服务器。\n\n操作相关变量：\n- 变量名称：fileInput\n- 标识符：f4bb6ee75c524189b63cd841f0d3d86d\n- 描述：用户选择的文件对象，作为上传操作的输入变量。\n\n条件描述：文件输入无效。\n\n状态描述包含以下几种情况：\n1. 文件属性限制状态：文件名、扩展名和大小必须符合规定的格式和限制。\n2. 文件属性异常：文件名和扩展名不符合规定，但文件大小在允许的范围内。\n3. 无效文件名状态：文件名不符合规定，但文件扩展名和大小符合规定。\n4. 无效文件状态：文件名不符合规定，扩展名不允许上传，文件大小小于最小限制或等于0字节。\n5. 无效文件名且超限：文件名不符合规定，文件大小超过最大限制，但文件扩展名符合规定。\n\n每种状态都详细描述了文件名、扩展名和文件大小的属性及其等价类描述。",
+                        "identifier": "d051680e75f74c7cb590c9bebab0233f",
+                        "name": "场景3",
+                        "nextCar": [],
+                        "result": {
+                            "description": "在文件上传页面中，用户通过选择文件并点击上传按钮来提交文件到服务器。这个过程涉及到的主要输入变量是 `fileInput`，它代表用户选择的文件对象。对于文件上传操作，我们关注几个关键属性：\n\n1. 文件名：应符合规定的格式，例如 XLSX, XLS, PDF, DOCX, DOC, TXT 等。\n2. 文件扩展名：决定了文件的格式和可打开的应用程序，必须是允许上传的格式。\n3. 文件大小：应在系统或业务逻辑规定的最小和最大限制之间。\n\n文件上传操作的伪代码可以概括为以下步骤：\n- 用户选择文件（`fileInput`）。\n- 系统验证文件名是否符合规定的格式。\n- 系统检查文件扩展名是否在允许上传的格式列表中。\n- 系统检查文件大小是否在允许的范围内。\n- 如果所有检查通过，文件将被上传到服务器；否则，将提示用户文件不符合上传要求。\n\n以下是操作函数的输出和操作影响结果列表的描述：\n\n```\n{\n  \"summary\": \"文件上传操作尝试将用户选定的文件上传到服务器。\",\n  \"output_variables\": [\n    {\n      \"name\": \"upload_result\",\n      \"description\": \"上传操作的结果，可能是成功或失败的状态。\"\n    },\n    {\n      \"name\": \"error_message\",\n      \"description\": \"如果上传失败，提供失败原因的描述。\"\n    }\n  ],\n  \"impacted_variables\": [\n    {\n      \"name\": \"server_file_storage\",\n      \"description\": \"服务器上的文件存储状态，可能会增加新上传的文件。\"\n    },\n    {\n      \"name\": \"user_feedback\",\n      \"description\": \"用户将收到关于上传操作成功或失败的反馈。\"\n    }\n  ]\n}\n```\n\n请注意，上述描述是基于提供的代码和CAR定义构建的。如果找不到相关信息，我们将无法提供操作结果。",
+                            "identifier": "765165de9b294f1e82160d14097d253e",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "\"文件输入无效状态\"",
+                            "identifier": "5a235e4d8cba481fb478887f9a1f9a0c",
+                            "states": [
+                                "013627cd43cd49d6bd6ccfd60b4a6aae"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为“场景4”的文件上传操作的CAR（条件-操作-结果）。它详细描述了用户选择文件并点击上传按钮提交文件到服务器的过程。操作涉及的变量是`fileInput`，即用户选择的文件对象，用于上传操作。\n\n条件描述了几种文件属性限制状态，包括：\n1. 文件属性限制状态：文件名应符合规定格式，文件类型为允许上传的格式，文件大小等于系统或业务逻辑规定的最大文件大小限制。\n2. 文件属性异常：文件名应符合规定格式，但文件类型为不允许上传的格式，文件大小在最小和最大限制之间。\n3. 无效文件名状态：文件名不符合规定格式，但文件类型为允许上传的格式，文件大小在最小和最大限制之间。\n4. 无效文件状态：文件名和类型都不符合规定，文件大小小于最小限制或等于0字节（空文件）。\n5. 无效文件名且超限：文件名不符合规定格式，文件类型为允许上传的格式，但文件大小超过最大限制。\n\n这些状态描述了不同情况下文件上传操作可能遇到的问题，例如文件类型不支持、文件大小超出限制、文件名格式不正确等。",
+                        "identifier": "d8f8ba5a0c684ceea7a607c6d604c429",
+                        "name": "场景4",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的CAR定义和已有信息，文件上传操作的伪代码可以概括为以下步骤：\n\n1. 用户通过`fileInput`选择文件。\n2. 系统验证文件名是否符合规定的格式（如XLSX, XLS, PDF, DOCX, DOC, TXT等）。\n3. 系统检查文件的扩展名是否属于允许上传的格式。\n4. 系统检查文件大小是否在规定的范围内。\n5. 如果所有检查通过，文件上传到服务器；否则，提示错误信息。\n\n操作函数的输出和操作影响结果列表如下：\n\n{\n  \"summary\": \"文件上传操作尝试将用户选定的文件上传到服务器，依据文件名、类型和大小是否符合预设条件。\",\n  \"output_variables\": [\n    {\n      \"name\": \"upload_result\",\n      \"description\": \"表示文件上传操作的结果，可能的值为'success'或'error'。\"\n    },\n    {\n      \"name\": \"error_message\",\n      \"description\": \"如果文件上传失败，提供错误信息的具体内容。\"\n    }\n  ],\n  \"impacted_variables\": [\n    {\n      \"name\": \"server_file_storage\",\n      \"description\": \"服务器上的文件存储区，新上传的文件将被保存在这里。\"\n    },\n    {\n      \"name\": \"user_feedback\",\n      \"description\": \"向用户显示的反馈信息，基于文件上传操作的结果。\"\n    }\n  ]\n}\n\n请注意，上述JSON对象仅为示例，用于说明可能的输出和影响结果。具体实现可能会根据实际业务逻辑和系统设计有所不同。如果找不到相关信息，将声明找不到操作结果。",
+                            "identifier": "51429b2f8c154cf2a416e994055014d2",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "\"文件名无效且超限\"",
+                            "identifier": "e1a091e050cf4aacb386d7f6590e04a8",
+                            "states": [
+                                "fb2a289393d64091a75549598cfc5abb"
+                            ]
+                        },
+                        "description": "这个JSON定义了一个名为“文件上传”的操作，以及与该操作相关的条件-操作-结果（CAR）场景。以下是对JSON内容的中文总结：\n\n- **操作名称**：文件上传\n- **操作描述**：用户选择文件后点击上传按钮，将文件提交到服务器。\n\n操作涉及的变量部分：\n- **变量名称**：fileInput\n- **标识符**：f4bb6ee75c524189b63cd841f0d3d86d\n- **描述**：用户选择的文件对象，是文件上传操作的输入变量。\n\n条件描述为“文件名无效且超限”，包含以下几种状态描述：\n\n1. **文件属性限制状态**：文件名应符合规定的格式，如XLSX, XLS, PDF, DOCX, DOC, TXT等；文件类型应为允许上传的格式；文件大小应等于系统或业务逻辑规定的最大文件大小限制。\n\n2. **文件属性异常**：文件名应符合规定的格式；文件类型不应为不允许上传的格式；文件大小应在最小和最大限制之间。\n\n3. **无效文件名状态**：文件名不符合规定的格式；文件类型为允许上传的格式；文件大小在最小和最大限制之间。\n\n4. **无效文件状态**：文件名不符合规定的格式；文件类型为不允许上传的格式；文件大小小于最小限制或等于0字节。\n\n5. **无效文件名且超限**：文件名不符合规定的格式；文件类型为允许上传的格式；文件大小超过最大限制。\n\n这些状态描述了在文件上传过程中可能遇到的不同情况，包括文件名、文件类型和文件大小的验证条件。",
+                        "identifier": "5b0e4604b6a84715a5b5121aa61d825d",
+                        "name": "场景5",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的详细信息和要求，以下是文件上传操作的伪代码描述和结果列表的JSON对象格式：\n\n伪代码描述：\n文件上传操作首先验证用户选择的文件（fileInput）是否符合规定的名称和类型。如果文件名不匹配规定的格式或文件类型不允许上传，操作将返回错误信息。如果文件大小超出系统或业务逻辑规定的最大限制，同样返回错误信息。在所有检查通过后，文件将被上传到服务器，操作返回成功信息。\n\nJSON对象格式：\n{\n    \"summary\": \"文件上传操作根据文件名、类型和大小的验证结果返回相应的成功或错误信息。\",\n    \"output_variables\": [\n        {\n            \"variable_name\": \"fileUploadResult\",\n            \"variable_description\": \"文件上传操作的结果，表示操作是否成功或失败。\"\n        },\n        {\n            \"variable_name\": \"errorMessage\",\n            \"variable_description\": \"如果文件上传操作失败，提供失败的具体原因描述。\"\n        }\n    ]\n}\n\n请注意，上述描述和JSON对象格式是根据提供的CAR信息和代码逻辑构建的，不包含任何不确定的变量，并且没有提供伪代码的具体实现细节。如果找不到相关信息，将说明找不到操作结果。",
+                            "identifier": "7f36fd6878ea44258178ec785693bb79",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "\"文件属性检查\"",
+                            "identifier": "342d3726bec4427a8cb01392bae5a105",
+                            "states": [
+                                "b1bce83ecbe8422caf15e0de3bea0934"
+                            ]
+                        },
+                        "description": "JSON内容总结如下：\n\n- 操作名称：文件上传\n- 操作描述：用户选择文件后，点击上传按钮将文件提交到服务器。\n- 操作变量：\n  - 变量名：fileInput\n  - 标识符：f4bb6ee75c524189b63cd841f0d3d86d\n  - 描述：用户选择的文件对象，用于文件上传操作。\n\n- CAR名称：场景6\n- 条件描述：文件属性检查\n- 状态描述：\n  - 文件属性限制状态：要求文件名、扩展名和大小符合特定条件。\n  - 文件属性异常：文件名、扩展名或大小不符合规定条件。\n  - 无效文件名状态：文件名不符合规定格式，但扩展名和大小符合。\n  - 无效文件状态：文件名不符合规定格式，扩展名不允许，且文件大小不符合最小或最大限制。\n  - 无效文件名且超限：文件名不符合规定格式，文件大小超过最大限制。\n\n每个状态描述下都包含了三个属性及其等价类描述，分别针对文件名、文件扩展名和文件大小。",
+                        "identifier": "4d3bd115b6d641c1b54804fe1612a2bb",
+                        "name": "场景6",
+                        "nextCar": [],
+                        "result": {
+                            "description": "根据提供的详细信息，以下是文件上传操作的伪代码描述和结果列表：\n\n描述：\n文件上传操作主要涉及用户通过文件输入控件选择文件，并触发上传按钮以将所选文件发送至服务器。此操作的关键在于验证文件的属性，包括文件名、扩展名和文件大小。系统将根据预设的规则来确定文件是否合规，例如，文件名应符合特定的格式要求，文件扩展名需要在允许的格式列表内，文件大小则不能超过规定的上限。若文件不符合这些属性要求，上传操作将被阻止，并给出相应的提示信息。\n\n操作影响结果列表（JSON对象格式）：\n```json\n{\n  \"summary\": \"文件上传操作根据文件属性验证结果，决定文件是否可以上传。\",\n  \"output_variables\": [\n    {\n      \"variable_name\": \"fileValidationResult\",\n      \"variable_description\": \"文件验证结果，表明文件是否符合上传要求。\"\n    },\n    {\n      \"variable_name\": \"errorMessage\",\n      \"variable_description\": \"如果文件不符合上传要求，提供错误信息描述具体原因。\"\n    }\n  ],\n  \"influence_results\": [\n    {\n      \"variable_name\": \"uploadSuccess\",\n      \"variable_description\": \"如果文件验证成功，该变量指示上传操作成功执行。\"\n    },\n    {\n      \"variable_name\": \"uploadFailure\",\n      \"variable_description\": \"如果文件验证失败，该变量指示上传操作未能成功执行。\"\n    }\n  ]\n}\n```\n请注意，上述JSON对象仅为示例，具体实现可能会根据实际业务逻辑和需求有所不同。如果找不到相关信息，将无法提供操作结果。",
+                            "identifier": "a3b13a06ff0d4ce09736ec8aacccd2ec",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "登录成功后，用户选择文件后点击上传按钮提交文件到服务器。\n\n        操作相关变量部分：\n        variable name: fileInput\n        identifier: f4bb6ee75c524189b63cd841f0d3d86d\n        description: 用户选择的文件，用于上传操作的文件对象。\n 是文件上传操作的input变量。\n\n        ",
+                "identifier": "84d07971409644cda6010b2ea9c66596",
+                "name": "文件上传"
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "包含文件选择输入框和上传按钮。",
+        "identifier": "2cdc792bc9ae4576920ade51fca4d194",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "文件的名称，用于标识上传的文件。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "文件名应匹配规定的格式，如XLSX, XLS, PDF, DOCX, DOC, TXT等。",
+                                "identifier": "cd05f144c11444468d8cf47c1277508c",
+                                "name": "有效文件名 - 符合格式"
+                            },
+                            {
+                                "description": "文件名不符合规定的格式，如不包含上述有效格式的扩展名。",
+                                "identifier": "e8362eec1cd845ee863acd918dfa01db",
+                                "name": "无效文件名 - 格式不符"
+                            }
+                        ],
+                        "identifier": "c1533af83b234a7da88f7df3eda5077e",
+                        "name": "文件名"
+                    },
+                    {
+                        "description": "文件的扩展名，决定了文件的格式和可打开的应用程序。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "文件类型为允许上传的格式，例如 'xlsx', 'xls', 'pdf', 'docx', 'doc', 'txt'。",
+                                "identifier": "fc8677069452494c8575418f5c0eab11",
+                                "name": "有效文件类型"
+                            },
+                            {
+                                "description": "文件类型为不允许上传的格式，不包括在 'xlsx', 'xls', 'pdf', 'docx', 'doc', 'txt' 之中的任何文件格式。",
+                                "identifier": "f8257770206e47cca1b82a994ee65cdb",
+                                "name": "无效文件类型"
+                            }
+                        ],
+                        "identifier": "ef0be6a55f7947abb8c5ad25fb0fa8c2",
+                        "name": "文件类型"
+                    },
+                    {
+                        "description": "文件所占存储空间的大小，通常影响上传时间和存储需求。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "文件大小等于0字节，通常表示空文件。",
+                                "identifier": "e2185e397404459bb8fe6947fad0a38c",
+                                "name": "文件大小为0"
+                            },
+                            {
+                                "description": "文件大小小于系统或业务逻辑规定的最小文件大小限制。",
+                                "identifier": "bc3480e04eb54100b9c3e4c5240036b8",
+                                "name": "文件大小小于最小限制"
+                            },
+                            {
+                                "description": "文件大小在系统或业务逻辑规定的最小和最大限制之间。",
+                                "identifier": "82f9f2c6901240e5b5631081a5c40d6d",
+                                "name": "文件大小在有效范围内"
+                            },
+                            {
+                                "description": "文件大小等于系统或业务逻辑规定的最大文件大小限制。",
+                                "identifier": "522334cf1b4f41f7be3dad3db2ef8aee",
+                                "name": "文件大小达到最大限制"
+                            },
+                            {
+                                "description": "文件大小超过系统或业务逻辑规定的最大文件大小限制。",
+                                "identifier": "6d312358a3634c20bf31b74f275b3903",
+                                "name": "文件大小超过最大限制"
+                            }
+                        ],
+                        "identifier": "f3c9c4b10e184fd489b120ec58c1aa03",
+                        "name": "文件大小"
+                    }
+                ],
+                "description": "用户选择的文件，用于上传操作的文件对象。",
+                "identifier": "f4bb6ee75c524189b63cd841f0d3d86d",
+                "name": "fileInput",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "c1533af83b234a7da88f7df3eda5077e",
+                                "equivalenceClassId": "cd05f144c11444468d8cf47c1277508c"
+                            },
+                            {
+                                "attributeId": "ef0be6a55f7947abb8c5ad25fb0fa8c2",
+                                "equivalenceClassId": "fc8677069452494c8575418f5c0eab11"
+                            },
+                            {
+                                "attributeId": "f3c9c4b10e184fd489b120ec58c1aa03",
+                                "equivalenceClassId": "522334cf1b4f41f7be3dad3db2ef8aee"
+                            }
+                        ],
+                        "identifier": "b1bce83ecbe8422caf15e0de3bea0934",
+                        "name": "\"文件属性限制状态\""
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "c1533af83b234a7da88f7df3eda5077e",
+                                "equivalenceClassId": "cd05f144c11444468d8cf47c1277508c"
+                            },
+                            {
+                                "attributeId": "ef0be6a55f7947abb8c5ad25fb0fa8c2",
+                                "equivalenceClassId": "f8257770206e47cca1b82a994ee65cdb"
+                            },
+                            {
+                                "attributeId": "f3c9c4b10e184fd489b120ec58c1aa03",
+                                "equivalenceClassId": "82f9f2c6901240e5b5631081a5c40d6d"
+                            }
+                        ],
+                        "identifier": "1a6bd67790de4e4e984eea02c46c6739",
+                        "name": "状态名：文件属性异常"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "c1533af83b234a7da88f7df3eda5077e",
+                                "equivalenceClassId": "e8362eec1cd845ee863acd918dfa01db"
+                            },
+                            {
+                                "attributeId": "ef0be6a55f7947abb8c5ad25fb0fa8c2",
+                                "equivalenceClassId": "fc8677069452494c8575418f5c0eab11"
+                            },
+                            {
+                                "attributeId": "f3c9c4b10e184fd489b120ec58c1aa03",
+                                "equivalenceClassId": "82f9f2c6901240e5b5631081a5c40d6d"
+                            }
+                        ],
+                        "identifier": "9b2de89bc5ac4b9bbf8de84136b1c227",
+                        "name": "无效文件名状态"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "c1533af83b234a7da88f7df3eda5077e",
+                                "equivalenceClassId": "e8362eec1cd845ee863acd918dfa01db"
+                            },
+                            {
+                                "attributeId": "ef0be6a55f7947abb8c5ad25fb0fa8c2",
+                                "equivalenceClassId": "f8257770206e47cca1b82a994ee65cdb"
+                            },
+                            {
+                                "attributeId": "f3c9c4b10e184fd489b120ec58c1aa03",
+                                "equivalenceClassId": "bc3480e04eb54100b9c3e4c5240036b8"
+                            }
+                        ],
+                        "identifier": "693eaa50bdbe4bbc98e60850472cc6a2",
+                        "name": "无效文件状态"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "c1533af83b234a7da88f7df3eda5077e",
+                                "equivalenceClassId": "e8362eec1cd845ee863acd918dfa01db"
+                            },
+                            {
+                                "attributeId": "ef0be6a55f7947abb8c5ad25fb0fa8c2",
+                                "equivalenceClassId": "f8257770206e47cca1b82a994ee65cdb"
+                            },
+                            {
+                                "attributeId": "f3c9c4b10e184fd489b120ec58c1aa03",
+                                "equivalenceClassId": "e2185e397404459bb8fe6947fad0a38c"
+                            }
+                        ],
+                        "identifier": "013627cd43cd49d6bd6ccfd60b4a6aae",
+                        "name": "无效文件状态"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "c1533af83b234a7da88f7df3eda5077e",
+                                "equivalenceClassId": "e8362eec1cd845ee863acd918dfa01db"
+                            },
+                            {
+                                "attributeId": "ef0be6a55f7947abb8c5ad25fb0fa8c2",
+                                "equivalenceClassId": "fc8677069452494c8575418f5c0eab11"
+                            },
+                            {
+                                "attributeId": "f3c9c4b10e184fd489b120ec58c1aa03",
+                                "equivalenceClassId": "6d312358a3634c20bf31b74f275b3903"
+                            }
+                        ],
+                        "identifier": "fb2a289393d64091a75549598cfc5abb",
+                        "name": "无效文件名且超限"
+                    }
+                ]
+            }
+        ],
+        "name": "文件上传页面",
+        "states": []
+    }
+}

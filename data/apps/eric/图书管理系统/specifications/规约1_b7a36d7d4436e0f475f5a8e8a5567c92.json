@@ -1,0 +1,1604 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "f31a9b166cc643efb69e817e11f0ac30",
+                            "states": [
+                                "bc0d500693cf49f5a975a14186a972ca",
+                                "f338cf14732b4e5c8e098803249f46c4",
+                                "f425a3c273fb4ad1adadbea3c25bbeee",
+                                "af7c3ba626cb4e6ba781f74718a5d88b",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "e6d753066f84494ab2a05ba760478e0b",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "15b1d308ae2244af959072f11e53bdda",
+                        "name": "场景1",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "17af168b9072409fa64e8fa4780f6e56",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "c5b489a491bb4b7bac135e12958553dd",
+                            "states": [
+                                "8cee2beafd824f4b91a10262e1e441a1",
+                                "ef234858df6540c8b0857d769298f2ca",
+                                "3faf5cb184ae46d2b1951f4dcc85684b",
+                                "2241e03e169342d3adf9c84918ee5af7",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "186c7454c2604bf3998f9e353765bfcb",
+                                "c4e666f6558345f692be787a434e051c",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "308860454f454fdba2df52854f6d6764",
+                        "name": "场景2",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "d823bf041aa64f198518f31f8c4da3ae",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "39121ece8b3448818e8944649ce81d68",
+                            "states": [
+                                "ae6b2be92fe34bfca00c23a6aa90218f",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "3faf5cb184ae46d2b1951f4dcc85684b",
+                                "abf9dbbf7def4a178387b1bb5a75b1eb",
+                                "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                                "1e5206523e3e4f71966edf2243d95599",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "71ea1a99178d4fa58ed699771fa577e9",
+                        "name": "场景3",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "9ca955c5f67f42848998ac010016d05a",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "139dbe8ad64b4ec299390c5e3165fad7",
+                            "states": [
+                                "ae6b2be92fe34bfca00c23a6aa90218f",
+                                "19ae599a71644235894cce27b4b70b2d",
+                                "336d303edb494fd58fd390ea9b5cffb1",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                                "352e13b4b8784c36a86bbea8e5ad8e26",
+                                "9e80fc9fc0e4469a9075e1390b96e593",
+                                "e6d753066f84494ab2a05ba760478e0b",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "00b5100a0d174e15ab2eb15fc0019696",
+                        "name": "场景4",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "251eb9c6cf774a0093b04166a0ec2543",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "eb65268f69a0498f9bab6d4a0554cc08",
+                            "states": [
+                                "2a6850cbaa7e45d7b3417a6dbbf375b1",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "e0d7dc67dc964ce98b74df29a2146aad",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "90c8a39cced84f92af4a5b022d4cf260",
+                                "3fc80d5d87324441acc01b44ee8ee848",
+                                "c4e666f6558345f692be787a434e051c",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "e8d416b62fec4df4b4a77c59d17928da",
+                        "name": "场景5",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "34cd826b1aa74ddaa65f1c77f3f85d02",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "32a9016851024c69b2918336682822c6",
+                            "states": [
+                                "bc0d500693cf49f5a975a14186a972ca",
+                                "f338cf14732b4e5c8e098803249f46c4",
+                                "e0d7dc67dc964ce98b74df29a2146aad",
+                                "af7c3ba626cb4e6ba781f74718a5d88b",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "352e13b4b8784c36a86bbea8e5ad8e26",
+                                "9e80fc9fc0e4469a9075e1390b96e593",
+                                "c4e666f6558345f692be787a434e051c",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "97945e5ef2c94f88934a98fbec079808",
+                        "name": "场景6",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "4c4e8276395c4a549b85c500069e3225",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "0bfb44c24f4d45a7a3d6fb3a8c817ab7",
+                            "states": [
+                                "ae6b2be92fe34bfca00c23a6aa90218f",
+                                "19ae599a71644235894cce27b4b70b2d",
+                                "336d303edb494fd58fd390ea9b5cffb1",
+                                "2241e03e169342d3adf9c84918ee5af7",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "90c8a39cced84f92af4a5b022d4cf260",
+                                "186c7454c2604bf3998f9e353765bfcb",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "d22a049d142f46b08d7566669255f0c3",
+                        "name": "场景7",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "4d3f99c1ba1b49b6a48887f8ae73edf5",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "ab561caa6a1a48fead6566d2e879ce88",
+                            "states": [
+                                "2a6850cbaa7e45d7b3417a6dbbf375b1",
+                                "f338cf14732b4e5c8e098803249f46c4",
+                                "336d303edb494fd58fd390ea9b5cffb1",
+                                "abf9dbbf7def4a178387b1bb5a75b1eb",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "1e5206523e3e4f71966edf2243d95599",
+                                "3fc80d5d87324441acc01b44ee8ee848",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "4e3605f4dad248e5974af10009964760",
+                        "name": "场景8",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "dcc63a75977d4172976deb4fe8e0d69d",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "087ad3e3a32a4c7c8164ebf558c39a05",
+                            "states": [
+                                "bc0d500693cf49f5a975a14186a972ca",
+                                "ef234858df6540c8b0857d769298f2ca",
+                                "f425a3c273fb4ad1adadbea3c25bbeee",
+                                "2241e03e169342d3adf9c84918ee5af7",
+                                "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                                "90c8a39cced84f92af4a5b022d4cf260",
+                                "3fc80d5d87324441acc01b44ee8ee848",
+                                "e6d753066f84494ab2a05ba760478e0b",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "285b83148ca747bf99b09a686ba7d190",
+                        "name": "场景9",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "f026d31f62a44ad09addbdcd0cded743",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "cd6f30572e814494b586fc9d2db24d3f",
+                            "states": [
+                                "ae6b2be92fe34bfca00c23a6aa90218f",
+                                "ef234858df6540c8b0857d769298f2ca",
+                                "e0d7dc67dc964ce98b74df29a2146aad",
+                                "af7c3ba626cb4e6ba781f74718a5d88b",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "1e5206523e3e4f71966edf2243d95599",
+                                "9e80fc9fc0e4469a9075e1390b96e593",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "7f73a8c2bca348d1bd77753d282ed5a0",
+                        "name": "场景10",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "1bccf993078e414fadf2e3328fc6c6c1",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "b5f343f5e94a443085b76fcaf11f23fd",
+                            "states": [
+                                "ae6b2be92fe34bfca00c23a6aa90218f",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "336d303edb494fd58fd390ea9b5cffb1",
+                                "af7c3ba626cb4e6ba781f74718a5d88b",
+                                "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "3fc80d5d87324441acc01b44ee8ee848",
+                                "c4e666f6558345f692be787a434e051c",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "990e36399fd9469bbdc2664e53451aff",
+                        "name": "场景11",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "eba1995db4ea484ea73d09c9849308c2",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "8af78498f77149e59e4f0e2c9df7e6df",
+                            "states": [
+                                "ae6b2be92fe34bfca00c23a6aa90218f",
+                                "19ae599a71644235894cce27b4b70b2d",
+                                "f425a3c273fb4ad1adadbea3c25bbeee",
+                                "abf9dbbf7def4a178387b1bb5a75b1eb",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "352e13b4b8784c36a86bbea8e5ad8e26",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "c4e666f6558345f692be787a434e051c",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "886a40d05fd04da5a4029c1d6a24498f",
+                        "name": "场景12",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "cec525d39e674cf4bbccae304ba988ac",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "10867e43a30a465aa86570024f125902",
+                            "states": [
+                                "8cee2beafd824f4b91a10262e1e441a1",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "f425a3c273fb4ad1adadbea3c25bbeee",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "1e5206523e3e4f71966edf2243d95599",
+                                "186c7454c2604bf3998f9e353765bfcb",
+                                "e6d753066f84494ab2a05ba760478e0b",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "c58a99555a9741608295e93903a440c3",
+                        "name": "场景13",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "454e5bb071fe4444809ca8eaa958a80c",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "7197596d5e2b42f6920343ff07301191",
+                            "states": [
+                                "2a6850cbaa7e45d7b3417a6dbbf375b1",
+                                "19ae599a71644235894cce27b4b70b2d",
+                                "3faf5cb184ae46d2b1951f4dcc85684b",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "e6d753066f84494ab2a05ba760478e0b",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "61588b203ff74d1c9b60ee27c64d162c",
+                        "name": "场景14",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "6388382d32ea4efb9e854eb4d4fdf29e",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "e71281dd0e654d5aa7787bcc0a6a0d81",
+                            "states": [
+                                "2a6850cbaa7e45d7b3417a6dbbf375b1",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "3faf5cb184ae46d2b1951f4dcc85684b",
+                                "2241e03e169342d3adf9c84918ee5af7",
+                                "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                                "352e13b4b8784c36a86bbea8e5ad8e26",
+                                "9e80fc9fc0e4469a9075e1390b96e593",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "a899a1ef78274b3cac50b1ef1e667b8d",
+                        "name": "场景15",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "85cc5fb1f47d4b9eab5058c64a7f7804",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "d812f5caf9464c8d96ba5e5ca580fb61",
+                            "states": [
+                                "2a6850cbaa7e45d7b3417a6dbbf375b1",
+                                "ef234858df6540c8b0857d769298f2ca",
+                                "f425a3c273fb4ad1adadbea3c25bbeee",
+                                "af7c3ba626cb4e6ba781f74718a5d88b",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "352e13b4b8784c36a86bbea8e5ad8e26",
+                                "186c7454c2604bf3998f9e353765bfcb",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "492acfe98140496aa4035ce204cae678",
+                        "name": "场景16",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "158875a72a004debb1522e8c45a3f99f",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "6d96b92376dd429da138126285e7cdae",
+                            "states": [
+                                "8cee2beafd824f4b91a10262e1e441a1",
+                                "f338cf14732b4e5c8e098803249f46c4",
+                                "e0d7dc67dc964ce98b74df29a2146aad",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                                "90c8a39cced84f92af4a5b022d4cf260",
+                                "186c7454c2604bf3998f9e353765bfcb",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "abdaba0ee7b942e5aef2dd9580e23b87",
+                        "name": "场景17",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "32cc6344b39845eb940ec5d41130acba",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "8984a0b2f31a43c181a379cef4bb9f19",
+                            "states": [
+                                "bc0d500693cf49f5a975a14186a972ca",
+                                "ef234858df6540c8b0857d769298f2ca",
+                                "336d303edb494fd58fd390ea9b5cffb1",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "a2a2bcb91e2a4ae6b1d6cb56f13ad09f",
+                        "name": "场景18",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "5ba1442ab62f41acaaa6ea22b0bcc193",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "f9b6219683d44e38842300bd407f2824",
+                            "states": [
+                                "bc0d500693cf49f5a975a14186a972ca",
+                                "19ae599a71644235894cce27b4b70b2d",
+                                "e0d7dc67dc964ce98b74df29a2146aad",
+                                "abf9dbbf7def4a178387b1bb5a75b1eb",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "1e5206523e3e4f71966edf2243d95599",
+                                "3fc80d5d87324441acc01b44ee8ee848",
+                                "e6d753066f84494ab2a05ba760478e0b",
+                                "1993d44d7ef04b95846a94fdfc569b36"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "ad681028b0ec498ca78793d95cce3df0",
+                        "name": "场景19",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "3030d271593e458aa66033dfd47e55b1",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "18f6747e1d48448ca401b12449b7c81c",
+                            "states": [
+                                "8cee2beafd824f4b91a10262e1e441a1",
+                                "19ae599a71644235894cce27b4b70b2d",
+                                "3faf5cb184ae46d2b1951f4dcc85684b",
+                                "af7c3ba626cb4e6ba781f74718a5d88b",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "90c8a39cced84f92af4a5b022d4cf260",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "c4e666f6558345f692be787a434e051c",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "760026e3f3834d058252fa9cc4bca8aa",
+                        "name": "场景20",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "763aedc217c34b71bdf46c1c14f8b859",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "db795b99f6b141f396c9058e2e27c906",
+                            "states": [
+                                "ae6b2be92fe34bfca00c23a6aa90218f",
+                                "f338cf14732b4e5c8e098803249f46c4",
+                                "e0d7dc67dc964ce98b74df29a2146aad",
+                                "2241e03e169342d3adf9c84918ee5af7",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "1e5206523e3e4f71966edf2243d95599",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "c4e666f6558345f692be787a434e051c",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "72aef21bc2304a3e949e0ed32e3b0385",
+                        "name": "场景21",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "0dcc2645324a4566b86ad1d683e39fed",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "43ecf064b94e45aeb8e9b5d84fb9d300",
+                            "states": [
+                                "bc0d500693cf49f5a975a14186a972ca",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "3faf5cb184ae46d2b1951f4dcc85684b",
+                                "abf9dbbf7def4a178387b1bb5a75b1eb",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "186c7454c2604bf3998f9e353765bfcb",
+                                "c4e666f6558345f692be787a434e051c",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "05c0a2c6e7424952aa102f8d142286c1",
+                        "name": "场景22",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "582603ee6a2d4980939df7ea35c88675",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "34799873dcd8424ca3c27671fa9560d4",
+                            "states": [
+                                "8cee2beafd824f4b91a10262e1e441a1",
+                                "ef234858df6540c8b0857d769298f2ca",
+                                "f425a3c273fb4ad1adadbea3c25bbeee",
+                                "abf9dbbf7def4a178387b1bb5a75b1eb",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "90c8a39cced84f92af4a5b022d4cf260",
+                                "9e80fc9fc0e4469a9075e1390b96e593",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "694d659d645b4ffdbe0f33c3545cf847"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "09c057e8e4d845d4a4895e71ce0aefa2",
+                        "name": "场景23",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "3c63768580024c2bb432bb7989b033b1",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "d4ffdfd2fd7b465cb8e652bf5f842c35",
+                            "states": [
+                                "8cee2beafd824f4b91a10262e1e441a1",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "336d303edb494fd58fd390ea9b5cffb1",
+                                "af7c3ba626cb4e6ba781f74718a5d88b",
+                                "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "9e80fc9fc0e4469a9075e1390b96e593",
+                                "593637201ede435fb41e0f3e09883f69",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "8d15d745fc9549649b9f9f8b40703259",
+                        "name": "场景24",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "69b9fb8c4e6d4f9dbf1f3bd34d4df028",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "5a4ab3495d5e482eabeceb127d25f3b3",
+                            "states": [
+                                "8cee2beafd824f4b91a10262e1e441a1",
+                                "f338cf14732b4e5c8e098803249f46c4",
+                                "3faf5cb184ae46d2b1951f4dcc85684b",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "b2d3a245e0dc438781eee10686661b15",
+                                "352e13b4b8784c36a86bbea8e5ad8e26",
+                                "3fc80d5d87324441acc01b44ee8ee848",
+                                "e6d753066f84494ab2a05ba760478e0b",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "4b68b9ed49d740c6ae9c0f9699dd1f6f",
+                        "name": "场景25",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "0908ac42963642a5a7dddd2a2cd0ea1d",
+                            "states": []
+                        }
+                    },
+                    {
+                        "condition": {
+                            "description": "",
+                            "identifier": "419078a78a3c4b70a2085206d6a83aaf",
+                            "states": [
+                                "bc0d500693cf49f5a975a14186a972ca",
+                                "0cbf11f880cf49939c2c793ca4f97eb0",
+                                "e0d7dc67dc964ce98b74df29a2146aad",
+                                "fe06c7b87db54e99b0c817351fccdf04",
+                                "88fcd2c58f524b0abd5850f24f7ddd25",
+                                "da47f26c0c2d463ab53a5cdc9fc9976c",
+                                "4f6ebf35740b44f6a26aa8974b02dc17",
+                                "c4e666f6558345f692be787a434e051c",
+                                "755e580fdcaa428191cc2af6d9dded83"
+                            ]
+                        },
+                        "description": "CAR描述",
+                        "identifier": "19abdeef6e324e17a4551bb7d2f8ce70",
+                        "name": "场景26",
+                        "nextCar": [],
+                        "result": {
+                            "description": "",
+                            "identifier": "6f42f3200cd44eca9d32f66f986c21d8",
+                            "states": []
+                        }
+                    }
+                ],
+                "description": "待填",
+                "identifier": "b774f3c099dcbebc16366f46235ecf3e",
+                "name": "借阅",
+                "variables": [
+                    "94435f28fceaa4913afcac6a0526c0e8",
+                    "0e71c0ec91f99bc823ad9cfacc8e5087",
+                    "c02f39fa4b05eb8b249110209bec3988",
+                    "dc57ea65e9ca98eb0e3c0ab408bae8cf",
+                    "919b70402ddcc72c52331f4a473413fc",
+                    "cb8ef8741b95e2bbff8dcc574fd55c2d",
+                    "e8765f1e556d0e40ee68be5e145af234",
+                    "ea090b188ff32a79dcb93550246831fb",
+                    "33d6f8f6a4b4735913bc372beb746b48"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "36a158d152d74600b6a8af311fb6013d",
+        "memberObjects": [
+            {
+                "attributes": [
+                    {
+                        "description": "书名不是可选项",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "e08a138d1effc804b69d64d01aa148c9",
+                                "name": "是"
+                            }
+                        ],
+                        "identifier": "3617e823d5dc090a7f162760a8f2885d",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "代码没有什么校验",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "92410c60660f107003502b81f92a83c1",
+                                "name": "书名存在，长度1-255字符"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "208799db500bbdb2f311030f1236aa20",
+                                "name": "任意字符串，长度大于55字符"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "85fd123163d57fb7323cc26f690a60b7",
+                                "name": "空"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "1ec909d3ef8ec45df1af06a8206122c2",
+                                "name": "书名不存在，长度1-255字符"
+                            }
+                        ],
+                        "identifier": "6cf8afef46a4c4c070998e7373b8a2f6",
+                        "name": "输入内容"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "94435f28fceaa4913afcac6a0526c0e8",
+                "name": "书名",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3617e823d5dc090a7f162760a8f2885d",
+                                "equivalenceClassId": "e08a138d1effc804b69d64d01aa148c9"
+                            },
+                            {
+                                "attributeId": "6cf8afef46a4c4c070998e7373b8a2f6",
+                                "equivalenceClassId": "1ec909d3ef8ec45df1af06a8206122c2"
+                            }
+                        ],
+                        "identifier": "ae6b2be92fe34bfca00c23a6aa90218f",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3617e823d5dc090a7f162760a8f2885d",
+                                "equivalenceClassId": "e08a138d1effc804b69d64d01aa148c9"
+                            },
+                            {
+                                "attributeId": "6cf8afef46a4c4c070998e7373b8a2f6",
+                                "equivalenceClassId": "208799db500bbdb2f311030f1236aa20"
+                            }
+                        ],
+                        "identifier": "8cee2beafd824f4b91a10262e1e441a1",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3617e823d5dc090a7f162760a8f2885d",
+                                "equivalenceClassId": "e08a138d1effc804b69d64d01aa148c9"
+                            },
+                            {
+                                "attributeId": "6cf8afef46a4c4c070998e7373b8a2f6",
+                                "equivalenceClassId": "85fd123163d57fb7323cc26f690a60b7"
+                            }
+                        ],
+                        "identifier": "bc0d500693cf49f5a975a14186a972ca",
+                        "name": "状态3"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "3617e823d5dc090a7f162760a8f2885d",
+                                "equivalenceClassId": "e08a138d1effc804b69d64d01aa148c9"
+                            },
+                            {
+                                "attributeId": "6cf8afef46a4c4c070998e7373b8a2f6",
+                                "equivalenceClassId": "92410c60660f107003502b81f92a83c1"
+                            }
+                        ],
+                        "identifier": "2a6850cbaa7e45d7b3417a6dbbf375b1",
+                        "name": "状态4"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "ISBN是必填项",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "c0be3273f725ec51ee68403c7170ca38",
+                                "name": "是"
+                            }
+                        ],
+                        "identifier": "8046fc710b5d0857c50491227a43593a",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "字长，是否存在",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "164eb88318ec345078b6e3946b24d56d",
+                                "name": "空"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "85eccab3f8182d26d3b82740d5e4000b",
+                                "name": "编号存在，任意字符串，长度1-255字符"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "1ba3bd31ecf09a4c69717ebbb27c05c8",
+                                "name": "编号不存在，任意字符串，长度1-255字符"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "9e64f9f26bb81605dd558507da51a3dc",
+                                "name": "任意字符串，长度大于255字符"
+                            }
+                        ],
+                        "identifier": "46a4ab5f31b56804e473417a38632cfe",
+                        "name": "ISBN编号有效性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "0e71c0ec91f99bc823ad9cfacc8e5087",
+                "name": "ISBN编号",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8046fc710b5d0857c50491227a43593a",
+                                "equivalenceClassId": "c0be3273f725ec51ee68403c7170ca38"
+                            },
+                            {
+                                "attributeId": "46a4ab5f31b56804e473417a38632cfe",
+                                "equivalenceClassId": "9e64f9f26bb81605dd558507da51a3dc"
+                            }
+                        ],
+                        "identifier": "f338cf14732b4e5c8e098803249f46c4",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8046fc710b5d0857c50491227a43593a",
+                                "equivalenceClassId": "c0be3273f725ec51ee68403c7170ca38"
+                            },
+                            {
+                                "attributeId": "46a4ab5f31b56804e473417a38632cfe",
+                                "equivalenceClassId": "85eccab3f8182d26d3b82740d5e4000b"
+                            }
+                        ],
+                        "identifier": "19ae599a71644235894cce27b4b70b2d",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8046fc710b5d0857c50491227a43593a",
+                                "equivalenceClassId": "c0be3273f725ec51ee68403c7170ca38"
+                            },
+                            {
+                                "attributeId": "46a4ab5f31b56804e473417a38632cfe",
+                                "equivalenceClassId": "1ba3bd31ecf09a4c69717ebbb27c05c8"
+                            }
+                        ],
+                        "identifier": "0cbf11f880cf49939c2c793ca4f97eb0",
+                        "name": "状态3"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8046fc710b5d0857c50491227a43593a",
+                                "equivalenceClassId": "c0be3273f725ec51ee68403c7170ca38"
+                            },
+                            {
+                                "attributeId": "46a4ab5f31b56804e473417a38632cfe",
+                                "equivalenceClassId": "164eb88318ec345078b6e3946b24d56d"
+                            }
+                        ],
+                        "identifier": "ef234858df6540c8b0857d769298f2ca",
+                        "name": "状态4"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "可选项",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "2b1497dc857ce31573e5636eb86e6fe3",
+                                "name": "否"
+                            }
+                        ],
+                        "identifier": "b6d1d9acbc2a1bc8e3bf77adb56c342e",
+                        "name": "收i否必填"
+                    },
+                    {
+                        "description": "代码里输入规则弱",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "de1378ee53ea5f9c96b3da6a4ecd98c6",
+                                "name": "空"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "7080e727c907506b8c69eab761ef4763",
+                                "name": "作者存在，长度1-255字符"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "839395756114d817d57c157006a865e7",
+                                "name": "作者不存在，长度1-255字符"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "b7a1f2f6b5c779bc0a893694224f242f",
+                                "name": "字长超过255字符"
+                            }
+                        ],
+                        "identifier": "f7a73f0accf8ca15f1c10f2ecc694c3e",
+                        "name": "内容有效性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "c02f39fa4b05eb8b249110209bec3988",
+                "name": "作者",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "b6d1d9acbc2a1bc8e3bf77adb56c342e",
+                                "equivalenceClassId": "2b1497dc857ce31573e5636eb86e6fe3"
+                            },
+                            {
+                                "attributeId": "f7a73f0accf8ca15f1c10f2ecc694c3e",
+                                "equivalenceClassId": "b7a1f2f6b5c779bc0a893694224f242f"
+                            }
+                        ],
+                        "identifier": "3faf5cb184ae46d2b1951f4dcc85684b",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "b6d1d9acbc2a1bc8e3bf77adb56c342e",
+                                "equivalenceClassId": "2b1497dc857ce31573e5636eb86e6fe3"
+                            },
+                            {
+                                "attributeId": "f7a73f0accf8ca15f1c10f2ecc694c3e",
+                                "equivalenceClassId": "7080e727c907506b8c69eab761ef4763"
+                            }
+                        ],
+                        "identifier": "336d303edb494fd58fd390ea9b5cffb1",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "b6d1d9acbc2a1bc8e3bf77adb56c342e",
+                                "equivalenceClassId": "2b1497dc857ce31573e5636eb86e6fe3"
+                            },
+                            {
+                                "attributeId": "f7a73f0accf8ca15f1c10f2ecc694c3e",
+                                "equivalenceClassId": "839395756114d817d57c157006a865e7"
+                            }
+                        ],
+                        "identifier": "e0d7dc67dc964ce98b74df29a2146aad",
+                        "name": "状态3"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "b6d1d9acbc2a1bc8e3bf77adb56c342e",
+                                "equivalenceClassId": "2b1497dc857ce31573e5636eb86e6fe3"
+                            },
+                            {
+                                "attributeId": "f7a73f0accf8ca15f1c10f2ecc694c3e",
+                                "equivalenceClassId": "de1378ee53ea5f9c96b3da6a4ecd98c6"
+                            }
+                        ],
+                        "identifier": "f425a3c273fb4ad1adadbea3c25bbeee",
+                        "name": "状态4"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "e04b5d92157cebf7d0ac4d48ca227f63",
+                                "name": "否"
+                            }
+                        ],
+                        "identifier": "a53971ffc23261ef727bf978dc3ce78d",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "6bee389faa7689eede3ca908a1056eda",
+                                "name": "空"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "51b5eefef2f19d72cc25c90021f211f6",
+                                "name": "出版社存在， 长度1-255字符"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "581c927859a79bc5885fdb09a40c50c0",
+                                "name": "出版社不存在，长度1-255字符"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "472fbe065b89b46479e54d7c0582ff2d",
+                                "name": "长度大于255字符"
+                            }
+                        ],
+                        "identifier": "83b98dd190bf62d48b336ac26347ed10",
+                        "name": "内容有效性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "dc57ea65e9ca98eb0e3c0ab408bae8cf",
+                "name": "出版社",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a53971ffc23261ef727bf978dc3ce78d",
+                                "equivalenceClassId": "e04b5d92157cebf7d0ac4d48ca227f63"
+                            },
+                            {
+                                "attributeId": "83b98dd190bf62d48b336ac26347ed10",
+                                "equivalenceClassId": "472fbe065b89b46479e54d7c0582ff2d"
+                            }
+                        ],
+                        "identifier": "2241e03e169342d3adf9c84918ee5af7",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a53971ffc23261ef727bf978dc3ce78d",
+                                "equivalenceClassId": "e04b5d92157cebf7d0ac4d48ca227f63"
+                            },
+                            {
+                                "attributeId": "83b98dd190bf62d48b336ac26347ed10",
+                                "equivalenceClassId": "51b5eefef2f19d72cc25c90021f211f6"
+                            }
+                        ],
+                        "identifier": "fe06c7b87db54e99b0c817351fccdf04",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a53971ffc23261ef727bf978dc3ce78d",
+                                "equivalenceClassId": "e04b5d92157cebf7d0ac4d48ca227f63"
+                            },
+                            {
+                                "attributeId": "83b98dd190bf62d48b336ac26347ed10",
+                                "equivalenceClassId": "581c927859a79bc5885fdb09a40c50c0"
+                            }
+                        ],
+                        "identifier": "af7c3ba626cb4e6ba781f74718a5d88b",
+                        "name": "状态3"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "a53971ffc23261ef727bf978dc3ce78d",
+                                "equivalenceClassId": "e04b5d92157cebf7d0ac4d48ca227f63"
+                            },
+                            {
+                                "attributeId": "83b98dd190bf62d48b336ac26347ed10",
+                                "equivalenceClassId": "6bee389faa7689eede3ca908a1056eda"
+                            }
+                        ],
+                        "identifier": "abf9dbbf7def4a178387b1bb5a75b1eb",
+                        "name": "状态4"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "637ec0c98ffdbc241c1ef939cd47d08a",
+                                "name": "否"
+                            }
+                        ],
+                        "identifier": "bc902fd1715388ac381aade0a0e59e0b",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "新等价类描述",
+                                "identifier": "906926cd6bc6db43abbe541b394043d1",
+                                "name": "空"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "da8a33a8a5f3a2698f64a7033e29bdf1",
+                                "name": "有效时间"
+                            },
+                            {
+                                "description": "请填写新等价类描述",
+                                "identifier": "71f0c4d6b20d15ae04168fc5d978feff",
+                                "name": "错误时间"
+                            }
+                        ],
+                        "identifier": "cad129571ed2540b0b2945dfd61f169f",
+                        "name": "内容有效性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "919b70402ddcc72c52331f4a473413fc",
+                "name": "借阅时间",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bc902fd1715388ac381aade0a0e59e0b",
+                                "equivalenceClassId": "637ec0c98ffdbc241c1ef939cd47d08a"
+                            },
+                            {
+                                "attributeId": "cad129571ed2540b0b2945dfd61f169f",
+                                "equivalenceClassId": "da8a33a8a5f3a2698f64a7033e29bdf1"
+                            }
+                        ],
+                        "identifier": "39e2c5c9ed484bd89c98ba57fe3cf4e7",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bc902fd1715388ac381aade0a0e59e0b",
+                                "equivalenceClassId": "637ec0c98ffdbc241c1ef939cd47d08a"
+                            },
+                            {
+                                "attributeId": "cad129571ed2540b0b2945dfd61f169f",
+                                "equivalenceClassId": "906926cd6bc6db43abbe541b394043d1"
+                            }
+                        ],
+                        "identifier": "b2d3a245e0dc438781eee10686661b15",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "bc902fd1715388ac381aade0a0e59e0b",
+                                "equivalenceClassId": "637ec0c98ffdbc241c1ef939cd47d08a"
+                            },
+                            {
+                                "attributeId": "cad129571ed2540b0b2945dfd61f169f",
+                                "equivalenceClassId": "71f0c4d6b20d15ae04168fc5d978feff"
+                            }
+                        ],
+                        "identifier": "88fcd2c58f524b0abd5850f24f7ddd25",
+                        "name": "状态3"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "aca1e21acb3bfe50a7e31cb6b36d8149",
+                                "name": "否"
+                            }
+                        ],
+                        "identifier": "8235468dbbd3dd44bf294b2a531dd7ff",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "391751aa3f0e2fa7591f790e7ea54c7a",
+                                "name": "空"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "e282f4e8d90b089ff02320044e520aa4",
+                                "name": "分类正确，字长 1- 255"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "0bc8087ecda9aa597038d00c6834a90a",
+                                "name": "分类不存在，字长 1- 255"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "19b23a85e803791c45e55d1670dceab5",
+                                "name": "长度大于255"
+                            }
+                        ],
+                        "identifier": "a7ad35c50137f92c4888449b976788a4",
+                        "name": "输入内容"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "cb8ef8741b95e2bbff8dcc574fd55c2d",
+                "name": "图书分类",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8235468dbbd3dd44bf294b2a531dd7ff",
+                                "equivalenceClassId": "aca1e21acb3bfe50a7e31cb6b36d8149"
+                            },
+                            {
+                                "attributeId": "a7ad35c50137f92c4888449b976788a4",
+                                "equivalenceClassId": "19b23a85e803791c45e55d1670dceab5"
+                            }
+                        ],
+                        "identifier": "90c8a39cced84f92af4a5b022d4cf260",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8235468dbbd3dd44bf294b2a531dd7ff",
+                                "equivalenceClassId": "aca1e21acb3bfe50a7e31cb6b36d8149"
+                            },
+                            {
+                                "attributeId": "a7ad35c50137f92c4888449b976788a4",
+                                "equivalenceClassId": "e282f4e8d90b089ff02320044e520aa4"
+                            }
+                        ],
+                        "identifier": "352e13b4b8784c36a86bbea8e5ad8e26",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8235468dbbd3dd44bf294b2a531dd7ff",
+                                "equivalenceClassId": "aca1e21acb3bfe50a7e31cb6b36d8149"
+                            },
+                            {
+                                "attributeId": "a7ad35c50137f92c4888449b976788a4",
+                                "equivalenceClassId": "0bc8087ecda9aa597038d00c6834a90a"
+                            }
+                        ],
+                        "identifier": "da47f26c0c2d463ab53a5cdc9fc9976c",
+                        "name": "状态3"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "8235468dbbd3dd44bf294b2a531dd7ff",
+                                "equivalenceClassId": "aca1e21acb3bfe50a7e31cb6b36d8149"
+                            },
+                            {
+                                "attributeId": "a7ad35c50137f92c4888449b976788a4",
+                                "equivalenceClassId": "391751aa3f0e2fa7591f790e7ea54c7a"
+                            }
+                        ],
+                        "identifier": "1e5206523e3e4f71966edf2243d95599",
+                        "name": "状态4"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "eb473ef0d4f8c1bf737ce08a342f3692",
+                                "name": "否"
+                            }
+                        ],
+                        "identifier": "ca9b90795373df31c3f5e8e7a90b641a",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "代码对页数校验若，此处引用的是数据表格字段",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "697573eec056c47a4d41d69bb48065df",
+                                "name": "空"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "7f869f2b57d5fa7f347a3c0daf74b6b0",
+                                "name": "正确数字，0-11位整数"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "a343e900dc0fa5e9fc61e74b1bc0d34d",
+                                "name": "页数不对， 0-11位整数"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "b2e40a0fda261b240dc8739afb03c46b",
+                                "name": "页数大于11位整数"
+                            }
+                        ],
+                        "identifier": "631a5192c9ed870c05bbec08622ec1c9",
+                        "name": "内容有效性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "e8765f1e556d0e40ee68be5e145af234",
+                "name": "页数",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "ca9b90795373df31c3f5e8e7a90b641a",
+                                "equivalenceClassId": "eb473ef0d4f8c1bf737ce08a342f3692"
+                            },
+                            {
+                                "attributeId": "631a5192c9ed870c05bbec08622ec1c9",
+                                "equivalenceClassId": "b2e40a0fda261b240dc8739afb03c46b"
+                            }
+                        ],
+                        "identifier": "186c7454c2604bf3998f9e353765bfcb",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "ca9b90795373df31c3f5e8e7a90b641a",
+                                "equivalenceClassId": "eb473ef0d4f8c1bf737ce08a342f3692"
+                            },
+                            {
+                                "attributeId": "631a5192c9ed870c05bbec08622ec1c9",
+                                "equivalenceClassId": "7f869f2b57d5fa7f347a3c0daf74b6b0"
+                            }
+                        ],
+                        "identifier": "3fc80d5d87324441acc01b44ee8ee848",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "ca9b90795373df31c3f5e8e7a90b641a",
+                                "equivalenceClassId": "eb473ef0d4f8c1bf737ce08a342f3692"
+                            },
+                            {
+                                "attributeId": "631a5192c9ed870c05bbec08622ec1c9",
+                                "equivalenceClassId": "a343e900dc0fa5e9fc61e74b1bc0d34d"
+                            }
+                        ],
+                        "identifier": "4f6ebf35740b44f6a26aa8974b02dc17",
+                        "name": "状态3"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "ca9b90795373df31c3f5e8e7a90b641a",
+                                "equivalenceClassId": "eb473ef0d4f8c1bf737ce08a342f3692"
+                            },
+                            {
+                                "attributeId": "631a5192c9ed870c05bbec08622ec1c9",
+                                "equivalenceClassId": "697573eec056c47a4d41d69bb48065df"
+                            }
+                        ],
+                        "identifier": "9e80fc9fc0e4469a9075e1390b96e593",
+                        "name": "状态4"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "d60a3ccf33b5e0bd263e3285e8a0c5fa",
+                                "name": "否"
+                            }
+                        ],
+                        "identifier": "51a2194134c79353d42dd1b46fc3dc85",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "只找到数据库字段：双精度浮点数",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "c517456e6d4bb0db1cdeed72219a1655",
+                                "name": "空"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "82f5caa6ae35d0ec8554348195ef4b92",
+                                "name": "双精度浮点数"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "4a7366aabdd9d93f38755410d0b969a3",
+                                "name": "超长数字"
+                            }
+                        ],
+                        "identifier": "e0a7375be59ae1f7d42b2a6967222907",
+                        "name": "内容有效性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "ea090b188ff32a79dcb93550246831fb",
+                "name": "定价",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "51a2194134c79353d42dd1b46fc3dc85",
+                                "equivalenceClassId": "d60a3ccf33b5e0bd263e3285e8a0c5fa"
+                            },
+                            {
+                                "attributeId": "e0a7375be59ae1f7d42b2a6967222907",
+                                "equivalenceClassId": "82f5caa6ae35d0ec8554348195ef4b92"
+                            }
+                        ],
+                        "identifier": "e6d753066f84494ab2a05ba760478e0b",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "51a2194134c79353d42dd1b46fc3dc85",
+                                "equivalenceClassId": "d60a3ccf33b5e0bd263e3285e8a0c5fa"
+                            },
+                            {
+                                "attributeId": "e0a7375be59ae1f7d42b2a6967222907",
+                                "equivalenceClassId": "c517456e6d4bb0db1cdeed72219a1655"
+                            }
+                        ],
+                        "identifier": "c4e666f6558345f692be787a434e051c",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "51a2194134c79353d42dd1b46fc3dc85",
+                                "equivalenceClassId": "d60a3ccf33b5e0bd263e3285e8a0c5fa"
+                            },
+                            {
+                                "attributeId": "e0a7375be59ae1f7d42b2a6967222907",
+                                "equivalenceClassId": "4a7366aabdd9d93f38755410d0b969a3"
+                            }
+                        ],
+                        "identifier": "593637201ede435fb41e0f3e09883f69",
+                        "name": "状态3"
+                    }
+                ]
+            },
+            {
+                "attributes": [
+                    {
+                        "description": "",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "0536abe7efca485cb9747a3efedf1a4c",
+                                "name": "否"
+                            }
+                        ],
+                        "identifier": "71999af648cee12e4c096ee8bf045a1d",
+                        "name": "是否必填"
+                    },
+                    {
+                        "description": "通常不填，让系统返还。",
+                        "equivalenceClasses": [
+                            {
+                                "description": "",
+                                "identifier": "14df08e31f20a6171ce04db027516cc4",
+                                "name": "反例：空， 负数，小数， 字长超过11位整数"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "e93ccf855471c6f8ca2bc94b42f4b154",
+                                "name": "0"
+                            },
+                            {
+                                "description": "",
+                                "identifier": "237af34ded3e51f26a733a7ad038c94c",
+                                "name": "大于零的正确数字"
+                            }
+                        ],
+                        "identifier": "fc538a0b548fd61212381868f05f431c",
+                        "name": "内容有效性"
+                    }
+                ],
+                "description": "待填",
+                "identifier": "33d6f8f6a4b4735913bc372beb746b48",
+                "name": "库存数量",
+                "states": [
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "71999af648cee12e4c096ee8bf045a1d",
+                                "equivalenceClassId": "0536abe7efca485cb9747a3efedf1a4c"
+                            },
+                            {
+                                "attributeId": "fc538a0b548fd61212381868f05f431c",
+                                "equivalenceClassId": "e93ccf855471c6f8ca2bc94b42f4b154"
+                            }
+                        ],
+                        "identifier": "755e580fdcaa428191cc2af6d9dded83",
+                        "name": "状态1"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "71999af648cee12e4c096ee8bf045a1d",
+                                "equivalenceClassId": "0536abe7efca485cb9747a3efedf1a4c"
+                            },
+                            {
+                                "attributeId": "fc538a0b548fd61212381868f05f431c",
+                                "equivalenceClassId": "14df08e31f20a6171ce04db027516cc4"
+                            }
+                        ],
+                        "identifier": "694d659d645b4ffdbe0f33c3545cf847",
+                        "name": "状态2"
+                    },
+                    {
+                        "attributeAndEquivalenceClasses": [
+                            {
+                                "attributeId": "71999af648cee12e4c096ee8bf045a1d",
+                                "equivalenceClassId": "0536abe7efca485cb9747a3efedf1a4c"
+                            },
+                            {
+                                "attributeId": "fc538a0b548fd61212381868f05f431c",
+                                "equivalenceClassId": "237af34ded3e51f26a733a7ad038c94c"
+                            }
+                        ],
+                        "identifier": "1993d44d7ef04b95846a94fdfc569b36",
+                        "name": "状态3"
+                    }
+                ]
+            }
+        ],
+        "name": "图书借阅页面",
+        "states": []
+    }
+}

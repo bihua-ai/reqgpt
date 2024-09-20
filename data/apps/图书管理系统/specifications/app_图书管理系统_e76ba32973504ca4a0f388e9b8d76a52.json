@@ -1,0 +1,29 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "My Support Team",
+            "url": "https://www.example.com/support"
+        },
+        "description": "该项目是一个图书管理系统，提供了用户登录、图书列表展示、搜索、编辑和删除图书的功能。用户可以通过输入账号、密码以及选择身份进行登录。登录成功后，用户可以查看图书列表，并通过书名进行搜索。图书列表展示图书的封面图、书名、作者、ISBN、页数、定价、出版社、出版时间、库存数量、翻译和分类等信息。用户还可以编辑或删除图书信息。系统后端通过Ajax与前端进行数据交互，使用分页组件展示图书数据。",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "该项目是一个图书管理系统，提供了用户登录、图书列表展示、搜索、编辑和删除图书的功能。用户可以通过输入账号、密码以及选择身份进行登录。登录成功后，用户可以查看图书列表，并通过书名进行搜索。图书列表展示图书的封面图、书名、作者、ISBN、页数、定价、出版社、出版时间、库存数量、翻译和分类等信息。用户还可以编辑或删除图书信息。系统后端通过Ajax与前端进行数据交互，使用分页组件展示图书数据。",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [],
+        "attributes": [],
+        "classification": "ui",
+        "description": "这个页面包含一个登录表单，用户需要输入账号、密码，并选择角色，还可以选择记住密码的选项。登录按钮会触发一个JavaScript函数，该函数通过AJAX请求发送登录信息到后端进行验证。",
+        "identifier": "8dfb2b551f17479a9e16361bf13db967",
+        "memberObjects": [],
+        "name": "后台管理登录页面",
+        "states": []
+    }
+}

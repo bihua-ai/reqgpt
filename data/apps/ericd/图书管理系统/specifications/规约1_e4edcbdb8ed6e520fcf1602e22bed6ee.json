@@ -1,0 +1,44 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "41098b6724769e134fd6492bd7be25f6",
+                "name": "搜索",
+                "variables": []
+            },
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "374bd9ac7223a91a58082d63c53dd700",
+                "name": "借阅",
+                "variables": []
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "5a952fde686d48228d792b3765581c41",
+        "memberObjects": [],
+        "name": "图书搜索页面",
+        "states": []
+    }
+}

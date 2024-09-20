@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>oms</td>
+            <td>1.0.0</td>
+        </tr>
+        <tr>
+            <td colspan="2">info</td>
+        </tr>
+        <tr>
+            <td>contact</td>
+            <td>
+                <ul>
+                    <li>Email: <a href="mailto:support@example.com">support@example.com</a></li>
+                    <li>Name: My Support Team</li>
+                    <li>URL: <a href="https://www.example.com/support" target="_blank">https://www.example.com/support</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>该项目是一个包含登录和文件上传功能的网页应用。用户首先需要在登录页面输入用户名和密码，并选择角色后进行登录。登录表单在提交前会进行前端验证，确保用户名长度在5到20个字符之间，密码长度至少为8个字符且不包含特殊字符。登录成功后，用户会被重定向到文件上传页面。<br><br>在文件上传页面，用户可以选择一个文件进行上传。上传表单同样包含前端验证，确保用户只能上传特定格式的文件，包括XLSX、XLS、PDF、DOCX、DOC和TXT格式。如果用户选择了一个不在允许范围内的文件，会弹出提示信息，阻止文件上传。如果文件验证通过，表单将提交到服务器进行进一步处理。</td>
+        </tr>
+        <tr>
+            <td>license</td>
+            <td>
+                <ul>
+                    <li>Name: MPL-2.0</li>
+                    <li>URL: <a href="https://opensource.org/licenses/MPL-2.0" target="_blank">https://opensource.org/licenses/MPL-2.0</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>summary</td>
+            <td>该项目是一个包含登录和文件上传功能的网页应用。用户首先需要在登录页面输入用户名和密码，并选择角色后进行登录。登录表单在提交前会进行前端验证，确保用户名长度在5到20个字符之间，密码长度至少为8个字符且不包含特殊字符。登录成功后，用户会被重定向到文件上传页面。<br><br>在文件上传页面，用户可以选择一个文件进行上传。上传表单同样包含前端验证，确保用户只能上传特定格式的文件，包括XLSX、XLS、PDF、DOCX、DOC和TXT格式。如果用户选择了一个不在允许范围内的文件，会弹出提示信息，阻止文件上传。如果文件验证通过，表单将提交到服务器进行进一步处理。</td>
+        </tr>
+        <tr>
+            <td>termsOfService</td>
+            <td><a href="https://example.com/terms/" target="_blank">https://example.com/terms/</a></td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>安全文件上传与登录验证系统</td>
+        </tr>
+        <tr>
+            <td>version</td>
+            <td>1.0.0</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,111 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "Supprt team name",
+            "url": "https://www.example.com/support"
+        },
+        "description": "project description",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "project summary",
+        "termsOfService": "https://example.com/terms/",
+        "title": "图书管理系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "待填",
+                "identifier": "1fe164b11a5ac5bfa7c700897796904a",
+                "name": "保存",
+                "variables": [
+                    "89e67ebcde718ac9187374f53827598f",
+                    "703954045fa3a0c0e681819a98f21bd7",
+                    "d114d5a06f2a620b927e31ab0f88da96",
+                    "39af88b93f742ced4894dee75626aed6",
+                    "dfed7262c04784a2bfb4d9cc9fa767d9",
+                    "a734c7842d204bbf311123fa177b88fb",
+                    "9f9c484cfc5ea103e3ebd45d96869ab4",
+                    "7d27875cf80c726a9801136eb71b19b3",
+                    "d5d8d29d300c4bcf91e92a27a43c672b"
+                ]
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "",
+        "identifier": "dc8cca83fdd84cad810fe1b2d4d1146f",
+        "memberObjects": [
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "89e67ebcde718ac9187374f53827598f",
+                "name": "变量1",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "703954045fa3a0c0e681819a98f21bd7",
+                "name": "变量2",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "d114d5a06f2a620b927e31ab0f88da96",
+                "name": "变量3",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "39af88b93f742ced4894dee75626aed6",
+                "name": "变量4",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "dfed7262c04784a2bfb4d9cc9fa767d9",
+                "name": "变量5",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "a734c7842d204bbf311123fa177b88fb",
+                "name": "变量6",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "9f9c484cfc5ea103e3ebd45d96869ab4",
+                "name": "变量7",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "7d27875cf80c726a9801136eb71b19b3",
+                "name": "变量8",
+                "states": []
+            },
+            {
+                "attributes": [],
+                "description": "待填",
+                "identifier": "d5d8d29d300c4bcf91e92a27a43c672b",
+                "name": "变量9",
+                "states": []
+            }
+        ],
+        "name": "图书信息编辑页面",
+        "states": []
+    }
+}

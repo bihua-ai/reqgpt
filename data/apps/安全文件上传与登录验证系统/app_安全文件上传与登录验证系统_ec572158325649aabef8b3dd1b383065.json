@@ -1,0 +1,36 @@
+{
+    "info": {
+        "contact": {
+            "email": "support@example.com",
+            "name": "My Support Team",
+            "url": "https://www.example.com/support"
+        },
+        "description": "该项目是一个包含登录和文件上传功能的网页应用。用户首先需要在登录页面输入用户名和密码，并选择角色后进行登录。登录表单在提交前会进行前端验证，确保用户名长度在5到20个字符之间，密码长度至少为8个字符且不包含特殊字符。登录成功后，用户会被重定向到文件上传页面。\n\n在文件上传页面，用户可以选择一个文件进行上传。上传表单同样包含前端验证，确保用户只能上传特定格式的文件，包括XLSX、XLS、PDF、DOCX、DOC和TXT格式。如果用户选择了一个不在允许范围内的文件，会弹出提示信息，阻止文件上传。如果文件验证通过，表单将提交到服务器进行进一步处理。",
+        "license": {
+            "name": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+        },
+        "summary": "该项目是一个包含登录和文件上传功能的网页应用。用户首先需要在登录页面输入用户名和密码，并选择角色后进行登录。登录表单在提交前会进行前端验证，确保用户名长度在5到20个字符之间，密码长度至少为8个字符且不包含特殊字符。登录成功后，用户会被重定向到文件上传页面。\n\n在文件上传页面，用户可以选择一个文件进行上传。上传表单同样包含前端验证，确保用户只能上传特定格式的文件，包括XLSX、XLS、PDF、DOCX、DOC和TXT格式。如果用户选择了一个不在允许范围内的文件，会弹出提示信息，阻止文件上传。如果文件验证通过，表单将提交到服务器进行进一步处理。",
+        "termsOfService": "https://example.com/terms/",
+        "title": "安全文件上传与登录验证系统",
+        "version": "1.0.0"
+    },
+    "oms": "1.0.0",
+    "omsObject": {
+        "actions": [
+            {
+                "cars": [],
+                "description": "验证上传文件的类型是否符合规定的格式",
+                "identifier": "6337fe424198415fa76b433400983caf",
+                "name": "validateUpload"
+            }
+        ],
+        "attributes": [],
+        "classification": "ui",
+        "description": "这个页面同样包含一个表单，用户可以在这个表单中选择一个文件进行上传。表单提交时会触发`validateUpload`函数，进行文件类型的验证，确保上传的文件是允许的格式之一。",
+        "identifier": "31437c1108ec4e769afd83f7ef3a4611",
+        "memberObjects": [],
+        "name": "安全文件上传系统页面",
+        "states": []
+    }
+}

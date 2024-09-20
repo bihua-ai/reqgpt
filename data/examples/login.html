@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录账号</title>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // 阻止表单的默认提交行为
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const agree = document.getElementById('agree').checked;
+
+            // 这里我们使用简单的逻辑来模拟登录过程
+            // 实际应用中，你需要发送异步请求到服务器进行验证
+            if(username && password && agree) {
+                // 假设用户名为"user"，密码为"password"，并且同意了协议
+                if(username === "user" && password === "password") {
+                    window.location.href = 'homepage.html'; // 登录成功，跳转到主页
+                } else {
+                    window.location.href = 'failure.html'; // 登录失败，跳转到失败页面
+                }
+            } else {
+                alert('请填写所有字段并同意服务条款。');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>登录账号</h1>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="checkbox" id="agree" name="agree">
+        <label for="agree">我同意<a href="https://example.com/terms/" target="_blank">服务条款</a></label><br><br>
+        
+        <button type="submit">登录</button>
+    </form>
+</body>
+</html>

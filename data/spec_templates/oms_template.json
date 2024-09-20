@@ -1,0 +1,518 @@
+{
+	"oms": "1.0.0",
+	"info": {
+		"title": "project name",
+		"summary": "project summary",
+		"description": "project description",
+		"termsOfService": "https://example.com/terms/",
+		"contact": {
+			"name": "Supprt team name",
+			"url": "https://www.example.com/support",
+			"email": "support@example.com"
+		},
+		"license": {
+			"name": "MPL-2.0",
+			"url": "https://opensource.org/licenses/MPL-2.0"
+		},
+		"version": "1.0.0"
+	},
+	"omsObject": {
+		"classification": "ui",
+		"identifier": "caea4361c7aaf493f832db2be01fab705",
+		"name": "注册账号页面",
+		"description": "",
+		"memberObjects": [{
+				"identifier": "cd76d91aae6614e50baf70ae6fd8a5d3d",
+				"name": "用户名",
+				"description": "",
+				"attributes": [{
+						"identifier": "c89c01666d41745e8838ca667c2be7b47",
+						"name": "长度",
+						"description": "",
+						"equivalenceClasses": [{
+								"identifier": "cec6ffd5d80564ba1801494c07f0f3d80",
+								"name": "6到18位",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagforward"
+								]
+							},
+							{
+								"identifier": "cc26bf1a2ddd04c77beba51962fb5e64a",
+								"name": "小于6",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							},
+							{
+								"identifier": "cc466645bb2e842c796a7a73234b116f1",
+								"name": "大于18",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							}
+						]
+					},
+					{
+						"identifier": "c171c3806a67a4a6b849a71f8dcb9bcf3",
+						"name": "字符",
+						"description": "",
+						"equivalenceClasses": [{
+								"identifier": "cff55268732fa4ae3b1a81664eb1d2c5f",
+								"name": "包含字母、数字、下划线",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagforward"
+								]
+							},
+							{
+								"identifier": "c72ff242dcc89438392ed0cb0dcdc6241",
+								"name": "包含特殊字符",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							}
+						]
+					},
+					{
+						"identifier": "c5bc056953a5d43a5ac3847ea2937345d",
+						"name": "首字符",
+						"description": "",
+						"equivalenceClasses": [{
+								"identifier": "cd63dbb392e154c27b76e9c4282a90c8c",
+								"name": "字母",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagforward"
+								]
+							},
+							{
+								"identifier": "c85289958d50442b18ff2e69f2089673b",
+								"name": "下划线",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							},
+							{
+								"identifier": "cfcaa8af9236340a2b3806680428c2732",
+								"name": "数字",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							}
+						]
+					}
+				],
+				"states": [{
+						"identifier": "cd83fd46635ab474ebd53eea26376726d",
+						"name": "长度 = 6到18位;字符 = 包含字母、数字、下划线;首字符 = 字母",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c89c01666d41745e8838ca667c2be7b47",
+								"equivalenceClassId": "cec6ffd5d80564ba1801494c07f0f3d80"
+							},
+							{
+								"attributeId": "c171c3806a67a4a6b849a71f8dcb9bcf3",
+								"equivalenceClassId": "cff55268732fa4ae3b1a81664eb1d2c5f"
+							},
+							{
+								"attributeId": "c5bc056953a5d43a5ac3847ea2937345d",
+								"equivalenceClassId": "cd63dbb392e154c27b76e9c4282a90c8c"
+							}
+						]
+					},
+					{
+						"identifier": "c35ac59cd9f8c4a50b9d43bf430182016",
+						"name": "长度 = 小于6;字符 = 包含字母、数字、下划线;首字符 = 字母",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c89c01666d41745e8838ca667c2be7b47",
+								"equivalenceClassId": "cc26bf1a2ddd04c77beba51962fb5e64a"
+							},
+							{
+								"attributeId": "c171c3806a67a4a6b849a71f8dcb9bcf3",
+								"equivalenceClassId": "cff55268732fa4ae3b1a81664eb1d2c5f"
+							},
+							{
+								"attributeId": "c5bc056953a5d43a5ac3847ea2937345d",
+								"equivalenceClassId": "cd63dbb392e154c27b76e9c4282a90c8c"
+							}
+						]
+					},
+					{
+						"identifier": "c920f13dc078448f5be7fe6f9064663e8",
+						"name": "长度 = 大于18;字符 = 包含字母、数字、下划线;首字符 = 字母",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c89c01666d41745e8838ca667c2be7b47",
+								"equivalenceClassId": "cc466645bb2e842c796a7a73234b116f1"
+							},
+							{
+								"attributeId": "c171c3806a67a4a6b849a71f8dcb9bcf3",
+								"equivalenceClassId": "cff55268732fa4ae3b1a81664eb1d2c5f"
+							},
+							{
+								"attributeId": "c5bc056953a5d43a5ac3847ea2937345d",
+								"equivalenceClassId": "cd63dbb392e154c27b76e9c4282a90c8c"
+							}
+						]
+					},
+					{
+						"identifier": "ce02c69f77eec4cfc937c9fbc4b7c8f01",
+						"name": "长度 = 6到18位;字符 = 包含特殊字符;首字符 = 字母",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c89c01666d41745e8838ca667c2be7b47",
+								"equivalenceClassId": "cec6ffd5d80564ba1801494c07f0f3d80"
+							},
+							{
+								"attributeId": "c171c3806a67a4a6b849a71f8dcb9bcf3",
+								"equivalenceClassId": "c72ff242dcc89438392ed0cb0dcdc6241"
+							},
+							{
+								"attributeId": "c5bc056953a5d43a5ac3847ea2937345d",
+								"equivalenceClassId": "cd63dbb392e154c27b76e9c4282a90c8c"
+							}
+						]
+					},
+					{
+						"identifier": "c7819c50d8c6049a6ad45a3d802aee9a6",
+						"name": "长度 = 6到18位;字符 = 包含字母、数字、下划线;首字符 = 下划线",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c89c01666d41745e8838ca667c2be7b47",
+								"equivalenceClassId": "cec6ffd5d80564ba1801494c07f0f3d80"
+							},
+							{
+								"attributeId": "c171c3806a67a4a6b849a71f8dcb9bcf3",
+								"equivalenceClassId": "cff55268732fa4ae3b1a81664eb1d2c5f"
+							},
+							{
+								"attributeId": "c5bc056953a5d43a5ac3847ea2937345d",
+								"equivalenceClassId": "c85289958d50442b18ff2e69f2089673b"
+							}
+						]
+					},
+					{
+						"identifier": "cc4c717a692194ac99ef428bbf3c22360",
+						"name": "长度 = 6到18位;字符 = 包含字母、数字、下划线;首字符 = 数字",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c89c01666d41745e8838ca667c2be7b47",
+								"equivalenceClassId": "cec6ffd5d80564ba1801494c07f0f3d80"
+							},
+							{
+								"attributeId": "c171c3806a67a4a6b849a71f8dcb9bcf3",
+								"equivalenceClassId": "cff55268732fa4ae3b1a81664eb1d2c5f"
+							},
+							{
+								"attributeId": "c5bc056953a5d43a5ac3847ea2937345d",
+								"equivalenceClassId": "cfcaa8af9236340a2b3806680428c2732"
+							}
+						]
+					}
+				]
+			},
+			{
+				"identifier": "c0df48d8f33da4504976f231cb4c9e516",
+				"name": "密码",
+				"description": "",
+				"attributes": [{
+						"identifier": "c783ed2c788124ab08e929e9d735ff88d",
+						"name": "长度",
+						"description": "",
+						"equivalenceClasses": [{
+								"identifier": "c386416a1beb44c77a33fe857ce50d82d",
+								"name": "6到18位",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagforward"
+								]
+							},
+							{
+								"identifier": "cbca8ba09193f4a049a6a042740e4bab2",
+								"name": "小于6位",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							},
+							{
+								"identifier": "c067d8a436af64fe1b6536e193bf19621",
+								"name": "大于18位",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							}
+						]
+					},
+					{
+						"identifier": "c61c3ba13401841b0818aeb3345be0fda",
+						"name": "字符",
+						"description": "",
+						"equivalenceClasses": [{
+								"identifier": "cda2d1bd290bc46a8ae65bde73097b294",
+								"name": "同时包括大、小写字符和数字",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagforward"
+								]
+							},
+							{
+								"identifier": "c56e1e9d2b8fe40b1832d98cf94b14158",
+								"name": "缺少大写字母",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							},
+							{
+								"identifier": "c1ae5ada06efe454e8be56c08e6049c20",
+								"name": "缺少小写字母",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							},
+							{
+								"identifier": "cd6f1cad434af45a9aa0eaea6463d0cb9",
+								"name": "缺少数字",
+								"description": "",
+								"tags": [
+									"tagcategoryprocess:tagreverse"
+								]
+							}
+						]
+					}
+				],
+				"states": [{
+						"identifier": "cfd598ceffc0a4cf4a116dd847b5fe199",
+						"name": "长度 = 6到18位;字符 = 同时包括大、小写字符和数字",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c783ed2c788124ab08e929e9d735ff88d",
+								"equivalenceClassId": "c386416a1beb44c77a33fe857ce50d82d"
+							},
+							{
+								"attributeId": "c61c3ba13401841b0818aeb3345be0fda",
+								"equivalenceClassId": "cda2d1bd290bc46a8ae65bde73097b294"
+							}
+						]
+					},
+					{
+						"identifier": "c948f3229601646b3bb6cae44eb800659",
+						"name": "长度 = 小于6位;字符 = 同时包括大、小写字符和数字",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c783ed2c788124ab08e929e9d735ff88d",
+								"equivalenceClassId": "cbca8ba09193f4a049a6a042740e4bab2"
+							},
+							{
+								"attributeId": "c61c3ba13401841b0818aeb3345be0fda",
+								"equivalenceClassId": "cda2d1bd290bc46a8ae65bde73097b294"
+							}
+						]
+					},
+					{
+						"identifier": "c3faa30db91684d2fb9cc72d8e43b7f94",
+						"name": "长度 = 大于18位;字符 = 同时包括大、小写字符和数字",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c783ed2c788124ab08e929e9d735ff88d",
+								"equivalenceClassId": "c067d8a436af64fe1b6536e193bf19621"
+							},
+							{
+								"attributeId": "c61c3ba13401841b0818aeb3345be0fda",
+								"equivalenceClassId": "cda2d1bd290bc46a8ae65bde73097b294"
+							}
+						]
+					},
+					{
+						"identifier": "c5e582daf163e44a88f59e5125a9db000",
+						"name": "长度 = 6到18位;字符 = 缺少大写字母",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c783ed2c788124ab08e929e9d735ff88d",
+								"equivalenceClassId": "c386416a1beb44c77a33fe857ce50d82d"
+							},
+							{
+								"attributeId": "c61c3ba13401841b0818aeb3345be0fda",
+								"equivalenceClassId": "c56e1e9d2b8fe40b1832d98cf94b14158"
+							}
+						]
+					},
+					{
+						"identifier": "ccdd53535f0254affb6a83343a1e802b8",
+						"name": "长度 = 6到18位;字符 = 缺少小写字母",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c783ed2c788124ab08e929e9d735ff88d",
+								"equivalenceClassId": "c386416a1beb44c77a33fe857ce50d82d"
+							},
+							{
+								"attributeId": "c61c3ba13401841b0818aeb3345be0fda",
+								"equivalenceClassId": "c1ae5ada06efe454e8be56c08e6049c20"
+							}
+						]
+					},
+					{
+						"identifier": "c68b4f1e775e44066a17cc10e12d56717",
+						"name": "长度 = 6到18位;字符 = 缺少数字",
+						"attributeAndEquivalenceClasses": [{
+								"attributeId": "c783ed2c788124ab08e929e9d735ff88d",
+								"equivalenceClassId": "c386416a1beb44c77a33fe857ce50d82d"
+							},
+							{
+								"attributeId": "c61c3ba13401841b0818aeb3345be0fda",
+								"equivalenceClassId": "cd6f1cad434af45a9aa0eaea6463d0cb9"
+							}
+						]
+					}
+				]
+			},
+			{
+				"identifier": "c8e003d07e9aa43208f93656c16958265",
+				"name": "同意服务协议",
+				"description": "",
+				"attributes": [{
+					"identifier": "c58a4a112fe91463db8c7f2c6d540bbb1",
+					"name": "同意协议与否",
+					"description": "",
+					"equivalenceClasses": [{
+							"identifier": "c51756bef85d54dd891e4fd193d31c3c0",
+							"name": "是",
+							"description": "",
+							"tags": [
+								"tagcategoryprocess:tagforward"
+							]
+						},
+						{
+							"identifier": "c4a8d9d302e5f4e82aaf6b648b09a5633",
+							"name": "否",
+							"description": "",
+							"tags": [
+								"tagcategoryprocess:tagreverse"
+							]
+						}
+					]
+				}],
+				"states": [{
+						"identifier": "ca0308700fdfa4fceba1c59a7b17ceb0c",
+						"name": "同意协议与否 = 是",
+						"attributeAndEquivalenceClasses": [{
+							"attributeId": "c58a4a112fe91463db8c7f2c6d540bbb1",
+							"equivalenceClassId": "c51756bef85d54dd891e4fd193d31c3c0"
+						}]
+					},
+					{
+						"identifier": "c9a44e190523a4a6f8ba9e914ccdcdcd6",
+						"name": "同意协议与否 = 否",
+						"attributeAndEquivalenceClasses": [{
+							"attributeId": "c58a4a112fe91463db8c7f2c6d540bbb1",
+							"equivalenceClassId": "c4a8d9d302e5f4e82aaf6b648b09a5633"
+						}]
+					}
+				]
+			},
+			{
+				"identifier": "cfe7ee79c3d304ed297e955d49cb5d29a",
+				"name": "注册按钮",
+				"description": "",
+				"actions": [{
+					"identifier": "cf27644d9b8cf4e21b28f67e6e90d9826",
+					"name": "点击注册按钮",
+					"description": "",
+					"cars": [{
+							"identifier": "89b6deb2-a987-484d-aca7-9cc09ebf0bdb",
+							"name": "场景1",
+							"description": "",
+							"condition": {
+								"identifier": "94e6c415-8895-4e49-a96c-52e197275257",
+								"states": [
+									"cd83fd46635ab474ebd53eea26376726d",
+									"c948f3229601646b3bb6cae44eb800659",
+									"ca0308700fdfa4fceba1c59a7b17ceb0c"
+								],
+								"description": ""
+							},
+							"tags": [
+								"tagcategoryprocess:tagreverse"
+							],
+							"result": {
+								"identifier": "c472dc52529dd469b96df3e01737a16a0",
+								"description": "登录成功"
+							},
+							"nextCar": {
+								"identifier": "cff1d6a31c1564aa6b7d7cfe2cc9ab286",
+								"cars": [
+									"cff973a13c0d848759512f6401082d195"
+								],
+								"description": ""
+							}
+						},
+						{
+							"identifier": "34999dbe-01f8-40ff-9b38-96206bec2c46",
+							"name": "场景2",
+							"condition": {
+								"identifier": "eb23cc62-8d88-4aac-8cde-17c80d361e8f",
+								"states": [
+									"cd83fd46635ab474ebd53eea26376726d",
+									"cfd598ceffc0a4cf4a116dd847b5fe199",
+									"c9a44e190523a4a6f8ba9e914ccdcdcd6"
+								],
+								"description": ""
+							},
+							"tags": [
+								"tagcategoryprocess:tagreverse"
+							],
+							"result": {
+								"identifier": "ce4b345599d0a4ae9958362b91da064f8",
+								"description": "登录失败"
+							}
+						},
+						{
+							"identifier": "88a39f83-9ff8-4b37-bf03-21c39a317305",
+							"name": "场景3",
+							"description": "",
+							"condition": {
+								"identifier": "6bb1ee93-98b9-4959-9334-d304c75e55c9",
+								"states": [
+									"c35ac59cd9f8c4a50b9d43bf430182016",
+									"c948f3229601646b3bb6cae44eb800659",
+									"c9a44e190523a4a6f8ba9e914ccdcdcd6"
+								],
+								"description": ""
+							},
+							"tags": [
+								"tagcategoryprocess:tagreverse"
+							],
+							"result": {
+								"identifier": "c9a1aebcbf68f46d4b492f8ad6131a25b",
+								"description": "登录失败"
+							}
+						},
+						{
+							"identifier": "930bcd73-1846-41df-96e4-b3a5d02b6436",
+							"name": "场景4",
+							"description": "",
+							"condition": {
+								"identifier": "a6595e3f-382d-4f60-a55e-8f5967c5fe82",
+								"states": [
+									"c35ac59cd9f8c4a50b9d43bf430182016",
+									"cfd598ceffc0a4cf4a116dd847b5fe199",
+									"ca0308700fdfa4fceba1c59a7b17ceb0c"
+								],
+								"description": ""
+							},
+							"tags": [
+								"tagcategoryprocess:tagreverse"
+							],
+							"result": {
+								"identifier": "ca676387ba51c4e54908b81212c7b93ce",
+								"description": "登录失败"
+							}
+						}
+					],
+					"tags": [
+						"tagcategoryprocess:tagreverse"
+					]
+				}]
+			}
+		]
+	}
+}
